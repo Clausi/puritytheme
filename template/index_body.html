@@ -9,48 +9,11 @@
 
 <!-- INCLUDE loginbox.html -->
 
-<!-- IF S_DISPLAY_ONLINE_LIST -->
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<!-- IF U_VIEWONLINE -->
-			<h3 class="panel-title"><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3 class="panel-title">{L_WHO_IS_ONLINE}</h3>
-		<!-- ENDIF -->
-	</div>
-	<div class="panel-body">
-		<p>{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /> <br />{LOGGED_IN_USER_LIST}
-		<!-- IF LEGEND --><br /><em>{L_LEGEND}: {LEGEND}</em><!-- ENDIF --></p>
-	</div>
-</div>
-<!-- ENDIF -->
-
-<!-- IF S_DISPLAY_BIRTHDAY_LIST and BIRTHDAY_LIST -->
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">{L_BIRTHDAYS}</h3>
-	</div>
-	<div class="panel-body">
-		<p><!-- IF BIRTHDAY_LIST -->{L_CONGRATULATIONS}: <strong>{BIRTHDAY_LIST}</strong><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF --></p>
-	</div>
-</div>
-<!-- ENDIF -->
-
-<!-- IF NEWEST_USER -->
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">{L_STATISTICS}</h3>
-	</div>
-	<div class="panel-body">
-		<p>{TOTAL_POSTS} &bull; {TOTAL_TOPICS} &bull; {TOTAL_USERS} &bull; {NEWEST_USER}</p>
-		<hr/>
-		<p class="{S_CONTENT_FLOW_END}<!-- IF S_USER_LOGGED_IN --> rightside<!-- ENDIF -->"><!-- IF S_USER_LOGGED_IN -->{LAST_VISIT_DATE}<!-- ELSE -->{CURRENT_TIME}<!-- ENDIF --></p>
-		<!-- IF U_MCP --><p>{CURRENT_TIME} <br />[&nbsp;<a href="{U_MCP}">{L_MCP}</a>&nbsp;]</p><!-- ELSEIF S_USER_LOGGED_IN --><p>{CURRENT_TIME}</p><!-- ENDIF -->
-	</div>
-</div>
-<!-- ENDIF -->
-
 	</div><!-- END col -->
-	<div class="col-md-3">
-		sidebar
+	<div class="col-md-3 top10">
+		<!-- INCLUDE viewonline_box.html -->
+		<!-- INCLUDE birthday_box.html -->
+		<!-- INCLUDE statistics_box.html -->
 	</div>
 </div><!-- END row -->
 

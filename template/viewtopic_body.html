@@ -1,7 +1,5 @@
 <!-- INCLUDE overall_header.html -->
 
-<!-- searchbox.html -->
-
 <!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
 <!-- IF FORUM_DESC --><div style="display: none !important;">{FORUM_DESC}<br /></div><!-- ENDIF -->
 
@@ -341,15 +339,6 @@
 
 <!-- INCLUDE loginbox.html -->
 
-<!-- IF S_DISPLAY_ONLINE_LIST -->
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h3 class="panel-title"><!-- IF U_VIEWONLINE --><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a><!-- ELSE -->{L_WHO_IS_ONLINE}<!-- ENDIF --></h3>
-		</div>
-		<div class="panel-body">
-			<p>{LOGGED_IN_USER_LIST}</p>
-		</div>
-	</div>
-<!-- ENDIF -->
+<!-- INCLUDE viewonline_box.html -->
 
 <!-- INCLUDE overall_footer.html -->

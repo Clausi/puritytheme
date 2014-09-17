@@ -132,11 +132,11 @@
 											<div class="btn-group">
 												<a class="btn btn-primary btn-labeled dropdown-toggle" data-toggle="dropdown" href="#">
 													<span class="btn-label"><i class="fa fa-envelope"></i></span>
-													{L_CONTACT_USER} {USERNAME}
+													{L_CONTACT_USER}
 													<span class="caret"></span>
 												</a>
 												<ul class="dropdown-menu">
-													<!-- IF U_EMAIL --><li><a href="{U_EMAIL}">{L_SEND_EMAIL_USER} {USERNAME}</a></li><!-- ENDIF -->
+													<!-- IF U_EMAIL --><li><a href="{U_EMAIL}">{L_SEND_EMAIL_USER}</a></li><!-- ENDIF -->
 													<!-- IF U_WWW --><li><a href="{U_WWW}" title="{L_VISIT_WEBSITE}: {U_WWW}">{U_WWW}</a></li><!-- ENDIF -->
 													<!-- IF U_PM --><li><a href="{U_PM}">{L_SEND_PRIVATE_MESSAGE}</a></li><!-- ENDIF -->
 													<!-- IF U_MSN or USER_MSN --><li><!-- IF U_MSN --><a href="{U_MSN}" onclick="popup(this.href, 550, 320); return false;">{L_SEND_MSNM_MESSAGE}</a><!-- ELSE -->{USER_MSN}<!-- ENDIF --></li><!-- ENDIF -->

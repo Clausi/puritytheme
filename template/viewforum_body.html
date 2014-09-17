@@ -3,8 +3,6 @@
 <div class="row">
 	<div class="col-md-9">
 
-<!-- searchbox.html -->
-
 <div class="page-header">
 	<h2><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></h2>
 </div>
@@ -261,17 +259,6 @@
 
 <!-- INCLUDE jumpbox.html -->
 
-<!-- IF S_DISPLAY_ONLINE_LIST -->
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h3 class="panel-title"><!-- IF U_VIEWONLINE --><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a><!-- ELSE -->{L_WHO_IS_ONLINE}<!-- ENDIF --></h3>
-		</div>
-		<div class="panel-body">
-			<p>{LOGGED_IN_USER_LIST}</p>
-		</div>
-	</div>
-<!-- ENDIF -->
-
 <!-- IF S_DISPLAY_POST_INFO -->
 	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -284,8 +271,9 @@
 <!-- ENDIF -->
 
 	</div><!-- END col -->
-	<div class="col-md-3">
-		sidebar
+	<div class="col-md-3 top10">
+		<!-- INCLUDE viewonline_box.html -->
+		<!-- INCLUDE birthday_box.html -->
 	</div>
 </div><!-- END row -->
 

@@ -214,14 +214,11 @@ $(document).ready(function(){
     });
     $('#back-to-top').tooltip('show');
 });
-/*
+
 $(window).scroll(function() {
 	if ($(document).scrollTop() > 100) {
 		$('#main-nav').addClass('navbar-shrink');
-		$('body').addClass('body-shrink');
 	} else {
 		$('#main-nav').removeClass('navbar-shrink');
-		$('body').removeClass('body-shrink');
 	}
 });
-*/

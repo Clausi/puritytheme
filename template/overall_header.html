@@ -112,24 +112,25 @@
 			<a class="navbar-brand" href="{U_INDEX}" title="{SITENAME}"><img src="{T_THEME_PATH}/purity/images/purity_logo.png" alt="{SITENAME}" /></a>
 		</div>
 		<div class="collapse navbar-collapse" id="main-menu">
-			<ul class="nav navbar-nav">
-				<li><a href="#" title="Home"><i class="fa fa-home"></i> Home</a></li>
-				<li><a href="#" title="Gilde"><i class="fa fa-beer"></i> Gilde</a></li>
-				<li><a href="index.php" title="Forum"><i class="fa fa-comment"></i> Forum</a></li>
+			<ul class="nav navbar-nav" id="homepage-menu">
+				<li><a href="#" title="Home"><i class="fa fa-star fa-fw"></i> Home</a></li>
+				<li><a href="#" title="Gilde"><i class="fa fa-beer fa-fw"></i> Gilde</a></li>
+				<li><a href="index.php" title="{L_INDEX}"><i class="fa fa-comment fa-fw"></i> Forum</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">
 					<button type="button" class="btn btn-default btn-labeled navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="btn-label"><i class="fa fa-search"></i></span> <span class="caret"></span></button>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a></li>
+						<li><a href="{U_SEARCH_UNANSWERED}"><i class="fa fa-square-o fa-fw"></i> {L_SEARCH_UNANSWERED}</a></li>
 						<!-- IF S_LOAD_UNREADS -->
-							<li><a href="{U_SEARCH_UNREAD}">{L_SEARCH_UNREAD}</a></li>
+							<li><a href="{U_SEARCH_UNREAD}"><i class="fa fa-eye fa-fw"></i> {L_SEARCH_UNREAD}</a></li>
 						<!-- ENDIF -->
 						<!-- IF S_USER_LOGGED_IN -->
-							<li><a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a></li>
+							<li><a href="{U_SEARCH_NEW}"><i class="fa fa-plus fa-fw"></i> {L_SEARCH_NEW}</a></li>
 						<!-- ENDIF -->
-						<li><a href="{U_SEARCH_ACTIVE_TOPICS}">{L_SEARCH_ACTIVE_TOPICS}</a></li>
+						<li><a href="{U_SEARCH_ACTIVE_TOPICS}"><i class="fa fa-fire fa-fw"></i> {L_SEARCH_ACTIVE_TOPICS}</a></li>
 						<!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
+						<li class="divider"></li>
 						<li>
 							<form class="form-inline" role="form" method="get" id="search" action="{U_SEARCH}">
 								<div class="form-group">
@@ -162,10 +163,7 @@
 							</li>
 							<!-- IF S_REGISTER_ENABLED -->
 								<li class="divider"></li>
-								<li><a href="{U_REGISTER}" class="reg-button"><button class="btn btn-primary"><i class="glyphicon glyphicon-user"></i> {L_REGISTER}</button></a></li>
-							<!-- ELSE -->
-								<li class="divider"></li>
-								<li><a href="#" class="btn btn-primary disabled"><i class="glyphicon glyphicon-user"></i> {L_REGISTER}</a></li>
+								<li><a href="{U_REGISTER}" class="btn btn-primaryreg-button"><i class="glyphicon glyphicon-user"></i> {L_REGISTER}</a></li>
 							<!-- ENDIF -->
 						<!-- ENDIF -->
 						<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
@@ -203,7 +201,7 @@
 		<div class="row bottom5">
 			<div class="col-md-12">
 				<div class="btn-group btn-breadcrumb">
-					 <a href="{U_INDEX}" accesskey="h" class="btn btn-primary" title="{L_INDEX}"><i class="glyphicon glyphicon-home"></i></a> <!-- BEGIN navlinks --> <a href="{navlinks.U_VIEW_FORUM}" class="btn btn-primary">{navlinks.FORUM_NAME}</a><!-- END navlinks -->
+					 <a href="{U_INDEX}" accesskey="h" class="btn btn-default" title="{L_INDEX}"><i class="glyphicon glyphicon-home"></i></a> <!-- BEGIN navlinks --> <a href="{navlinks.U_VIEW_FORUM}" class="btn btn-default<!-- IF navlinks.FORUM_ID == S_FORUM_ID --> active<!-- ENDIF -->">{navlinks.FORUM_NAME}</a><!-- END navlinks -->
 				</div>
 			</div>
 		</div>
@@ -214,3 +212,4 @@
 				</div>
 			</div>
 		<!-- ENDIF -->
+		
