@@ -1044,3 +1044,11 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 .panel-body {
     padding: 10px;
 }
+
+th.posts {
+	text-align: center;
+}
+
+th.topics {
+	text-align: center;
+}
