@@ -140,6 +140,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 	$("select").addClass("selectpicker");
 	$(".selectpicker").attr({"data-width": "auto"});
+	$(".selectpicker").attr({"data-style": "btn-default btn-sm"});
 	$(".selectpicker").selectpicker();
 });
 

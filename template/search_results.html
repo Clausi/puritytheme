@@ -22,9 +22,9 @@
 			<!-- IF SEARCH_MATCHES -->
 				<div class="col-md-3">
 					<!-- IF SEARCH_TOPIC -->
-						<a class="btn btn-default btn-labeled" href="{U_SEARCH_TOPIC}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_RETURN_TO}: {SEARCH_TOPIC}</a>
+						<a class="btn btn-default btn-labeled btn-sm" href="{U_SEARCH_TOPIC}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_RETURN_TO}: {SEARCH_TOPIC}</a>
 					<!-- ELSE -->
-						<a class="btn btn-default btn-labeled" href="{U_SEARCH}" title="{L_SEARCH_ADV}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_RETURN_TO_SEARCH_ADV}</a>
+						<a class="btn btn-default btn-labeled btn-sm" href="{U_SEARCH}" title="{L_SEARCH_ADV}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_RETURN_TO_SEARCH_ADV}</a>
 					<!-- ENDIF -->
 				</div>
 			<!-- ENDIF -->
@@ -41,7 +41,7 @@
 						<div class="input-group">
 							<input type="text" name="add_keywords" id="add_keywords" value="" class="input-medium form-control" placeholder="{L_SEARCH_IN_RESULTS}"/>
 							<span class="input-group-btn">
-								<input class="btn btn-default" type="submit" name="submit" value="{L_SEARCH}" />
+								<input class="btn btn-default btn-sm" type="submit" name="submit" value="{L_SEARCH}" />
 							</span>
 						</div>
 					<!-- ENDIF -->
@@ -67,7 +67,7 @@
 					<tr>
 						<td>
 							<div class="pull-left forum-topic-icon">
-								<span><a href="{searchresults.U_VIEW_TOPIC}" class="btn <!-- IF searchresults.S_UNREAD_TOPIC -->btn-info<!-- ELSE -->btn-default<!-- ENDIF --> btn-lg tooltip-link" title="{searchresults.TOPIC_FOLDER_IMG_ALT}">
+								<span><a href="{searchresults.U_VIEW_TOPIC}" class="btn <!-- IF searchresults.S_UNREAD_TOPIC -->btn-info<!-- ELSE -->btn-default<!-- ENDIF --> tooltip-link" title="{searchresults.TOPIC_FOLDER_IMG_ALT}">
 									<i class="fa fa-file-text-o"></i>
 								</a></span>
 							</div>
@@ -170,7 +170,7 @@
 				<!-- IF NEXT_PAGE --><a href="{NEXT_PAGE}" class="right-box {S_CONTENT_FLOW_END}">{L_NEXT}</a><!-- ENDIF -->
 				<!-- IF S_SELECT_SORT_DAYS or S_SELECT_SORT_KEY -->
 					<label><!-- IF S_SHOW_TOPICS -->{L_DISPLAY_POSTS}<!-- ELSE -->{L_SORT_BY}</label><label><!-- ENDIF --> {S_SELECT_SORT_DAYS}<!-- IF S_SELECT_SORT_KEY --></label> <label>{S_SELECT_SORT_KEY}</label>
-					<label>{S_SELECT_SORT_DIR}<!-- ENDIF --> <input type="submit" name="sort" value="{L_GO}" class="btn btn-default" /></label>
+					<label>{S_SELECT_SORT_DIR}<!-- ENDIF --> <input type="submit" name="sort" value="{L_GO}" class="btn btn-default btn-sm" /></label>
 				<!-- ENDIF -->
 			</fieldset>
 		</form>
@@ -183,9 +183,9 @@
 			<!-- IF SEARCH_MATCHES -->
 				<div class="col-md-3">
 					<!-- IF SEARCH_TOPIC -->
-						<a class="btn btn-default btn-labeled" href="{U_SEARCH_TOPIC}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_RETURN_TO}: {SEARCH_TOPIC}</a>
+						<a class="btn btn-default btn-labeled btn-sm" href="{U_SEARCH_TOPIC}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_RETURN_TO}: {SEARCH_TOPIC}</a>
 					<!-- ELSE -->
-						<a class="btn btn-default btn-labeled" href="{U_SEARCH}" title="{L_SEARCH_ADV}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_RETURN_TO_SEARCH_ADV}</a>
+						<a class="btn btn-default btn-labeled btn-sm" href="{U_SEARCH}" title="{L_SEARCH_ADV}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_RETURN_TO_SEARCH_ADV}</a>
 					<!-- ENDIF -->
 				</div>
 			<!-- ENDIF -->
