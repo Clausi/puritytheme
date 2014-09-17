@@ -1,9 +1,9 @@
 
 <!-- BEGIN forumrow -->
 	<!-- IF (forumrow.S_IS_CAT and not forumrow.S_FIRST_ROW) or forumrow.S_NO_CAT  -->
-			</ul>
+			</tbody>
 
-			</div>
+			</table>
 		</div>
 	<!-- ENDIF -->
 	
@@ -27,7 +27,7 @@
 					<tr>
 						<td class="forum-name" title="{forumrow.FORUM_FOLDER_IMG_ALT}" >
 							<span class="pull-left forum-button">
-								<a href="{forumrow.U_VIEWFORUM}" class="btn btn-lg <!-- IF forumrow.S_UNREAD_FORUM -->btn-info<!-- ELSE -->btn-default<!-- ENDIF --> tooltip-link" title="{forumrow.FORUM_FOLDER_IMG_ALT}">
+								<a href="{forumrow.U_VIEWFORUM}" class="btn <!-- IF forumrow.S_UNREAD_FORUM -->btn-warning<!-- ELSE -->btn-default<!-- ENDIF --> tooltip-link" title="{forumrow.FORUM_FOLDER_IMG_ALT}">
 									<!-- IF forumrow.S_IS_LINK -->
 										<i class="fa fa-globe fa-lg"></i>
 									<!-- ELSEIF forumrow.S_LOCKED_FORUM -->
@@ -56,7 +56,7 @@
 						<td class="lastpost"><span>
 							<!-- IF forumrow.U_UNAPPROVED_TOPICS --><a href="{forumrow.U_UNAPPROVED_TOPICS}">{UNAPPROVED_IMG}</a><!-- ENDIF -->
 							<!-- IF forumrow.LAST_POST_TIME --><dfn>{L_LAST_POST}</dfn> {L_POST_BY_AUTHOR} {forumrow.LAST_POSTER_FULL}
-							<!-- IF not S_IS_BOT --><a href="{forumrow.U_LAST_POST}">{LAST_POST_IMG}</a> <!-- ENDIF --><br />{forumrow.LAST_POST_TIME}<!-- ELSE -->{L_NO_POSTS}<br />&nbsp;<!-- ENDIF --></span>
+							<!-- IF not S_IS_BOT --><a href="{forumrow.U_LAST_POST}"><i class="fa fa-angle-double-right"></i></a> <!-- ENDIF --><br />{forumrow.LAST_POST_TIME}<!-- ELSE -->{L_NO_POSTS}<br />&nbsp;<!-- ENDIF --></span>
 						</td>
 					<!-- ENDIF -->	
 					</tr>

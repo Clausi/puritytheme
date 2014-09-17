@@ -1,0 +1,35 @@
+<!-- IF not .notifications -->
+<li>
+	<span class="nolink"><i class="fa fa-bell-slash fa-fw"></i> {L_NO_NOTIFICATIONS}</span>
+</li>
+<!-- ENDIF -->
+<!-- BEGIN notifications -->
+<div class="alert<!-- IF notifications.UNREAD --> alert-info alert-dismissible<!-- ELSE --> alert-done<!-- ENDIF -->" role="alert">
+  <!-- IF notifications.UNREAD --><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">{L_MARK_READ}</span></button><!-- ENDIF -->
+  <!-- IF notifications.URL -->
+		<a class="alert-link" href="<!-- IF notifications.UNREAD -->{notifications.U_MARK_READ}" data-real-url="{notifications.URL}<!-- ELSE -->{notifications.URL}<!-- ENDIF -->">
+	<!-- ENDIF -->
+	<ul class="media-list">
+		<li class="media">
+			<span class="pull-left"><!-- IF notifications.AVATAR -->{notifications.AVATAR}<!-- ELSE --><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="" /><!-- ENDIF --></span>
+			<div class="media-body">
+				<h6 class="media-heading">{notifications.FORMATTED_TITLE}</h6>
+				<!-- IF notifications.REFERENCE --><p>{notifications.REFERENCE}</p><!-- ENDIF -->
+				<!-- IF notifications.FORUM --><p>{notifications.FORUM}</p><!-- ENDIF -->
+				<!-- IF notifications.REASON --><p>{notifications.REASON}</p><!-- ENDIF -->
+				<small>{notifications.TIME}</small>
+			</div>
+		</li>
+	</ul>
+	<!-- IF notifications.URL --></a><!-- ENDIF -->
+</div>
+<!-- END notifications -->
+<li class="divider"></li>
+<li>
+	<a href="{U_NOTIFICATION_SETTINGS}"><i class="fa fa-pencil fa-fw"></i> {L_SETTINGS}</a>
+</li>
+<!-- IF NOTIFICATIONS_COUNT -->
+<li>
+	<a href="{U_MARK_ALL_NOTIFICATIONS}"><i class="fa fa-check-square-o fa-fw"></i> {L_MARK_ALL_READ}</a>
+</li>
+<!-- ENDIF -->

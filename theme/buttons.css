@@ -162,6 +162,6 @@ ul.profile-icons li.info-icon, ul.profile-icons li.report-icon	{ margin: 0 3px 0
 .navbar-right .dropdown-menu .btn{
 	margin-top:.75em;
 	width: 100%;
-	height: 32px; 
+	/*height: 32px; */
 	font-size: 13px;
 }

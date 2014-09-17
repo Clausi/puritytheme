@@ -1,58 +1,16 @@
 <!-- INCLUDE overall_header.html -->
 
-<!-- IF S_DISPLAY_SEARCH or (S_USER_LOGGED_IN and not S_IS_BOT) -->
-	<ul class="linklist">
-		<!-- IF S_DISPLAY_SEARCH -->
-			<li>
-				<div class="btn-group">
-					<a href="{U_SEARCH_UNANSWERED}" class="btn btn-default btn-sm">{L_SEARCH_UNANSWERED}</a>
-					<!-- IF S_LOAD_UNREADS -->
-						<a href="{U_SEARCH_UNREAD}" class="btn btn-default btn-sm">{L_SEARCH_UNREAD}</a>
-					<!-- ENDIF -->
-					<!-- IF S_USER_LOGGED_IN -->
-						<a href="{U_SEARCH_NEW}" class="btn btn-default btn-sm">{L_SEARCH_NEW}</a>
-					<!-- ENDIF -->
-					<a href="{U_SEARCH_ACTIVE_TOPICS}" class="btn btn-default btn-sm">{L_SEARCH_ACTIVE_TOPICS}</a>
-				</div>
-			</li>
-		<!-- ENDIF -->
-		<!-- IF not S_IS_BOT and U_MARK_FORUMS --><li class="rightside"><a href="{U_MARK_FORUMS}" accesskey="m" class="btn btn-default btn-sm">{L_MARK_FORUMS_READ}</a></li><!-- ENDIF -->
-	</ul>
-<!-- ENDIF -->
+<div class="row">
+	<div class="col-md-9">
+				
+<!-- searchbox.html -->
 
 <!-- INCLUDE forumlist_body.html -->
 
-<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
-<div class="panel panel-info">
-	<div class="panel-heading">
-		<h3 class="panel-title">{L_LOGIN_LOGOUT}</h3>
-	</div>	
-	<div class="panel-body">
-		<form method="post" action="{S_LOGIN_ACTION}" class="form-inline">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="input-group">
-						<input type="text" placeholder="{L_USERNAME}" name="username" id="username" size="10" class="form-control" title="{L_USERNAME}" style="width: 117px;"/>	
-						<input type="password" placeholder="{L_PASSWORD}" name="password" id="password" size="10" class="form-control" title="{L_PASSWORD}" style="width: 117px;"/>
-						<span class="input-group-btn" style="width: 0px;">
-							{S_LOGIN_REDIRECT}
-							<input type="submit" name="login" value="{L_LOGIN}" class="btn btn-primary" />
-						</span>	
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="form-group">
-						<a href="{U_REGISTER}" class="btn btn-primary btn-labeled "><span class="btn-label"><i class="glyphicon glyphicon glyphicon-user"></i></span>{L_REGISTER}</a>
-					</div>
-				</div>
-			</div>
-		</form>
-	</div>
-</div>
-<!-- ENDIF -->
+<!-- INCLUDE loginbox.html -->
 
 <!-- IF S_DISPLAY_ONLINE_LIST -->
-<div class="panel panel-info">
+<div class="panel panel-default">
 	<div class="panel-heading">
 		<!-- IF U_VIEWONLINE -->
 			<h3 class="panel-title"><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3 class="panel-title">{L_WHO_IS_ONLINE}</h3>
@@ -66,7 +24,7 @@
 <!-- ENDIF -->
 
 <!-- IF S_DISPLAY_BIRTHDAY_LIST and BIRTHDAY_LIST -->
-<div class="panel panel-info">
+<div class="panel panel-default">
 	<div class="panel-heading">
 		<h3 class="panel-title">{L_BIRTHDAYS}</h3>
 	</div>
@@ -77,7 +35,7 @@
 <!-- ENDIF -->
 
 <!-- IF NEWEST_USER -->
-<div class="panel panel-info">
+<div class="panel panel-default">
 	<div class="panel-heading">
 		<h3 class="panel-title">{L_STATISTICS}</h3>
 	</div>
@@ -89,5 +47,11 @@
 	</div>
 </div>
 <!-- ENDIF -->
+
+	</div><!-- END col -->
+	<div class="col-md-3">
+		sidebar
+	</div>
+</div><!-- END row -->
 
 <!-- INCLUDE overall_footer.html -->

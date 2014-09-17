@@ -1,5 +1,10 @@
 <!-- INCLUDE overall_header.html -->
 
+<div class="row">
+	<div class="col-md-9">
+
+<!-- searchbox.html -->
+
 <div class="page-header">
 	<h2><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></h2>
 </div>
@@ -133,7 +138,7 @@
 					<tr class="t-row<!-- IF topicrow.S_POST_GLOBAL --> warning-color<!-- ENDIF --><!-- IF topicrow.S_POST_ANNOUNCE --> info-color<!-- ENDIF --><!-- IF topicrow.S_POST_STICKY --> success-color<!-- ENDIF --><!-- IF topicrow.S_TOPIC_REPORTED --> danger-color<!-- ENDIF -->">                        
 						<td class="topic-name <!-- IF topicrow.S_POST_GLOBAL --> warning-color<!-- ENDIF --><!-- IF topicrow.S_POST_ANNOUNCE --> info-color<!-- ENDIF --><!-- IF topicrow.S_POST_STICKY --> success-color<!-- ENDIF --><!-- IF topicrow.S_TOPIC_REPORTED --> danger-color<!-- ENDIF -->" title="{topicrow.TOPIC_FOLDER_IMG_ALT}">
 							<div class="pull-left forum-topic-icon">
-								<span><a href="{topicrow.U_VIEW_TOPIC}" class="btn <!-- IF topicrow.S_UNREAD_TOPIC -->btn-info<!-- ELSE -->btn-default<!-- ENDIF --> btn-lg tooltip-link" title="{topicrow.TOPIC_FOLDER_IMG_ALT}">
+								<span><a href="{topicrow.U_VIEW_TOPIC}" class="btn <!-- IF topicrow.S_UNREAD_TOPIC -->btn-warning<!-- ELSE -->btn-default<!-- ENDIF --> tooltip-link" title="{topicrow.TOPIC_FOLDER_IMG_ALT}">
 									<!-- IF topicrow.S_TOPIC_LOCKED -->
 										<i class="fa fa-lock"></i>
 									<!-- ELSEIF topicrow.S_POST_GLOBAL -->
@@ -181,7 +186,7 @@
 							<div class="text-center"><span class="badge">{topicrow.VIEWS}</span></div>
 						</td>
 						<td class="lastpost<!-- IF topicrow.S_POST_GLOBAL --> warning-color<!-- ENDIF --><!-- IF topicrow.S_POST_ANNOUNCE --> info-color<!-- ENDIF --><!-- IF topicrow.S_POST_STICKY --> success-color<!-- ENDIF --><!-- IF topicrow.S_TOPIC_REPORTED --> danger-color<!-- ENDIF -->"><span><dfn>{L_LAST_POST} </dfn>{L_POST_BY_AUTHOR} {topicrow.LAST_POST_AUTHOR_FULL}
-							<!-- IF not S_IS_BOT --><a href="{topicrow.U_LAST_POST}">{LAST_POST_IMG}</a> <!-- ENDIF --><br />{topicrow.LAST_POST_TIME}</span>
+							<!-- IF not S_IS_BOT --><a href="{topicrow.U_LAST_POST}"><i class="fa fa-angle-double-right"></i></a> <!-- ENDIF --><br />{topicrow.LAST_POST_TIME}</span>
 						</td>
 					</tr>
 		<!-- IF topicrow.S_LAST_ROW -->
@@ -252,39 +257,12 @@
 	</div>
 <!-- ENDIF -->
 
-<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
-	<div class="panel panel-info">
-		<div class="panel-heading">
-			<h3 class="panel-title">{L_LOGIN_LOGOUT}</h3>
-		</div>	
-		<div class="panel-body">
-			<form method="post" action="{S_LOGIN_ACTION}" class="form-inline">
-				<div class="row">
-					<div class="col-md-4">
-						<div class="input-group">
-							<input type="text" placeholder="{L_USERNAME}" name="username" id="username" size="10" class="form-control" title="{L_USERNAME}" style="width: 117px;"/>	
-							<input type="password" placeholder="{L_PASSWORD}" name="password" id="password" size="10" class="form-control" title="{L_PASSWORD}" style="width: 117px;"/>
-							<span class="input-group-btn" style="width: 0px;">
-								{S_LOGIN_REDIRECT}
-								<input type="submit" name="login" value="{L_LOGIN}" class="btn btn-primary" />
-							</span>	
-						</div>
-					</div>
-					<div class="col-md-2">
-						<div class="form-group">
-							<a href="{U_REGISTER}" class="btn btn-primary btn-labeled "><span class="btn-label"><i class="glyphicon glyphicon glyphicon-user"></i></span>{L_REGISTER}</a>
-						</div>
-					</div>
-				</div>
-			</form>
-		</div>
-	</div>
-<!-- ENDIF -->
+<!-- INCLUDE loginbox.html -->
 
 <!-- INCLUDE jumpbox.html -->
 
 <!-- IF S_DISPLAY_ONLINE_LIST -->
-	<div class="panel panel-info">
+	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h3 class="panel-title"><!-- IF U_VIEWONLINE --><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a><!-- ELSE -->{L_WHO_IS_ONLINE}<!-- ENDIF --></h3>
 		</div>
@@ -295,7 +273,7 @@
 <!-- ENDIF -->
 
 <!-- IF S_DISPLAY_POST_INFO -->
-	<div class="panel panel-info">
+	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h3 class="panel-title">{L_FORUM_PERMISSIONS}</h3>
 		</div>
@@ -304,5 +282,11 @@
 		</div>
 	</div>
 <!-- ENDIF -->
+
+	</div><!-- END col -->
+	<div class="col-md-3">
+		sidebar
+	</div>
+</div><!-- END row -->
 
 <!-- INCLUDE overall_footer.html -->
