@@ -2,6 +2,8 @@ html { background: transparent }
 
 body {
 	padding-top: 70px;
+	background-color: #141414;
+	color: #EFEFEF;
 }
 
 h2 {
@@ -387,7 +389,7 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 [class*="badger"] {
     position: relative;
     background: #3C3C3C;
-	color: #f0f0f0;
+	color: #EFEFEF;
 }
 
 [class*="badger"]:after {
@@ -960,14 +962,10 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
   right: 0;
 }
 
-.panel-recolor {
-    border-color: #ccc;
-}
-
 .panel-recolor > .panel-heading {
-    color: #888;
-    background-color: #d2d2d2;
-    border-color: #ccc;
+	color: #D4D4D4;
+	background-color: #777;
+	border-color: #808080;
 }
 
 .page-header {
@@ -1055,4 +1053,17 @@ th.topics {
 
 .badge {
 	border-radius: 4px;
+	color: #EFEFEF;
+}
+
+.table {
+	color: #EFEFEF;
+}
+
+table a:not(.btn), .table a:not(.btn) {
+	color: #EFEFEF;
+}
+
+.form-control {
+	background-color: #EFEFEF;
 }

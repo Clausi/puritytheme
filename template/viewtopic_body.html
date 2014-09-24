@@ -128,7 +128,7 @@
 <!-- BEGIN postrow -->
 	<!-- IF postrow.S_FIRST_UNREAD --><a id="unread"></a><!-- ENDIF -->
 	<div id="p{postrow.POST_ID}">
-		<div class="panel <!-- IF postrow.S_UNREAD_POST -->panel-primary<!-- ELSEIF postrow.S_POST_REPORTED -->panel-danger<!-- ELSE -->panel-primary panel-recolor<!-- ENDIF --> bottom5">
+		<div class="panel <!-- IF postrow.S_UNREAD_POST -->panel-primary<!-- ELSEIF postrow.S_POST_REPORTED -->panel-danger<!-- ELSE -->panel-default panel-recolor<!-- ENDIF --> bottom5">
 			<div class="panel-heading">
 				<h3 class="panel-title<!-- IF postrow.S_FIRST_ROW --> first<!-- ENDIF -->"><!-- IF postrow.POST_ICON_IMG --><img src="{T_ICONS_PATH}{postrow.POST_ICON_IMG}" width="{postrow.POST_ICON_IMG_WIDTH}" height="{postrow.POST_ICON_IMG_HEIGHT}" alt="" /> <!-- ENDIF --><a href="#p{postrow.POST_ID}">{postrow.POST_SUBJECT}</a></h3>
 			</div>
