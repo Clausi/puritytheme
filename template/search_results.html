@@ -67,7 +67,7 @@
 					<tr>
 						<td>
 							<div class="pull-left forum-topic-icon">
-								<span><a href="{searchresults.U_VIEW_TOPIC}" class="btn <!-- IF searchresults.S_UNREAD_TOPIC -->btn-info<!-- ELSE -->btn-default<!-- ENDIF --> tooltip-link" title="{searchresults.TOPIC_FOLDER_IMG_ALT}">
+								<span><a href="{searchresults.U_VIEW_TOPIC}" class="btn <!-- IF searchresults.S_UNREAD_TOPIC -->btn-warning<!-- ELSE -->btn-default<!-- ENDIF --> tooltip-link" title="{searchresults.TOPIC_FOLDER_IMG_ALT}">
 									<i class="fa fa-file-text-o"></i>
 								</a></span>
 							</div>
@@ -86,7 +86,7 @@
 										{searchresults.PAGINATION}
 									<!-- ENDIF -->
 									<!-- IF searchresults.S_UNREAD_TOPIC -->
-										<a class="btn btn-xs btn-info" href="{searchresults.U_NEWEST_POST}"><i class="fa fa-angle-right"></i></a>
+										<a class="btn btn-xs btn-warning" href="{searchresults.U_NEWEST_POST}"><i class="fa fa-angle-right"></i></a>
 									<!-- ENDIF -->
 									<!-- IF not S_IS_BOT -->
 										<a class="btn btn-default btn-xs tooltip-link" href="{searchresults.U_LAST_POST}"  title="{L_LAST_POST}"><i class="fa fa-angle-double-right"></i></a>

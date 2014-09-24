@@ -6,6 +6,14 @@ body {
 	color: #EFEFEF;
 }
 
+a {
+	color: #147EC2;
+}
+
+a:hover {
+	color: #147EC2;
+}
+
 h2 {
 	font-size: 30px;
 }
@@ -504,6 +512,18 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 }
 
 /** Primary button **/
+.btn-primary:hover {
+	color: #F0F0F0;
+	background-color: #0E5B8C;
+	border-color: #0E5B8C;
+}
+
+.btn-primary {
+	color: #F0F0F0;
+	border-color: #116BA5;
+	background-color: #116BA5;
+}
+
 .btn-breadcrumb .btn.btn-primary:not(:last-child):after {
   border-left: 10px solid #428bca;
 }
@@ -997,9 +1017,19 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 .navbar-fixed-top .nav {
 	padding: 20px 0;
 }
+
 .navbar-fixed-top .navbar-brand {
 	padding: 0 20px;
 }
+
+.dropdown-menu > li > a:hover {
+	background-color: #0E5B8C;
+}
+
+.dropdown-menu > li > a.btn:hover  {
+	background-color: #900;
+}
+
 @media(min-width:768px) {
 	body {
 		padding-top: 100px;
@@ -1058,6 +1088,7 @@ th.topics {
 .badge {
 	border-radius: 4px;
 	color: #EFEFEF;
+	background-color: #147EC2;
 }
 
 .table {
