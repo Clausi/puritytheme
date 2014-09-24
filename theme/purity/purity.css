@@ -441,6 +441,10 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 /* Breadcrumb
 ------------------------- */
 
+.btn-breadcrumb a {
+	color: #EFEFEF;
+}
+
 .btn-breadcrumb .btn:not(:last-child):after {
   content: " ";
   display: block;
@@ -448,7 +452,7 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
   height: 0;
   border-top: 17px solid transparent;
   border-bottom: 17px solid transparent;
-  border-left: 10px solid white;
+  border-left: 10px solid #F0F0F0;
   position: absolute;
   top: 50%;
   margin-top: -17px;
@@ -462,7 +466,7 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
   height: 0;
   border-top: 17px solid transparent;
   border-bottom: 17px solid transparent;
-  border-left: 10px solid rgb(173, 173, 173);
+  border-left: 10px solid #F0F0F0;
   position: absolute;
   top: 50%;
   margin-top: -17px;
@@ -1066,4 +1070,5 @@ table a:not(.btn), .table a:not(.btn) {
 
 .form-control {
 	background-color: #EFEFEF;
+	color: #000;
 }
