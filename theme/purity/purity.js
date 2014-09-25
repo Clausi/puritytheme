@@ -223,3 +223,4 @@ $(window).scroll(function() {
 		$('#main-nav').removeClass('navbar-shrink');
 	}
 });
+

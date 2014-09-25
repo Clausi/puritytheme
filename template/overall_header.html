@@ -140,6 +140,18 @@
 					<!-- ENDIF -->
 					</ul>
 				</li>
+				
+				<!-- IF S_REGISTERED_USER -->
+					<!-- IF S_NOTIFICATIONS_DISPLAY -->		
+						<li class="dropdown">
+							<button type="button" class="btn <!-- IF NOTIFICATIONS_COUNT > 0 -->btn-warning<!-- ELSE -->btn-default<!-- ENDIF --> btn-labeled navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="btn-label"><i class="fa <!-- IF NOTIFICATIONS_COUNT > 0 -->fa-bell<!-- ELSE -->fa-bell-slash<!-- ENDIF-->"></i></span> <span>{L_NOTIFICATIONS} [</span><strong>{NOTIFICATIONS_COUNT}</strong><span>]</span> <span class="caret"></span></button>
+							<ul class="dropdown-menu" role="menu">
+								<!-- INCLUDE notification_dropdown.html -->
+							</ul>
+						</li>
+					<!-- ENDIF -->
+				<!-- ENDIF -->
+				
 				<li class="dropdown">
 					<button type="button" class="btn btn-primary btn-labeled navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="btn-label"><i class="glyphicon glyphicon-user"></i></span> <!-- IF not S_IS_BOT and S_USER_LOGGED_IN --> {S_USERNAME} <!-- ENDIF --><span class="caret"></span></button>
 					<ul class="dropdown-menu" role="menu">
@@ -176,6 +188,11 @@
 								<li class="divider"></li>
 							<!-- ENDIF -->
 							<li><a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e"><i class="fa fa-wrench"></i> {L_PROFILE}</a></li>
+							<li class="divider"></li>
+							<!-- IF U_RESTORE_PERMISSIONS --><li><a href="{U_RESTORE_PERMISSIONS}">{L_RESTORE_PERMISSIONS}</a></li><!-- ENDIF -->
+							<!-- IF U_ACP --><li><a href="{U_ACP}" title="{L_ACP}"><i class="fa fa-wrench"></i> {L_ACP_SHORT}</a></li><!-- ENDIF -->
+							<!-- IF U_MCP --><li><a href="{U_MCP}" title="{L_MCP}"><i class="fa fa-wrench"></i> {L_MCP_SHORT}</a></li><!-- ENDIF -->
+							<li class="divider"></li>
 							<li><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" class="btn btn-danger"><i class="fa fa-sign-out"></i> {L_LOGIN_LOGOUT}</a></li>
 						<!-- ENDIF -->
 					</ul>

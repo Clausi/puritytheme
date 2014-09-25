@@ -1,29 +1,28 @@
 <!-- IF not .notifications -->
-<li>
-	<span class="nolink"><i class="fa fa-bell-slash fa-fw"></i> {L_NO_NOTIFICATIONS}</span>
-</li>
+	<li>
+		<i class="fa fa-bell-slash fa-fw"></i> {L_NO_NOTIFICATIONS}
+	</li>
 <!-- ENDIF -->
+<li>
 <!-- BEGIN notifications -->
-<div class="alert<!-- IF notifications.UNREAD --> alert-info alert-dismissible<!-- ELSE --> alert-done<!-- ENDIF -->" role="alert">
-  <!-- IF notifications.UNREAD --><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">{L_MARK_READ}</span></button><!-- ENDIF -->
-  <!-- IF notifications.URL -->
-		<a class="alert-link" href="<!-- IF notifications.UNREAD -->{notifications.U_MARK_READ}" data-real-url="{notifications.URL}<!-- ELSE -->{notifications.URL}<!-- ENDIF -->">
+	<!-- IF notifications.URL -->
+		<a href="<!-- IF notifications.UNREAD -->{notifications.U_MARK_READ}" data-real-url="{notifications.URL}<!-- ELSE -->{notifications.URL}<!-- ENDIF -->">
 	<!-- ENDIF -->
-	<ul class="media-list">
-		<li class="media">
-			<span class="pull-left"><!-- IF notifications.AVATAR -->{notifications.AVATAR}<!-- ELSE --><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="" /><!-- ENDIF --></span>
-			<div class="media-body">
-				<h6 class="media-heading">{notifications.FORMATTED_TITLE}</h6>
-				<!-- IF notifications.REFERENCE --><p>{notifications.REFERENCE}</p><!-- ENDIF -->
-				<!-- IF notifications.FORUM --><p>{notifications.FORUM}</p><!-- ENDIF -->
-				<!-- IF notifications.REASON --><p>{notifications.REASON}</p><!-- ENDIF -->
-				<small>{notifications.TIME}</small>
-			</div>
-		</li>
-	</ul>
+	<p>
+		{notifications.FORMATTED_TITLE}
+		<!-- IF notifications.REFERENCE -->{notifications.REFERENCE}<!-- ENDIF -->
+		<!-- IF notifications.FORUM -->{notifications.FORUM}<!-- ENDIF -->
+		<!-- IF notifications.REASON -->{notifications.REASON}<!-- ENDIF -->
+		{notifications.TIME}
+		<a href="{notifications.U_MARK_READ}" data-ajax="notification.mark_read" title="{L_MARK_READ}">{L_MARK_READ}</a>
+	</p>
 	<!-- IF notifications.URL --></a><!-- ENDIF -->
-</div>
 <!-- END notifications -->
+</li>
+<li class="divider"></li>
+<li>
+	<a href="{U_VIEW_ALL_NOTIFICATIONS}"><span>{L_SEE_ALL} {L_NOTIFICATIONS}</span></a>
+</li>
 <li class="divider"></li>
 <li>
 	<a href="{U_NOTIFICATION_SETTINGS}"><i class="fa fa-pencil fa-fw"></i> {L_SETTINGS}</a>
