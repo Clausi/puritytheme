@@ -201,8 +201,10 @@ $(document).ready(function(){
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('#back-to-top').fadeIn();
+			$('#main-nav').addClass('navbar-shrink');
         } else {
             $('#back-to-top').fadeOut();
+			$('#main-nav').removeClass('navbar-shrink');
         }
     });
     // scroll body to 0px on click
@@ -215,12 +217,3 @@ $(document).ready(function(){
     });
     $('#back-to-top').tooltip('show');
 });
-
-$(window).scroll(function() {
-	if ($(document).scrollTop() > 100) {
-		$('#main-nav').addClass('navbar-shrink');
-	} else {
-		$('#main-nav').removeClass('navbar-shrink');
-	}
-});
-
