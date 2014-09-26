@@ -776,6 +776,14 @@ table a:not(.btn), .table a:not(.btn) {
 	color: #000;
 }
 
-#notification_list {
-	min-width: 300px;
+.navbar-top-links .dropdown-alerts {
+    width: 310px;
+    min-width: 0px;
 }
+
+#notification_list img {
+	width: auto;
+	height: 30px;
+	float: left !important;
+}
+

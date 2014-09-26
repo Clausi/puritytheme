@@ -9,15 +9,20 @@
 	<!-- IF notifications.URL -->
 		<a class="<!-- IF notifications.UNREAD -->bg-warning<!-- ENDIF -->" href="<!-- IF notifications.UNREAD -->{notifications.U_MARK_READ}" data-real-url="{notifications.URL}<!-- ELSE -->{notifications.URL}<!-- ENDIF -->">
 	<!-- ENDIF -->
-	{notifications.FORMATTED_TITLE}
-	<!-- IF notifications.REFERENCE -->{notifications.REFERENCE}<!-- ENDIF -->
-	<!-- IF notifications.FORUM -->{notifications.FORUM}<!-- ENDIF -->
-	<!-- IF notifications.REASON -->{notifications.REASON}<!-- ENDIF -->
-	{notifications.TIME}
+	<ul class="media-list">
+	  <li class="media">
+		<!-- IF notifications.AVATAR -->{notifications.AVATAR}<!-- ELSE --><img class="img-rounded pull-left" src="{T_THEME_PATH}/images/no_avatar.gif" alt="" /><!-- ENDIF -->
+		<div class="media-body">
+		  <i class="fa fa-comment fa-fw"></i> {notifications.FORMATTED_TITLE}
+			<!-- IF notifications.REFERENCE -->{notifications.REFERENCE}<!-- ENDIF -->
+			<!-- IF notifications.FORUM -->{notifications.FORUM}<!-- ENDIF -->
+			<!-- IF notifications.REASON -->{notifications.REASON}<!-- ENDIF -->
+			{notifications.TIME}
+		</div>
+	  </li>
+	</ul>
+
 	<!-- IF notifications.URL --></a><!-- ENDIF -->
-	<!-- IF notifications.UNREAD -->
-		<a href="{notifications.U_MARK_READ}" class="mark_read" data-ajax="notification.mark_read" title="{L_MARK_READ}"><span class="glyphicon glyphicon-remove"></span></a>
-	<!-- ENDIF -->
 </li>
 <!-- END notifications -->
 

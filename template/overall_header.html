@@ -145,7 +145,7 @@
 					<!-- IF S_NOTIFICATIONS_DISPLAY -->		
 						<li class="dropdown">
 							<button id="notification_list_button" type="button" class="btn <!-- IF NOTIFICATIONS_COUNT > 0 -->btn-warning<!-- ELSE -->btn-default<!-- ENDIF --> btn-labeled navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="btn-label"><i class="fa <!-- IF NOTIFICATIONS_COUNT > 0 -->fa-bell<!-- ELSE -->fa-bell-slash<!-- ENDIF-->"></i></span> <span>{L_NOTIFICATIONS} [</span><strong>{NOTIFICATIONS_COUNT}</strong><span>]</span> <span class="caret"></span></button>
-							<ul class="dropdown-menu" id="notification_list" role="menu">
+							<ul class="dropdown-menu dropdown-alerts" id="notification_list" role="menu">
 								<!-- INCLUDE notification_dropdown.html -->
 							</ul>
 						</li>
