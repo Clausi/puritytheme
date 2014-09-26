@@ -99,9 +99,8 @@ phpbb.addAjaxCallback('mark_topics_read', function(res, updateTopicLinks) {
 
 // This callback will mark all notifications read
 phpbb.addAjaxCallback('notification.mark_all_read', function(res) {
-	console.log('success');
 	if (typeof res.success !== 'undefined') {
-		phpbb.markNotifications($('#notification_list li.bg2'), 0);
+		phpbb.markNotifications($('#notification_list'), 0);
 		phpbb.closeDarkenWrapper(3000);
 	}
 });
@@ -110,7 +109,7 @@ phpbb.addAjaxCallback('notification.mark_all_read', function(res) {
 phpbb.addAjaxCallback('notification.mark_read', function(res) {
 	if (typeof res.success !== 'undefined') {
 		var unreadCount = Number($('#notification_list_button strong').html()) - 1;
-		phpbb.markNotifications($(this).parent('li.bg2'), unreadCount);
+		phpbb.markNotifications($(this).parent('li'), unreadCount);
 	}
 });
 
@@ -122,7 +121,7 @@ phpbb.addAjaxCallback('notification.mark_read', function(res) {
  */
 phpbb.markNotifications = function($popup, unreadCount) {
 	// Remove the unread status.
-	$popup.removeClass('bg2');
+	$popup.find('a.bg-warning').removeClass('bg-warning');
 	$popup.find('a.mark_read').remove();
 
 	// Update the notification link to the real URL.
@@ -136,12 +135,16 @@ phpbb.markNotifications = function($popup, unreadCount) {
 	// Remove the Mark all read link if there are no unread notifications.
 	if (!unreadCount) {
 		$('#mark_all_notifications').remove();
+		$('#notification_list_button').removeClass('btn-warning');
+		$('#notification_list_button').addClass('btn-default');
 	}
 
 	// Update page title
 	$('title').text(
 		(unreadCount ? '(' + unreadCount + ')' : '') + $('title').text().replace(/(\(([0-9])\))/, '')
 	);
+	
+	$('#confirm_modal').modal('hide')
 };
 
 // This callback finds the post from the delete link, and removes it.

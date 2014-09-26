@@ -303,22 +303,6 @@ ul.topiclist li.row dt a.subforum.unread {
 	background-image: url("./images/subforum_unread.gif");
 }
 
-li.row {
-	border-top-color:  #FFFFFF;
-	border-bottom-color: #00608F;
-}
-
-li.row strong {
-	color: #000000;
-}
-
-li.row:hover {
-	background-color: #F6F4D0;
-}
-
-li.row:hover dd {
-	border-left-color: #CCCCCC;
-}
 
 .rtl li.row:hover dd {
 	border-right-color: #CCCCCC;

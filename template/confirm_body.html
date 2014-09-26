@@ -1,14 +1,31 @@
 <!-- IF S_AJAX_REQUEST -->
-	<form action="{S_CONFIRM_ACTION}" method="post">
-		<h3>{MESSAGE_TITLE}</h3>
-		<p>{MESSAGE_TEXT}</p>
-
-		<fieldset class="submit-buttons">
-			<input type="button" name="confirm" value="{L_YES}" class="button2" />&nbsp;
-			<input type="button" name="cancel" value="{L_NO}" class="button2" />
-		</fieldset>
-	</form>
-
+	
+	<div class="modal fade" id="confirm_modal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">{CLOSE_WINDOW}</span></button>
+					<h4 class="modal-title">{MESSAGE_TITLE}</h4>
+				</div>
+				<div class="modal-body">
+					<p>{MESSAGE_TEXT}</p>
+				</div>
+				<div class="modal-footer">
+					<form action="{S_CONFIRM_ACTION}" method="post">
+						<input type="button" class="btn btn-success" name="confirm" value="{L_YES}" />
+						<button type="button" class="btn btn-default" data-dismiss="modal">{L_NO}</button>
+					</form>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			$('#confirm_modal').modal()
+		});
+	</script>
+	
 <!-- ELSE -->
 
 <!-- INCLUDE overall_header.html -->

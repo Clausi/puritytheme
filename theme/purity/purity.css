@@ -63,9 +63,6 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
   width: 14px !important;
 }
 
-.navbar-fix {
-	z-index: 10000;
-}
 
 #cp-main {
   min-height: 300px;
@@ -737,6 +734,11 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 		max-height: 50px;
 		width: auto;
 	}
+	
+	.navbar-nav button {
+		width: 100%;
+		text-align: left;
+	}
 }
 
 .panel-heading {
@@ -772,4 +774,8 @@ table a:not(.btn), .table a:not(.btn) {
 .form-control {
 	background-color: #EFEFEF;
 	color: #000;
+}
+
+#notification_list {
+	min-width: 300px;
 }

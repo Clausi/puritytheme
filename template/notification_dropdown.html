@@ -3,22 +3,24 @@
 		<a href="#"><i class="fa fa-bell-slash fa-fw"></i> {L_NO_NOTIFICATIONS}</a>
 	</li>
 <!-- ENDIF -->
-<li>
+
 <!-- BEGIN notifications -->
+<li>
 	<!-- IF notifications.URL -->
-		<a href="<!-- IF notifications.UNREAD -->{notifications.U_MARK_READ}" data-real-url="{notifications.URL}<!-- ELSE -->{notifications.URL}<!-- ENDIF -->">
+		<a class="<!-- IF notifications.UNREAD -->bg-warning<!-- ENDIF -->" href="<!-- IF notifications.UNREAD -->{notifications.U_MARK_READ}" data-real-url="{notifications.URL}<!-- ELSE -->{notifications.URL}<!-- ENDIF -->">
 	<!-- ENDIF -->
-	<p>
-		{notifications.FORMATTED_TITLE}
-		<!-- IF notifications.REFERENCE -->{notifications.REFERENCE}<!-- ENDIF -->
-		<!-- IF notifications.FORUM -->{notifications.FORUM}<!-- ENDIF -->
-		<!-- IF notifications.REASON -->{notifications.REASON}<!-- ENDIF -->
-		{notifications.TIME}
-		<a href="{notifications.U_MARK_READ}" data-ajax="notification.mark_read" title="{L_MARK_READ}">{L_MARK_READ}</a>
-	</p>
+	{notifications.FORMATTED_TITLE}
+	<!-- IF notifications.REFERENCE -->{notifications.REFERENCE}<!-- ENDIF -->
+	<!-- IF notifications.FORUM -->{notifications.FORUM}<!-- ENDIF -->
+	<!-- IF notifications.REASON -->{notifications.REASON}<!-- ENDIF -->
+	{notifications.TIME}
 	<!-- IF notifications.URL --></a><!-- ENDIF -->
-<!-- END notifications -->
+	<!-- IF notifications.UNREAD -->
+		<a href="{notifications.U_MARK_READ}" class="mark_read" data-ajax="notification.mark_read" title="{L_MARK_READ}"><span class="glyphicon glyphicon-remove"></span></a>
+	<!-- ENDIF -->
 </li>
+<!-- END notifications -->
+
 <li class="divider"></li>
 <li>
 	<a href="{U_VIEW_ALL_NOTIFICATIONS}"><i class="fa fa-list fa-fw"></i> {L_SEE_ALL} {L_NOTIFICATIONS}</a>
@@ -28,7 +30,7 @@
 	<a href="{U_NOTIFICATION_SETTINGS}"><i class="fa fa-pencil fa-fw"></i> {L_SETTINGS}</a>
 </li>
 <!-- IF NOTIFICATIONS_COUNT -->
-<li>
+<li id="mark_all_notifications">
 	<a href="{U_MARK_ALL_NOTIFICATIONS}" data-ajax="notification.mark_all_read"><i class="fa fa-check-square-o fa-fw"></i> {L_MARK_ALL_READ}</a>
 </li>
 <!-- ENDIF -->
