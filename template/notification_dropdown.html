@@ -13,11 +13,14 @@
 	  <li class="media">
 		<!-- IF notifications.AVATAR -->{notifications.AVATAR}<!-- ELSE --><img class="img-rounded pull-left" src="{T_THEME_PATH}/images/no_avatar.gif" alt="" /><!-- ENDIF -->
 		<div class="media-body">
-		  <i class="fa fa-comment fa-fw"></i> {notifications.FORMATTED_TITLE}
-			<!-- IF notifications.REFERENCE -->{notifications.REFERENCE}<!-- ENDIF -->
-			<!-- IF notifications.FORUM -->{notifications.FORUM}<!-- ENDIF -->
-			<!-- IF notifications.REASON -->{notifications.REASON}<!-- ENDIF -->
-			{notifications.TIME}
+		  <p>
+		 	 <i class="fa fa-comment fa-fw"></i> {notifications.FORMATTED_TITLE}
+				<!-- IF notifications.REFERENCE -->{notifications.REFERENCE}<!-- ENDIF -->
+				<!-- IF notifications.FORUM -->{notifications.FORUM}<!-- ENDIF -->
+				<!-- IF notifications.REASON -->{notifications.REASON}<!-- ENDIF -->
+				<br />
+				<small>{notifications.TIME}</small>
+			</p>
 		</div>
 	  </li>
 	</ul>

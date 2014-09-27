@@ -776,9 +776,12 @@ table a:not(.btn), .table a:not(.btn) {
 	color: #000;
 }
 
-.navbar-top-links .dropdown-alerts {
-    width: 310px;
-    min-width: 0px;
+.dropdown-menu {
+	min-width: 220px;
+}
+
+.dropdown-alerts {
+    min-width: 400px;
 }
 
 #notification_list img {
