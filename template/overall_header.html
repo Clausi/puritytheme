@@ -85,7 +85,6 @@
 <link href="{T_THEME_PATH}/purity/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 <link href="{T_THEME_PATH}/purity/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="{T_THEME_PATH}/purity/bootstrap/css/bootstrap-select.css" rel="stylesheet"/>
-<!-- <link href="{T_THEME_PATH}/purity/bootstrap/css/bootstrap-colorpicker.min.css" rel="stylesheet"/> -->
 <link href="{T_THEME_PATH}/purity/purity.css" rel="stylesheet" />
 
 <!-- IF S_CONTENT_DIRECTION eq 'rtl' -->
@@ -132,6 +131,7 @@
 						<li>
 							<form class="form-inline" role="form" method="get" id="search" action="{U_SEARCH}">
 								<div class="form-group">
+									<label class="sr-only" for="search_keywords">{LA_SEARCH_FORUM}</label>
 									<input class="form-control" style="width: 170px; margin-bottom: 0px;" maxlength="128" type="text" name="keywords" id="search_keywords" placeholder="{LA_SEARCH_FORUM}" />
 									{S_SEARCH_LOCAL_HIDDEN_FIELDS}
 								</div>
@@ -164,7 +164,7 @@
 									<!-- IF S_DISPLAY_FULL_LOGIN -->
 										<div class="checkbox">
 											<!-- IF S_AUTOLOGIN_ENABLED --><label for="autologin"><input type="checkbox" name="autologin" id="autologin" tabindex="4" /> {L_LOG_ME_IN}</label><!-- ENDIF -->
-											<br><label for="viewonline"><input type="checkbox" name="viewonline" id="viewonline" tabindex="5" /> {L_HIDE_ME}</label>
+											<br /><label for="viewonline"><input type="checkbox" name="viewonline" id="viewonline" tabindex="5" /> {L_HIDE_ME}</label>
 										</div>
 									<!-- ENDIF -->
 									{S_LOGIN_REDIRECT}
