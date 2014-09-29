@@ -696,6 +696,13 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	background-color: #900;
 }
 
+.navbar-fixed-top, .navbar-fixed-bottom {
+ position: fixed;
+ right: 0;
+ left: 0;
+ z-index: 10000;
+ }
+
 @media(min-width:768px) {
 	body {
 		padding-top: 100px;
@@ -705,6 +712,7 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	
 	#main-nav-container {
 		position: fixed;
+		z-index: 9998;
 	}
 
 	#main-nav-bg {
@@ -715,14 +723,13 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 		-webkit-filter: blur(2px);
 		filter: url('images/blur.svg#blur');
 		
-		z-index: 99;
+		z-index: 9999;
 		
 		position: fixed;
 		top: 0px;
 		right: 0px;
 		bottom: 0px;
 		left: 0px;
-		z-index: 99;
 		width: 100%;
 		height: 91px;
 		
@@ -735,7 +742,7 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	}
 
 	#main-nav {
-		z-index: 100;
+		z-index: 10000;
 		background-color: transparent;
 	}
 
