@@ -97,110 +97,113 @@
 
 <body id="phpbb" class="section-{SCRIPT_NAME} {S_CONTENT_DIRECTION}">
 	<a id="top" accesskey="t"></a>
-	<nav class="navbar navbar-default navbar-fixed-top navbar-fix" role="navigation" id="main-nav">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="{U_INDEX}" title="{SITENAME}"><img src="{T_THEME_PATH}/purity/images/purity_logo.png" alt="{SITENAME}" /></a>
-		</div>
-		<div class="collapse navbar-collapse" id="main-menu">
-			<ul class="nav navbar-nav" id="homepage-menu">
-				<li><a href="#" title="News"><i class="fa fa-star fa-fw"></i> News</a></li>
-				<li><a href="#" title="Gilde"><i class="fa fa-beer fa-fw"></i> Gilde</a></li>
-				<li><a href="index.php" title="{L_INDEX}"><i class="fa fa-comment fa-fw"></i> Forum</a></li>
-				<li><a href="#" title="Raidplaner"><i class="fa fa-calendar fa-fw"></i> Raidplaner</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<button type="button" class="btn btn-default btn-labeled navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="btn-label"><i class="fa fa-search"></i></span> <span class="visible-xs-inline">{L_SEARCH}</span> <span class="caret"></span></button>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="{U_SEARCH_UNANSWERED}"><i class="fa fa-square-o fa-fw"></i> {L_SEARCH_UNANSWERED}</a></li>
-						<!-- IF S_LOAD_UNREADS -->
-							<li><a href="{U_SEARCH_UNREAD}"><i class="fa fa-eye fa-fw"></i> {L_SEARCH_UNREAD}</a></li>
-						<!-- ENDIF -->
-						<!-- IF S_USER_LOGGED_IN -->
-							<li><a href="{U_SEARCH_NEW}"><i class="fa fa-plus fa-fw"></i> {L_SEARCH_NEW}</a></li>
-						<!-- ENDIF -->
-						<li><a href="{U_SEARCH_ACTIVE_TOPICS}"><i class="fa fa-fire fa-fw"></i> {L_SEARCH_ACTIVE_TOPICS}</a></li>
-						<!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
-						<li class="divider"></li>
-						<li>
-							<form class="form-inline" role="form" method="get" id="search" action="{U_SEARCH}">
-								<div class="form-group">
-									<label class="sr-only" for="search_keywords">{LA_SEARCH_FORUM}</label>
-									<input class="form-control" style="width: 170px; margin-bottom: 0px;" maxlength="128" type="text" name="keywords" id="search_keywords" placeholder="{LA_SEARCH_FORUM}" />
-									{S_SEARCH_LOCAL_HIDDEN_FIELDS}
-								</div>
-								<button type="submit" class="btn btn-default" style="width: 40px; margin: 0px;"><i class="fa fa-search"></i></button>
-							</form>
-						</li>
-					<!-- ENDIF -->
-					</ul>
-				</li>
-				
-				<!-- IF S_REGISTERED_USER -->
-					<!-- IF S_NOTIFICATIONS_DISPLAY -->		
-						<li class="dropdown">
-							<button id="notification_list_button" type="button" class="btn <!-- IF NOTIFICATIONS_COUNT > 0 -->btn-warning<!-- ELSE -->btn-default<!-- ENDIF --> btn-labeled navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="btn-label"><i class="fa <!-- IF NOTIFICATIONS_COUNT > 0 -->fa-bell<!-- ELSE -->fa-bell-slash<!-- ENDIF-->"></i></span> <span>{L_NOTIFICATIONS} [</span><strong>{NOTIFICATIONS_COUNT}</strong><span>]</span> <span class="caret"></span></button>
-							<ul class="dropdown-menu dropdown-alerts" id="notification_list" role="menu">
-								<!-- INCLUDE notification_dropdown.html -->
-							</ul>
-						</li>
-					<!-- ENDIF -->
-				<!-- ENDIF -->
-				
-				<li class="dropdown">
-					<button type="button" class="btn btn-primary btn-labeled navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="btn-label"><i class="glyphicon glyphicon-user"></i></span> <!-- IF not S_IS_BOT and S_USER_LOGGED_IN --> {S_USERNAME} <!-- ENDIF --><span class="caret"></span></button>
-					<ul class="dropdown-menu" role="menu">
-						<!-- IF not S_USER_LOGGED_IN -->							
+	<div id="main-nav-container">
+		<div id="main-nav-bg"></div>
+		<nav class="navbar navbar-default navbar-fixed-top navbar-fix" role="navigation" id="main-nav">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="{U_INDEX}" title="{SITENAME}"><img src="{T_THEME_PATH}/purity/images/purity_logo.png" alt="{SITENAME}" /></a>
+			</div>
+			<div class="collapse navbar-collapse" id="main-menu">
+				<ul class="nav navbar-nav" id="homepage-menu">
+					<li><a href="#" title="News"><i class="fa fa-star fa-fw"></i> News</a></li>
+					<li><a href="#" title="Gilde"><i class="fa fa-beer fa-fw"></i> Gilde</a></li>
+					<li><a href="index.php" title="{L_INDEX}"><i class="fa fa-comment fa-fw"></i> Forum</a></li>
+					<li><a href="#" title="Raidplaner"><i class="fa fa-calendar fa-fw"></i> Raidplaner</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<button type="button" class="btn btn-default btn-labeled navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="btn-label"><i class="fa fa-search"></i></span> <span class="visible-xs-inline">{L_SEARCH}</span> <span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="{U_SEARCH_UNANSWERED}"><i class="fa fa-square-o fa-fw"></i> {L_SEARCH_UNANSWERED}</a></li>
+							<!-- IF S_LOAD_UNREADS -->
+								<li><a href="{U_SEARCH_UNREAD}"><i class="fa fa-eye fa-fw"></i> {L_SEARCH_UNREAD}</a></li>
+							<!-- ENDIF -->
+							<!-- IF S_USER_LOGGED_IN -->
+								<li><a href="{U_SEARCH_NEW}"><i class="fa fa-plus fa-fw"></i> {L_SEARCH_NEW}</a></li>
+							<!-- ENDIF -->
+							<li><a href="{U_SEARCH_ACTIVE_TOPICS}"><i class="fa fa-fire fa-fw"></i> {L_SEARCH_ACTIVE_TOPICS}</a></li>
+							<!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
+							<li class="divider"></li>
 							<li>
-								<form action="{S_LOGIN_ACTION}" method="post" id="navloginform" name="loginform">
-									<input type="text" placeholder="{L_USERNAME}" name="username" id="username" size="10" class="form-control" title="{L_USERNAME}"/>	
-									<input type="password" placeholder="{L_PASSWORD}" name="password" id="password" size="10" class="form-control" title="{L_PASSWORD}"/>
-									<!-- IF S_DISPLAY_FULL_LOGIN -->
-										<div class="checkbox">
-											<!-- IF S_AUTOLOGIN_ENABLED --><label for="autologin"><input type="checkbox" name="autologin" id="autologin" tabindex="4" /> {L_LOG_ME_IN}</label><!-- ENDIF -->
-											<br /><label for="viewonline"><input type="checkbox" name="viewonline" id="viewonline" tabindex="5" /> {L_HIDE_ME}</label>
-										</div>
-									<!-- ENDIF -->
-									{S_LOGIN_REDIRECT}
-									<input type="submit" name="login" value="{L_LOGIN}" class="btn btn-primary" />
+								<form class="form-inline" role="form" method="get" id="search" action="{U_SEARCH}">
+									<div class="form-group">
+										<label class="sr-only" for="search_keywords">{LA_SEARCH_FORUM}</label>
+										<input class="form-control" style="width: 170px; margin-bottom: 0px;" maxlength="128" type="text" name="keywords" id="search_keywords" placeholder="{LA_SEARCH_FORUM}" />
+										{S_SEARCH_LOCAL_HIDDEN_FIELDS}
+									</div>
+									<button type="submit" class="btn btn-default" style="width: 40px; margin: 0px;"><i class="fa fa-search"></i></button>
 								</form>
 							</li>
-							<!-- IF S_REGISTER_ENABLED -->
-								<li class="divider"></li>
-								<li><a href="{U_REGISTER}" class="btn btn-primaryreg-button"><i class="glyphicon glyphicon-user"></i> {L_REGISTER}</a></li>
-							<!-- ENDIF -->
 						<!-- ENDIF -->
-						<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
-							<!-- IF S_DISPLAY_PM -->
+						</ul>
+					</li>
+					
+					<!-- IF S_REGISTERED_USER -->
+						<!-- IF S_NOTIFICATIONS_DISPLAY -->		
+							<li class="dropdown">
+								<button id="notification_list_button" type="button" class="btn <!-- IF NOTIFICATIONS_COUNT > 0 -->btn-warning<!-- ELSE -->btn-default<!-- ENDIF --> btn-labeled navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="btn-label"><i class="fa <!-- IF NOTIFICATIONS_COUNT > 0 -->fa-bell<!-- ELSE -->fa-bell-slash<!-- ENDIF-->"></i></span> <span>{L_NOTIFICATIONS} [</span><strong>{NOTIFICATIONS_COUNT}</strong><span>]</span> <span class="caret"></span></button>
+								<ul class="dropdown-menu dropdown-alerts" id="notification_list" role="menu">
+									<!-- INCLUDE notification_dropdown.html -->
+								</ul>
+							</li>
+						<!-- ENDIF -->
+					<!-- ENDIF -->
+					
+					<li class="dropdown">
+						<button type="button" class="btn btn-primary btn-labeled navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="btn-label"><i class="glyphicon glyphicon-user"></i></span> <!-- IF not S_IS_BOT and S_USER_LOGGED_IN --> {S_USERNAME} <!-- ENDIF --><span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu">
+							<!-- IF not S_USER_LOGGED_IN -->							
 								<li>
-									<a href="{U_PRIVATEMSGS}">
-										<i class="fa fa-envelope"></i> <span>{L_PRIVATE_MESSAGES} [</span><strong>{PRIVATE_MESSAGE_COUNT}</strong><span>]</span>
-									</a>
+									<form action="{S_LOGIN_ACTION}" method="post" id="navloginform" name="loginform">
+										<input type="text" placeholder="{L_USERNAME}" name="username" id="username" size="10" class="form-control" title="{L_USERNAME}"/>	
+										<input type="password" placeholder="{L_PASSWORD}" name="password" id="password" size="10" class="form-control" title="{L_PASSWORD}"/>
+										<!-- IF S_DISPLAY_FULL_LOGIN -->
+											<div class="checkbox">
+												<!-- IF S_AUTOLOGIN_ENABLED --><label for="autologin"><input type="checkbox" name="autologin" id="autologin" tabindex="4" /> {L_LOG_ME_IN}</label><!-- ENDIF -->
+												<br /><label for="viewonline"><input type="checkbox" name="viewonline" id="viewonline" tabindex="5" /> {L_HIDE_ME}</label>
+											</div>
+										<!-- ENDIF -->
+										{S_LOGIN_REDIRECT}
+										<input type="submit" name="login" value="{L_LOGIN}" class="btn btn-primary" />
+									</form>
 								</li>
+								<!-- IF S_REGISTER_ENABLED -->
+									<li class="divider"></li>
+									<li><a href="{U_REGISTER}" class="btn btn-primaryreg-button"><i class="glyphicon glyphicon-user"></i> {L_REGISTER}</a></li>
+								<!-- ENDIF -->
 							<!-- ENDIF -->
-							<!-- IF S_DISPLAY_SEARCH -->
-								<li><a href="{U_SEARCH_SELF}"><i class="fa fa-file"></i> {L_SEARCH_SELF}</a></li>
+							<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
+								<!-- IF S_DISPLAY_PM -->
+									<li>
+										<a href="{U_PRIVATEMSGS}">
+											<i class="fa fa-envelope"></i> <span>{L_PRIVATE_MESSAGES} [</span><strong>{PRIVATE_MESSAGE_COUNT}</strong><span>]</span>
+										</a>
+									</li>
+								<!-- ENDIF -->
+								<!-- IF S_DISPLAY_SEARCH -->
+									<li><a href="{U_SEARCH_SELF}"><i class="fa fa-file"></i> {L_SEARCH_SELF}</a></li>
+									<li class="divider"></li>
+								<!-- ENDIF -->
+								<li><a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e"><i class="fa fa-wrench"></i> {L_PROFILE}</a></li>
 								<li class="divider"></li>
+								<!-- IF U_RESTORE_PERMISSIONS --><li><a href="{U_RESTORE_PERMISSIONS}">{L_RESTORE_PERMISSIONS}</a></li><!-- ENDIF -->
+								<!-- IF U_ACP --><li><a href="{U_ACP}" title="{L_ACP}"><i class="fa fa-wrench"></i> {L_ACP_SHORT}</a></li><!-- ENDIF -->
+								<!-- IF U_MCP --><li><a href="{U_MCP}" title="{L_MCP}"><i class="fa fa-wrench"></i> {L_MCP_SHORT}</a></li><!-- ENDIF -->
+								<li class="divider"></li>
+								<li><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" class="btn btn-danger"><i class="fa fa-sign-out"></i> {L_LOGIN_LOGOUT}</a></li>
 							<!-- ENDIF -->
-							<li><a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e"><i class="fa fa-wrench"></i> {L_PROFILE}</a></li>
-							<li class="divider"></li>
-							<!-- IF U_RESTORE_PERMISSIONS --><li><a href="{U_RESTORE_PERMISSIONS}">{L_RESTORE_PERMISSIONS}</a></li><!-- ENDIF -->
-							<!-- IF U_ACP --><li><a href="{U_ACP}" title="{L_ACP}"><i class="fa fa-wrench"></i> {L_ACP_SHORT}</a></li><!-- ENDIF -->
-							<!-- IF U_MCP --><li><a href="{U_MCP}" title="{L_MCP}"><i class="fa fa-wrench"></i> {L_MCP_SHORT}</a></li><!-- ENDIF -->
-							<li class="divider"></li>
-							<li><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" class="btn btn-danger"><i class="fa fa-sign-out"></i> {L_LOGIN_LOGOUT}</a></li>
-						<!-- ENDIF -->
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</nav>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
 	<!-- IF S_STARTPAGE -->
 	<div class="jumbotron">
 		<div class="container text-center">

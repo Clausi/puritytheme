@@ -2,8 +2,45 @@ html { background: transparent }
 
 body {
 	padding-top: 70px;
-	background-color: #141414;
+	background: #141414 url('images/silvanas_bg.jpg') no-repeat center top;
+	background-size: 1280px auto;
 	color: #EFEFEF;
+}
+
+#main-nav-container {
+	position: fixed;
+}
+
+#main-nav-bg {
+	background: rgb(10,10,10); /* for IE */
+	background: rgba(10,10,10,0.75);
+	
+	filter: blur(10px); /* Doesn't work anywhere yet */
+	-webkit-filter: blur(2px);
+	filter: url('images/blur.svg#blur');
+	
+	z-index: 99;
+	
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	z-index: 99;
+	width: 100%;
+	height: 91px;
+	
+	transition: all 300ms ease;
+}
+
+.main-nav-bg-shrink {
+	height: 52px !important;
+	transition: all 300ms ease;
+}
+
+#main-nav {
+	z-index: 100;
+	background-color: transparent;
 }
 
 a {
