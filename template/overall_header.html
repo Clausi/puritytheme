@@ -75,9 +75,6 @@
 <script type="text/javascript" src="{T_SUPER_TEMPLATE_PATH}/styleswitcher.js"></script>
 <script type="text/javascript" src="{T_SUPER_TEMPLATE_PATH}/forum_fn.js"></script>
 
-<link href="{T_THEME_PATH}/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
-<link href="{T_STYLESHEET_LINK}" rel="stylesheet" type="text/css" media="screen, projection" />
-
 <link href="{T_THEME_PATH}/normal.css" rel="stylesheet" type="text/css" title="A" />
 <link href="{T_THEME_PATH}/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
 <link href="{T_THEME_PATH}/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
@@ -85,7 +82,9 @@
 <link href="{T_THEME_PATH}/purity/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 <link href="{T_THEME_PATH}/purity/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="{T_THEME_PATH}/purity/bootstrap/css/bootstrap-select.css" rel="stylesheet"/>
-<link href="{T_THEME_PATH}/purity/purity.css" rel="stylesheet" />
+
+<link href="{T_STYLESHEET_LINK}" rel="stylesheet" type="text/css" media="screen, projection" />
+<link href="{T_THEME_PATH}/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
 
 <!-- IF S_CONTENT_DIRECTION eq 'rtl' -->
 	<link href="{T_THEME_PATH}/bidi.css" rel="stylesheet" type="text/css" media="screen, projection" />
@@ -110,7 +109,7 @@
 		</div>
 		<div class="collapse navbar-collapse" id="main-menu">
 			<ul class="nav navbar-nav" id="homepage-menu">
-				<li><a href="#" title="News"><i class="fa fa-star fa-fw"></i> News</a></li>
+				<li><a href="start.php" title="News"><i class="fa fa-star fa-fw"></i> News</a></li>
 				<li><a href="#" title="Gilde"><i class="fa fa-beer fa-fw"></i> Gilde</a></li>
 				<li><a href="index.php" title="{L_INDEX}"><i class="fa fa-comment fa-fw"></i> Forum</a></li>
 				<li><a href="#" title="Raidplaner"><i class="fa fa-calendar fa-fw"></i> Raidplaner</a></li>
@@ -202,26 +201,19 @@
 			</ul>
 		</div>
 	</nav>
-
-	<!-- IF S_STARTPAGE -->
-	<div class="jumbotron">
-		<div class="container text-center">
-			<div id="site-logo"><a href="{U_INDEX}" title="{L_INDEX}">{SITE_LOGO_IMG}</a><!--<h1>{SITENAME}</h1>--></div>
-			<p>{SITE_DESCRIPTION}</p>
-			<p class="skiplink"><a href="#start_here">{L_SKIP}</a></p>
-		</div>
-	</div>
-	<!-- ENDIF -->
+	
 	<a id="start_here"></a>
 	<div class="container" id="content-wrapper">
-				
-		<div class="row bottom5">
-			<div class="col-md-12">
-				<div class="btn-group btn-breadcrumb">
-					 <a href="{U_INDEX}" accesskey="h" class="btn btn-default btn-sm" title="{L_INDEX}"><i class="glyphicon glyphicon-home"></i></a> <!-- BEGIN navlinks --> <a href="{navlinks.U_VIEW_FORUM}" class="btn btn-default btn-sm<!-- IF navlinks.FORUM_ID == S_FORUM_ID --> active<!-- ENDIF -->">{navlinks.FORUM_NAME}</a><!-- END navlinks -->
+		<!-- IF not S_STARTPAGE -->
+			<div class="row bottom5">
+				<div class="col-md-12">
+					<div class="btn-group btn-breadcrumb">
+						 <a href="{U_INDEX}" accesskey="h" class="btn btn-default btn-sm" title="{L_INDEX}"><i class="glyphicon glyphicon-home"></i></a> <!-- BEGIN navlinks --> <a href="{navlinks.U_VIEW_FORUM}" class="btn btn-default btn-sm<!-- IF navlinks.FORUM_ID == S_FORUM_ID --> active<!-- ENDIF -->">{navlinks.FORUM_NAME}</a><!-- END navlinks -->
+					</div>
 				</div>
 			</div>
-		</div>
+		<!-- ENDIF -->
+		
 		<!-- IF S_BOARD_DISABLED and S_USER_LOGGED_IN and (U_MCP or U_ACP) -->
 			<div class="alert alert-danger row rules">
 				<div class="well">
@@ -229,4 +221,3 @@
 				</div>
 			</div>
 		<!-- ENDIF -->
-		

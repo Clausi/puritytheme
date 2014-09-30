@@ -1,0 +1,23 @@
+<!-- INCLUDE overall_header.html -->
+
+<!-- INCLUDE slider.html -->
+
+<div>
+
+	<!-- BEGIN n_news -->
+		<h3>{n_news.TOPIC_TIME}</h3>
+		<h2><a href="viewtopic.php?f={n_news.FORUM_ID}&amp;t={n_news.TOPIC_ID}" title="{n_news.TITEL}">{n_news.TITEL}</a></h2>
+		<br />
+		<div>
+			<p>
+				{n_news.POST_TEXT}
+			</p>
+		</div>
+		<p><a href="viewtopic.php?f={n_news.FORUM_ID}&amp;t={n_news.TOPIC_ID}" title="{n_news.TITEL}">Kommentare: {n_news.COMMENTS}</a></p>
+	<!-- END n_news -->
+	
+	<a href="viewforum.php?f=2">Alle News</a>
+
+</div>
+
+<!-- INCLUDE overall_footer.html -->

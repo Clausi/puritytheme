@@ -3,6 +3,7 @@ html { background: transparent }
 body {
 	padding-top: 70px;
 	color: #EFEFEF;
+	background-color: #0e1316;
 }
 
 a {
@@ -700,7 +701,7 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 @media(min-width:768px) {
 	body {
 		padding-top: 100px;
-		background: #141414 url('images/silvanas_bg.jpg') no-repeat center top;
+		background: #0e1316 url('images/silvanas_bg.jpg') no-repeat center top;
 		background-size: 1280px auto;
 	}
 
@@ -827,3 +828,6 @@ table a:not(.btn), .table a:not(.btn) {
 	float: left !important;
 }
 
+.jumbotron {
+	background-color: rgba(10,10,10,0.7);
+}
