@@ -43,11 +43,12 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 }
 
 .back-to-top {
-  cursor: pointer;
-  position: fixed;
-  bottom: 30px;
-  right:30px;
-  display:none;
+	z-index: 10001;
+	cursor: pointer;
+	position: fixed;
+	bottom: 30px;
+	right:30px;
+	display:none;
 }
 
 .vote-progress {
