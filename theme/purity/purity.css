@@ -703,41 +703,11 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 		background: #141414 url('images/silvanas_bg.jpg') no-repeat center top;
 		background-size: 1280px auto;
 	}
-	
-	#main-nav-container {
-		position: fixed;
-		z-index: 9998;
-	}
-
-	#main-nav-bg {
-		background: rgb(10,10,10); /* for IE */
-		background: rgba(10,10,10,0.8);
-		
-		filter: blur(2px); /* Doesn't work anywhere yet */
-		-webkit-filter: blur(2px);
-		filter: url('images/blur.svg#blur');
-		
-		z-index: 9999;
-		
-		position: fixed;
-		top: 0px;
-		right: 0px;
-		bottom: 0px;
-		left: 0px;
-		width: 100%;
-		height: 91px;
-		
-		transition: all 300ms ease;
-	}
-
-	.main-nav-bg-shrink {
-		height: 52px !important;
-		transition: all 300ms ease;
-	}
 
 	#main-nav {
 		z-index: 10000;
-		background-color: transparent;
+		background-color: rgb(10,10,10);
+		background-color: rgba(10,10,10,0.8);
 	}
 
 	.navbar-fixed-top .navbar-brand {
