@@ -1,30 +1,36 @@
 <!-- INCLUDE overall_header.html -->
 
-<!-- INCLUDE slider.html -->
-
 <div class="row">
 	<div class="col-md-9">
-				
-	<!-- BEGIN n_news -->
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title"><a href="viewtopic.php?f={n_news.FORUM_ID}&amp;t={n_news.TOPIC_ID}" title="{n_news.TITEL}">{n_news.TITEL}</a></h3>
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="page-header">
+					News
+				</h2>
 			</div>
-			<div class="panel-body">
-				{n_news.POST_TEXT}
+			<div class="col-lg-12">
+			<!-- BEGIN n_news -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title"><a href="viewtopic.php?f={n_news.FORUM_ID}&amp;t={n_news.TOPIC_ID}" title="{n_news.TITEL}">{n_news.TITEL}</a></h3>
+					</div>
+					<div class="panel-body">
+						{n_news.POST_TEXT}
+					</div>
+					<div class="panel-footer">
+						<span class="small">{n_news.TOPIC_TIME}</span>
+						<a class="pull-right" href="viewtopic.php?f={n_news.FORUM_ID}&amp;t={n_news.TOPIC_ID}" title="{n_news.TITEL}">Kommentare: {n_news.COMMENTS}</a>
+					</div>
+				</div>
+			<!-- END n_news -->
 			</div>
-			<div class="panel-footer">
-				<span>{n_news.TOPIC_TIME}</span>
-				<a class="pull-right" href="viewtopic.php?f={n_news.FORUM_ID}&amp;t={n_news.TOPIC_ID}" title="{n_news.TITEL}">Kommentare: {n_news.COMMENTS}</a>
+			<div class="col-lg-12">
+				<a href="viewforum.php?f=2">Alle News</a>
 			</div>
 		</div>
-	<!-- END n_news -->
-	
-	<a href="viewforum.php?f=2">Alle News</a>
-	
 	</div><!-- END col -->
 	<div class="col-md-3">
-		
+		sidebar
 	</div>
 </div><!-- END row -->
 
