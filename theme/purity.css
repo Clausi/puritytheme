@@ -39,7 +39,11 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 }
 
 .modal-dialog {
-  padding-top: 40px;
+	padding-top: 40px;
+}
+
+.modal {
+	z-index: 10002;
 }
 
 .back-to-top {
