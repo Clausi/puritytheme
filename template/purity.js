@@ -161,6 +161,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $('#site-logo img').attr('class','img-responsive center-block');
+	 $('.content img').attr('class','img-responsive');
 });
 
 $(document).ready(function() {
