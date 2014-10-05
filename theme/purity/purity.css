@@ -829,6 +829,10 @@ table a:not(.btn), .table a:not(.btn) {
 	float: left !important;
 }
 
+#notification_list a {
+	margin-top: 1px;
+}
+
 .jumbotron {
 	background-color: rgba(10,10,10,0.7);
 }
