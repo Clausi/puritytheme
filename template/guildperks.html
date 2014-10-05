@@ -1,0 +1,15 @@
+<div id="cp-main">
+	<h2>Gildenboni</h2>
+	<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+	
+		<!-- BEGIN n_perks -->
+		<img src=<!-- IF n_perks.S_PERK_OK -->"/forum/gilde/images/guild_perks/{n_perks.PERKICON}.jpg"<!-- ELSE -->"/forum/gilde/guild_perks/not.png"<!-- ENDIF --> class="perkimage" />
+		<h3>{n_perks.PERKNAME} ( Level {n_perks.LEVEL} )</h3>
+		<p>{n_perks.PERKTEXT}</p>
+		<br />
+		<!-- END n_perks -->
+
+	<span class="corners-bottom"><span></span></span></div>
+	</div>
+</div>

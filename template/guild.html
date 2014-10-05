@@ -1,0 +1,29 @@
+<!-- INCLUDE overall_header.html -->
+
+<div id="tabs">
+	<ul>
+		<li <!-- IF S_PAGE_ROSTER or S_PAGE_ARMORY -->class="activetab"<!-- ENDIF -->><a href="gilde.php"><span>Roster</span></a></li>
+		<li <!-- IF S_PAGE_GUILDPERKS -->class="activetab"<!-- ENDIF -->><a href="gilde.php?page=guildperks"><span>Gildenboni</span></a></li>
+		<li <!-- IF S_PAGE_PROVINGGROUNDS -->class="activetab"<!-- ENDIF -->><a href="gilde.php?page=provinggrounds"><span>Feuerprobe</span></a></li>
+	</ul>
+</div>
+
+<div class="panel bg1">
+<div class="inner"><span class="corners-top"><span></span></span>
+
+<div class="guildcontent">
+<!-- IF S_PAGE_GILDE --><!-- INCLUDE guildroster.html -->
+<!-- ELSEIF S_PAGE_GUILDPERKS --><!-- INCLUDE guildperks.html -->
+<!-- ELSEIF S_PAGE_PROVINGGROUNDS --><!-- INCLUDE provinggrounds.html -->
+<!-- ELSEIF S_PAGE_SIMCRAFT --><!-- INCLUDE simcraft.html -->
+<!-- ELSE --><!-- INCLUDE guildroster.html --><!-- ENDIF -->
+</div>
+
+<div class="guildsidebar">
+<!-- INCLUDE guildsidebar.html -->
+</div>
+
+<span class="corners-bottom"><span></span></span></div>
+</div>
+
+<!-- INCLUDE overall_footer.html -->
