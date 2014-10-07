@@ -13,12 +13,26 @@
 					<!-- IF U_ACP --><th>Beitritt</th><!-- ENDIF -->
 				</tr>
 			</thead>
+			
+			<tfoot>
+				<tr>
+					<th>Name</th>
+					<th>Volk</th>
+					<th>Klasse</th>
+					<th>Stufe</th>
+					<th>Rank</th>
+					<th class="guildrank">Gildenrang</th>
+					<th>Erfolgspunkte</th>
+					<!-- IF U_ACP --><th>Beitritt</th><!-- ENDIF -->
+				</tr>
+			</tfoot>
+			
 			<tbody>
 				<!-- BEGIN n_members -->
 				<tr class="clickableRow" data-url="http://{REGION}.battle.net/wow/{BNETLOCALE}/character/{REALM}/{n_members.NAME}/advanced" data-darktip="wow.character:{REGION}.{REALM}.{n_members.NAME}({BNETLOCALE})">
 					<td>{n_members.NAME}</td>
-					<td><img src="./guild/images/race/{n_members.RACE}-{n_members.GENDER}.gif" alt="Race" /></td>
-					<td><img src="./guild/images/class/{n_members.CLASS}.gif" alt="Race" /></td>
+					<td><img src="./guild/images/race/{n_members.RACE}-{n_members.GENDER}.gif" alt="{n_members.RACENAME}" /></td>
+					<td><img src="./guild/images/class/{n_members.CLASS}.gif" alt="{n_members.CLASSNAME}" /></td>
 					<td>{n_members.LEVEL}</td>
 					<td>{n_members.RANK}</td>
 					<td>{n_members.RANKNAME}</td>
@@ -48,6 +62,18 @@
 					<th>Verlassen</th>
 				</tr>
 			</thead>
+			
+			<tfoot>
+				<tr>
+					<th>Name</th>
+					<th>Volk</th>
+					<th>Klasse</th>
+					<th>Stufe</th>
+					<th class="guildrank">Gildenrang</th>
+					<th>Verlassen</th>
+				</tr>
+			</tfoot>
+			
 			<tbody>
 				<!-- BEGIN n_exMembers -->
 				<tr class="clickableRow" data-url="http://{REGION}.battle.net/wow/{BNETLOCALE}/character/{REALM}/{n_exMembers.NAME}/advanced" data-darktip="wow.character:{REGION}.{REALM}.{n_exMembers.NAME}({BNETLOCALE})">

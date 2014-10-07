@@ -114,36 +114,27 @@
 <!-- IF S_GUILDPAGE -->
 <script type="text/javascript">
 $(document).ready(function() {
-	$('#datatables-roster').dataTable( {
+	var rosterTable = $('#datatables-roster').DataTable( {
 		"oLanguage": {
 			"sUrl": "{T_THEME_PATH}/libs/datatables/lang/dataTables.german.txt"
 		},
 		"order": [[ 4, "asc" ]],
 		"pageLength": 15,
 		"lengthMenu": [ [ 10, 15, 25, 50, 100, -1], [ 10, 15, 25, 50, 100, "Alle"] ],
-		"columnDefs": [
+		"columnDefs": 
+		[
 			{
 				"targets": [ 4 ],
 				"visible": false,
-				"searchable": false
+				"searchable": true
 			}
 		]
 	});
 });
 
-$(document).ready(function() {
-	$(".clickableRow").click(function() {
-		window.document.location = $(this).data("url");
-	});
-});
-
-</script>
-<!-- ENDIF -->
-
 <!-- IF U_ACP -->
-<script type="text/javascript">
 $(document).ready(function() {
-	$('#datatables-rosterExmember').dataTable( {
+	$('#datatables-rosterExmember').DataTable( {
 		"oLanguage": {
 			"sUrl": "{T_THEME_PATH}/libs/datatables/lang/dataTables.german.txt"
 		},
@@ -152,6 +143,14 @@ $(document).ready(function() {
 		"lengthMenu": [[ 10, 15, 25, 50, 100, -1], [ 10, 15, 25, 50, 100, "Alle"] ],
 	});
 });
+<!-- ENDIF -->
+
+$(document).ready(function() {
+	$(".clickableRow").click(function() {
+		window.document.location = $(this).data("url");
+	});
+});
+
 </script>
 <!-- ENDIF -->
 
