@@ -17,7 +17,9 @@
 			<thead>
 				<tr>
 					<th>Name</th>
+					<th>Race</th>
 					<th>Volk</th>
+					<th>Class</th>
 					<th>Klasse</th>
 					<th>Stufe</th>
 					<th>Rank</th>
@@ -31,7 +33,9 @@
 				<!-- BEGIN n_members -->
 				<tr class="clickableRow" data-url="http://{REGION}.battle.net/wow/{BNETLOCALE}/character/{REALM}/{n_members.NAME}/advanced" data-darktip="wow.character:{REGION}.{REALM}.{n_members.NAME}({BNETLOCALE})">
 					<td>{n_members.NAME}</td>
+					<td>{n_members.RACE}</td>
 					<td><img src="./guild/images/race/{n_members.RACE}-{n_members.GENDER}.gif" alt="{n_members.RACENAME}" /></td>
+					<td>{n_members.CLASS}</td>
 					<td><img src="./guild/images/class/{n_members.CLASS}.gif" alt="{n_members.CLASSNAME}" /></td>
 					<td>{n_members.LEVEL}</td>
 					<td>{n_members.RANK}</td>

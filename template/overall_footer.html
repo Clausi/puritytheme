@@ -115,24 +115,35 @@
 <script type="text/javascript">
 $(document).ready(function() {
 	function filterTable(table, filter) {
-		table.fnFilter("^"+filter+"$", 4, true);
+		table.fnFilter("^"+filter+"$", 6, true);
 	}
 	
 	var rosterTable = $('#datatables-roster').dataTable( {
 		"oLanguage": {
 			"sUrl": "{T_THEME_PATH}/libs/datatables/lang/dataTables.german.txt"
 		},
-		"order": [[ 4, "asc" ]],
+		"order": [[ 6, "asc" ], [ 0, "asc" ]],
 		"pageLength": 25,
 		"lengthMenu": [ [ 10, 15, 25, 50, 100, -1], [ 10, 15, 25, 50, 100, "Alle"] ],
 		"columnDefs": 
 		[
 			{
-				"targets": [ 4 ],
+				"targets": [ 1 ],
+				"visible": false,
+				"searchable": true
+			},
+			{
+				"targets": [ 3 ],
+				"visible": false,
+				"searchable": true
+			},
+			{
+				"targets": [ 6 ],
 				"visible": false,
 				"searchable": true
 			}
 		],
+
 		"fnInitComplete": function(oSettings, json) {
 			createSelectpicker();
 			filterTable(this, "[0,1,2,4,5,6]");
