@@ -137,11 +137,14 @@ $(document).ready(function() {
   $('.btn').tooltip({container: 'body'});
 });
 
-$(document).ready(function() {
+function createSelectpicker() {
 	$("select").addClass("selectpicker");
 	$(".selectpicker").attr({"data-width": "auto"});
 	$(".selectpicker").attr({"data-style": "btn-default btn-sm"});
 	$(".selectpicker").selectpicker();
+}
+$(document).ready(function() {
+	createSelectpicker();
 });
 
 $(document).ready(function() {
