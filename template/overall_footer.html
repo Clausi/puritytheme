@@ -114,12 +114,16 @@
 <!-- IF S_GUILDPAGE -->
 <script type="text/javascript">
 $(document).ready(function() {
-	var rosterTable = $('#datatables-roster').DataTable( {
+	function filterTable(table, filter) {
+		table.fnFilter("^"+filter+"$", 4, true);
+	}
+	
+	var rosterTable = $('#datatables-roster').dataTable( {
 		"oLanguage": {
 			"sUrl": "{T_THEME_PATH}/libs/datatables/lang/dataTables.german.txt"
 		},
 		"order": [[ 4, "asc" ]],
-		"pageLength": 15,
+		"pageLength": 25,
 		"lengthMenu": [ [ 10, 15, 25, 50, 100, -1], [ 10, 15, 25, 50, 100, "Alle"] ],
 		"columnDefs": 
 		[
@@ -128,8 +132,17 @@ $(document).ready(function() {
 				"visible": false,
 				"searchable": true
 			}
-		]
+		],
+		"fnInitComplete": function(oSettings, json) {
+			filterTable(this, "[0,1,2,4,5,6]");
+		 }
 	});
+	
+	$('select#rosterFilter').on('change',function(){
+        var selectedValue = $(this).val();
+		  filterTable(rosterTable, selectedValue);
+   });
+	
 });
 
 <!-- IF U_ACP -->
