@@ -806,7 +806,11 @@ th.topics {
 }
 
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-    background-color: rgba(10,10,10,0.7);
+    background-color: rgba(20,20,20,0.6);
+}
+
+.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
+    background-color: #282828;
 }
 
 table a:not(.btn), .table a:not(.btn) {
@@ -843,4 +847,20 @@ table a:not(.btn), .table a:not(.btn) {
 
 .well {
 	background-color: rgba(10,10,10,0.7);
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #FFF;
+    background-color: #116BA5;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    color: #F0F0F0;
+	background-color: #0E5B8C;
+	border-color: #0E5B8C;
+}
+
+tr.clickableRow {
+	cursor: pointer;
 }

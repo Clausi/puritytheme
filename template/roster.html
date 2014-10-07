@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+	<div class="panel-body">
+		<table class="table table-hover table-striped" id="datatables-roster">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Volk</th>
+					<th>Klasse</th>
+					<th>Stufe</th>
+					<th>Rank</th>
+					<th>Gildenrang</th>
+					<th>Erfolgspunkte</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- BEGIN n_members -->
+				<tr class="clickableRow" data-url="http://{REGION}.battle.net/wow/{BNETLOCALE}/character/{REALM}/{n_members.NAME}/advanced" data-darktip="wow.character:{REGION}.{REALM}.{n_members.NAME}({BNETLOCALE})">
+					<td>{n_members.NAME}</td>
+					<td><img src="./guild/images/race/{n_members.RACE}-{n_members.GENDER}.gif" alt="Race" /></td>
+					<td><img src="./guild/images/class/{n_members.CLASS}.gif" alt="Race" /></td>
+					<td>{n_members.LEVEL}</td>
+					<td>{n_members.RANK}</td>
+					<td>{n_members.RANKNAME}</td>
+					<td>{n_members.ACHIEVEMENTPOINTS}</td>
+				</tr>
+				<!-- END n_members -->
+			</tbody>
+		</table>
+	</div>
+</div>

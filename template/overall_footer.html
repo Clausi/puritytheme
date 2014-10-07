@@ -97,6 +97,10 @@
 
 <script src="{T_THEME_PATH}/libs/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="{T_THEME_PATH}/libs/bootstrap/js/bootstrap-select.js" type="text/javascript"></script>
+<script src="{T_THEME_PATH}/libs/datatables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="{T_THEME_PATH}/libs/datatables/js/dataTables.bootstrap.js" type="text/javascript"></script>
+
+<script src="{T_THEME_PATH}/libs/darktip/DarkTip.all.js" type="text/javascript"></script>
 
 <script type="text/javascript" src="{T_ASSETS_PATH}/javascript/core.js?assets_version={T_ASSETS_VERSION}"></script>
 <!-- INCLUDEJS forum_fn.js -->
@@ -106,6 +110,35 @@
 <!-- EVENT overall_footer_after -->
 
 {$SCRIPTS}
+
+<!-- IF S_GUILDPAGE -->
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#datatables-roster').dataTable( {
+		"oLanguage": {
+			"sUrl": "{T_THEME_PATH}/libs/datatables/lang/dataTables.german.txt"
+		},
+		"order": [[ 4, "asc" ]],
+		"pageLength": 15,
+		"lengthMenu": [ 10, 15, 25, 50, 75, 100 ],
+		"columnDefs": [
+			{
+				"targets": [ 4 ],
+				"visible": false,
+				"searchable": false
+			}
+		]
+	});
+});
+
+$(document).ready(function() {
+	$(".clickableRow").click(function() {
+		window.document.location = $(this).data("url");
+	});
+});
+
+</script>
+<!-- ENDIF -->
 
 </body>
 </html>
