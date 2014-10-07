@@ -7035,7 +7035,7 @@ QTIP.defaults = {
 		target: FALSE,
 		event: 'mouseenter',
 		effect: TRUE,
-		delay: 90,
+		delay: 1000,
 		solo: FALSE,
 		ready: FALSE,
 		autofocus: FALSE
