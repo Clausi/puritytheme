@@ -2,14 +2,17 @@
 	<div class="panel-body">
 		<div class="row bottom5">
 			<div class="col-xs-12">
-				<select id="rosterFilter" class="pull-right">
-					 <option value="[0-9]">alle</option>
-					 <option value="[0,1,2,4,5,6]" selected="selected">Raider</option>
-					 <option value="[0,1,2]">Offi</option>
-					 <option value="[4,5,6]">Member</option>
-					 <option value="[8,9]">Friends</option>
-					 <option value="[3,7]">Twinks</option>
-				</select>
+				<div class="form-group pull-right">
+					<label for="rosterFilter">Rangfilter:</label> 
+					<select id="rosterFilter">
+						 <option value="[0-9]">alle</option>
+						 <option value="[0,1,2]">Offis</option>
+						 <option value="[0,1,2,4,5,6]" selected="selected">Raider (Offis, Members, Trials)</option>
+						 <option value="[4,5,6]">Members, Trials</option>
+						 <option value="[8,9]">Friends</option>
+						 <option value="[3,7]">Twinks</option>
+					</select>
+				</div>
 			</div>
 		</div>
 		

@@ -125,23 +125,14 @@ $(document).ready(function() {
 		"order": [[ 6, "asc" ], [ 0, "asc" ]],
 		"pageLength": 25,
 		"lengthMenu": [ [ 10, 15, 25, 50, 100, -1], [ 10, 15, 25, 50, 100, "Alle"] ],
-		"columnDefs": 
-		[
-			{
-				"targets": [ 1 ],
-				"visible": false,
-				"searchable": true
-			},
-			{
-				"targets": [ 3 ],
-				"visible": false,
-				"searchable": true
-			},
-			{
-				"targets": [ 6 ],
-				"visible": false,
-				"searchable": true
-			}
+
+		"aoColumnDefs": [
+		  { "aTargets": [ 1 ], "bVisible": false },
+		  { "iDataSort": 1, "aTargets": [ 2 ] },
+		  { "aTargets": [ 3 ], "bVisible": false },
+		  { "iDataSort": 3, "aTargets": [ 4 ] },
+		  { "aTargets": [ 6 ], "bVisible": false },
+		  { "iDataSort": 6, "aTargets": [ 7 ] }
 		],
 
 		"fnInitComplete": function(oSettings, json) {
