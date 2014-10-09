@@ -864,3 +864,7 @@ table a:not(.btn), .table a:not(.btn) {
 tr.clickableRow {
 	cursor: pointer;
 }
+
+.no-bg {
+	background-color: transparent;
+}
