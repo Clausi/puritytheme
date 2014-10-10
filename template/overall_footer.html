@@ -157,6 +157,15 @@ $(document).ready(function() {
 		"order": [[ 5, "desc" ]],
 		"pageLength": 10,
 		"lengthMenu": [[ 10, 15, 25, 50, 100, -1], [ 10, 15, 25, 50, 100, "Alle"] ],
+		
+		"aoColumnDefs": [
+		  { "aTargets": [ 1 ], "bVisible": false },
+		  { "iDataSort": 1, "aTargets": [ 2 ] },
+		  { "aTargets": [ 3 ], "bVisible": false },
+		  { "iDataSort": 3, "aTargets": [ 4 ] },
+		  { "aTargets": [ 6 ], "bVisible": false },
+		  { "iDataSort": 6, "aTargets": [ 7 ] }
+		],
 	});
 });
 <!-- ENDIF -->
