@@ -82,7 +82,16 @@
 					<div class="form-group">
 						<label class="control-label col-md-4" for="timezone">{L_BOARD_TIMEZONE}:</label>
 						<div class="col-md-8">
-							<select name="tz" id="timezone" class="autowidth">{S_TZ_OPTIONS}</select>
+							<select name="tz" id="timezone" class="autowidth tz_select">
+								<option value="">{L_SELECT_TIMEZONE}</option>
+								<!-- BEGIN timezone_select -->
+								<optgroup label="{timezone_select.LABEL}" data-tz-value="{timezone_select.VALUE}">
+									<!-- BEGIN timezone_options -->
+									<option title="{timezone_select.timezone_options.TITLE}" value="{timezone_select.timezone_options.VALUE}"<!-- IF timezone_select.timezone_options.SELECTED --> selected="selected"<!-- ENDIF -->>{timezone_select.timezone_options.LABEL}</option>
+									<!-- END timezone_options -->
+								</optgroup>
+								<!-- END timezone_select -->
+							</select>
 						</div>
 					</div>
 					<div class="form-group">
