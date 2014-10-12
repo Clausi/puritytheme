@@ -868,3 +868,15 @@ tr.clickableRow {
 .no-bg {
 	background-color: transparent;
 }
+
+.progress-bar-default {
+	background-color: #116BA5;
+}
+
+.progresslist .progress {
+	margin-bottom: 1px;
+}
+
+.progresslist a {
+	color: #fff;
+}

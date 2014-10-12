@@ -1,0 +1,36 @@
+<!-- IF S_DISPLAY_PROGRESS_BLOCK -->
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title"><a href="http://www.wowprogress.com/guild/{REGION}/{REALM}/{GUILD}" title="Raid Progress">Raidprogress</a></h3>
+	</div>
+	<ul class="list-group progresslist">
+		<!-- IF .n_raidprogress -->
+			<!-- BEGIN n_raidprogress -->
+			<li class="list-group-item">
+				<h6 class="list-group-item-heading"><a href="http://de.wowhead.com/zone={n_raidprogress.RAIDID}">{n_raidprogress.RAIDNAME}</a></h6>
+				<a href="#" data-toggle="tooltip" id="tooltip_{n_raidprogress.NORMALNUMBER}">
+					<div class="progress">
+						<div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="{n_raidprogress.PROZENT}" aria-valuemin="0" aria-valuemax="100" style="width: {n_raidprogress.PROZENT}%">
+							{n_raidprogress.BOSSESKILLED} / {n_raidprogress.TOTALBOSSES}
+						</div>
+					</div>
+				</a>
+				
+				<a href="#" data-toggle="tooltip" title="Some tooltip text!">
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{n_raidprogress.PROZENTHC}" aria-valuemin="0" aria-valuemax="100" style="width: {n_raidprogress.PROZENTHC}%">
+							HC: {n_raidprogress.HCBOSSESKILLED} / {n_raidprogress.TOTALHCBOSSES}
+						</div>
+					</div>
+				</a>
+
+			</li>
+			<!-- END n_raidprogress -->
+		<!-- ENDIF -->
+		
+	</ul>
+	<div class="panel-footer text-center">
+		<a href="http://www.wowprogress.com/guild/{REGION}/{REALM}/{GUILD}"><img alt="WoW Guild Rankings" src="http://wowprogress.com/guild_img/977602/out/type.site" border="0"/></a>
+	</div>
+</div>
+<!-- ENDIF -->

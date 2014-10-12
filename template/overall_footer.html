@@ -111,6 +111,22 @@
 
 {$SCRIPTS}
 
+<!-- IF S_DISPLAY_PROGRESS_BLOCK -->
+<script type="text/javascript">
+	$(document).ready(function(){
+	<!-- BEGIN n_raidprogress -->
+		$('#tooltip_{n_raidprogress.NORMALNUMBER}').tooltip(
+			<ul>
+			<!-- BEGIN n_nhkills -->
+				<li>{n_raidprogress.n_nhkills.BOSSNAME}</li>
+			<!-- END n_nhkills -->
+			</ul>
+		);
+	<!-- END n_raidprogress -->
+	});
+</script>
+<!-- ENDIF -->
+
 <!-- IF S_GUILDPAGE -->
 <script type="text/javascript">
 $(document).ready(function() {
