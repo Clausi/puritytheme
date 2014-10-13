@@ -154,13 +154,16 @@ $(document).ready(function() {
 	});
 });
 
-/*
+
 $(document).ready(function() {
-	$('.colour-picker').colorpicker({
-        format: 'hex'
+	$('.progress-popover').popover({
+		html: true,
+		delay: 200
+	}).click(function(e) {
+        e.preventDefault();
     });
 });
-*/
+
 
 $(document).ready(function() {
     $('#site-logo img').attr('class','img-responsive center-block');

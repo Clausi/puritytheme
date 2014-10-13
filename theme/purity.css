@@ -880,3 +880,19 @@ tr.clickableRow {
 .progresslist a {
 	color: #fff;
 }
+
+.popover {
+	background-color: rgba(50, 50, 50, 0.9);
+}
+
+.popover dl {
+	margin-bottom: 0px;
+}
+
+.popover.top > .arrow:after {
+	border-top-color: rgba(50, 50, 50, 0.9);
+}
+
+.popover.left > .arrow:after {
+	border-left-color: rgba(50, 50, 50, 0.9);
+}
