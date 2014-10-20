@@ -692,8 +692,8 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	background-color: #0E5B8C;
 }
 
-.dropdown-menu > li > a.btn:hover  {
-	background-color: #900;
+.dropdown-menu > li > a.reg-button:hover {
+	background-color: #990000;
 }
 
 .navbar-fixed-top, .navbar-fixed-bottom {
