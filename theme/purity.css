@@ -805,14 +805,6 @@ th.topics {
 	background-color: rgba(10,10,10,0.8);
 }
 
-.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-    background-color: rgba(20,20,20,0.6);
-}
-
-.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
-    background-color: #282828;
-}
-
 table a:not(.btn), .table a:not(.btn) {
 	color: #EFEFEF;
 }
