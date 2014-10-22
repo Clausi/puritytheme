@@ -853,7 +853,7 @@ table a:not(.btn), .table a:not(.btn) {
 	border-color: #0E5B8C;
 }
 
-tr.clickableRow {
+.clickable_row  tr{
 	cursor: pointer;
 }
 
