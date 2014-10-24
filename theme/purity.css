@@ -888,3 +888,7 @@ table a:not(.btn), .table a:not(.btn) {
 .popover.left > .arrow:after {
 	border-left-color: rgba(50, 50, 50, 0.9);
 }
+
+.bg-primary {
+	background-color: #116BA5;
+}
