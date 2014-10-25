@@ -113,6 +113,10 @@ $(document).ready(function() {
 		table.fnFilter("^"+filter+"$", 6, true);
 	}
 	
+	$('table.clickable_row').on('click', 'tbody > tr > td', function() {
+		if($(this).attr('class') != 'no_click') location.href = $(this).parent('tr').data('url');
+	});
+	
 	var rosterTable = $('#datatables-roster').dataTable( {
 		"oLanguage": {
 			"sUrl": "{T_THEME_PATH}/libs/datatables/lang/dataTables.german.txt"
@@ -164,12 +168,6 @@ $(document).ready(function() {
 	});
 });
 <!-- ENDIF -->
-
-$(document).ready(function() {
-	$(".clickable_row tbody > tr").click(function() {
-		window.document.location = $(this).data("url");
-	});
-});
 
 </script>
 <!-- ENDIF -->
