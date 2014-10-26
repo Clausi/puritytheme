@@ -33,12 +33,9 @@
 							<!-- ENDIF -->
 							<li><a href="{U_SEARCH_ACTIVE_TOPICS}">{L_SEARCH_ACTIVE_TOPICS}</a></li>
 							<!-- ENDIF -->
-							<!-- IF not S_IS_BOT and U_MARK_FORUMS -->
-							<li class="rightside"><a href="{U_MARK_FORUMS}" accesskey="m">{L_MARK_FORUMS_READ}</a></li>
-							<!-- ENDIF -->
 							<!-- IF S_HAS_SUBFORUM -->
 							<!-- IF not S_IS_BOT and U_MARK_FORUMS -->
-							<li><a href="{U_MARK_FORUMS}">{L_MARK_SUBFORUMS_READ}</a></li>
+							<li><a href="{U_MARK_FORUMS}" data-ajax="mark_forums_read">{L_MARK_SUBFORUMS_READ}</a></li>
 							<!-- ENDIF -->
 							<!-- ENDIF -->
 						</ul>
@@ -74,6 +71,43 @@
 	</nav>
 	<a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
 	<a id="bottom" accesskey="z"></a>
+	
+	
+	<div id="darkenwrapper" data-ajax-error-title="{L_AJAX_ERROR_TITLE}" data-ajax-error-text="{L_AJAX_ERROR_TEXT}" data-ajax-error-text-abort="{L_AJAX_ERROR_TEXT_ABORT}" data-ajax-error-text-timeout="{L_AJAX_ERROR_TEXT_TIMEOUT}" data-ajax-error-text-parsererror="{L_AJAX_ERROR_TEXT_PARSERERROR}">
+		<div id="darken">&nbsp;</div>
+	</div>
+	<div id="loading_indicator"><i class="fa fa-spinner fa-spin fa-3x"></i></div>
+	
+	<div class="modal" id="phpbb_alert" data-l-err="{L_ERROR}" data-l-timeout-processing-req="{L_TIMEOUT_PROCESSING_REQ}">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close alert_close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title alert_title">&nbsp;</h4>
+				</div>
+				<div class="modal-body">
+					<p class="alert_text"></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default alert_close">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal" id="phpbb_confirm">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="alert_text"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default alert_close">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	
 	<!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
 

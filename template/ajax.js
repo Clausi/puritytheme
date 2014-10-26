@@ -101,6 +101,7 @@ phpbb.addAjaxCallback('mark_topics_read', function(res, updateTopicLinks) {
 phpbb.addAjaxCallback('notification.mark_all_read', function(res) {
 	if (typeof res.success !== 'undefined') {
 		phpbb.markNotifications($('#notification_list'), 0);
+	//	phpbb.closeDarkenWrapper(3000);
 	}
 });
 
@@ -109,6 +110,7 @@ phpbb.addAjaxCallback('notification.mark_read', function(res) {
 	if (typeof res.success !== 'undefined') {
 		var unreadCount = Number($('#notification_list_button strong').html()) - 1;
 		phpbb.markNotifications($(this).parent('li'), unreadCount);
+		phpbb.closeDarkenWrapper(3000);
 	}
 });
 
@@ -134,8 +136,10 @@ phpbb.markNotifications = function($popup, unreadCount) {
 	// Remove the Mark all read link if there are no unread notifications.
 	if (!unreadCount) {
 		$('#mark_all_notifications').remove();
-		$('#notification_list_button').toggleClass('btn-warning btn-default');
-		$('#notification_list_button i').toggleClass('fa-bell fa-bell-slash');
+		$('#notification_list_button').removeClass('btn-warning');
+		$('#notification_list_button i').removeClass('fa-bell');
+		$('#notification_list_button').addClass('btn-default');
+		$('#notification_list_button i').addClass('fa-bell-slash');
 	}
 
 	// Update page title

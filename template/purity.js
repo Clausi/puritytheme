@@ -221,5 +221,9 @@ $(document).ready(function(){
  
 	$('#phpbb_alert').hide();
 	$('#phpbb_confirm').hide();
-	$(".alert").alert()
+	$(".alert").alert();
+
+	$('#phpbb_alert').modal({
+		'show': false,
+	})
 });

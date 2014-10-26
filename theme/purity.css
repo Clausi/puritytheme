@@ -46,6 +46,11 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	z-index: 10002;
 }
 
+#darkenwrapper {
+	z-index: 10001;
+}
+
+
 .back-to-top {
 	z-index: 10001;
 	cursor: pointer;
