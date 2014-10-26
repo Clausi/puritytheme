@@ -146,8 +146,7 @@ phpbb.markNotifications = function($popup, unreadCount) {
 	$('title').text(
 		(unreadCount ? '(' + unreadCount + ')' : '') + $('title').text().replace(/(\(([0-9])\))/, '')
 	);
-	
-	$('#confirm_modal').modal('hide');
+
 };
 
 // This callback finds the post from the delete link, and removes it.

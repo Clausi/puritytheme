@@ -35,25 +35,6 @@
 	background-position: 0 -16px;
 }
 
-.phpbb_alert p {
-	margin: 8px 0;
-	padding-bottom: 8px;
-}
-
-.phpbb_alert label {
-	display: block;
-	margin: 8px 0;
-	padding-bottom: 8px;
-}
-
-.phpbb_alert div.alert_text > p,
-.phpbb_alert div.alert_text > label,
-.phpbb_alert div.alert_text > select,
-.phpbb_alert div.alert_text > textarea,
-.phpbb_alert div.alert_text > input {
-	font-size: 1.1em;
-}
-
 #darkenwrapper {
 	display: none;
 	position: relative;
