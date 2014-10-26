@@ -139,9 +139,12 @@ $(document).ready(function() {
 
 function createSelectpicker() {
 	$("select").addClass("selectpicker");
-	$(".selectpicker").attr({"data-width": "auto"});
-	$(".selectpicker").attr({"data-style": "btn-default btn-sm"});
-	$(".selectpicker").selectpicker();
+	$(".selectpicker").selectpicker({
+		container: 'body',
+		width: 'auto'
+	})
+	.selectpicker('setStyle', 'btn-default', 'add')
+	.selectpicker('setStyle', 'btn-sm', 'add');
 }
 $(document).ready(function() {
 	createSelectpicker();
@@ -215,4 +218,8 @@ $(document).ready(function(){
         }, 500);
     });
     $('#back-to-top').tooltip('show');
+ 
+	$('#phpbb_alert').hide();
+	$('#phpbb_confirm').hide();
+	$(".alert").alert()
 });

@@ -101,7 +101,6 @@ phpbb.addAjaxCallback('mark_topics_read', function(res, updateTopicLinks) {
 phpbb.addAjaxCallback('notification.mark_all_read', function(res) {
 	if (typeof res.success !== 'undefined') {
 		phpbb.markNotifications($('#notification_list'), 0);
-		phpbb.closeDarkenWrapper(3000);
 	}
 });
 
@@ -144,7 +143,7 @@ phpbb.markNotifications = function($popup, unreadCount) {
 		(unreadCount ? '(' + unreadCount + ')' : '') + $('title').text().replace(/(\(([0-9])\))/, '')
 	);
 	
-	$('#confirm_modal').modal('hide')
+	$('#confirm_modal').modal('hide');
 };
 
 // This callback finds the post from the delete link, and removes it.
