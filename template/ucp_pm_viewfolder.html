@@ -123,7 +123,9 @@
 					<!-- IF PAGE_NUMBER -->
 						<!-- IF PAGINATION -->
 							<a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a>
-							<span class="btn btn-default btn-sm">{PAGINATION}</span>
+							<!-- IF .pagination -->
+								<!-- INCLUDE pagination.html -->
+							<!-- ENDIF -->
 						<!-- ELSE -->
 							<span class="btn btn-default btn-sm disabled">{PAGE_NUMBER}</span>
 						<!-- ENDIF -->

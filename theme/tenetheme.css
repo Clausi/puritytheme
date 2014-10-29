@@ -205,6 +205,11 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
   margin-top: 0; 
 }
 
+.signature {
+	padding-top: 5px;
+	border-top: 1px solid #282828;
+}
+
 .2top {
 	float: right;
 }
