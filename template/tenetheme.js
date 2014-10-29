@@ -134,19 +134,26 @@ $(function () {
 });
 
 function createSelectpicker() {
-		$("select").addClass("selectpicker");
-		$(".selectpicker").selectpicker({
-			container: 'body',
-			width: 'auto'
-		})
-		.selectpicker('setStyle', 'btn-default', 'add')
-		.selectpicker('setStyle', 'btn-sm', 'add');
-	}
-	$('.btn').tooltip({container: 'body'});
+	$("select").addClass("selectpicker");
+	$(".selectpicker").selectpicker({
+		container: 'body',
+		width: 'auto'
+	})
+	.selectpicker('setStyle', 'btn-default', 'add')
+	.selectpicker('setStyle', 'btn-sm', 'add');
+}
+
+function createInputbox() {
+	$("input.inputbox").addClass("form-control");
+}
 
 $(document).ready(function() {
 
 	createSelectpicker();
+	
+	createInputbox();
+	
+	$('.btn').tooltip({container: 'body'});
 
 	$(".top").click(function(event){		
 		event.preventDefault();

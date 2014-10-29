@@ -41,30 +41,18 @@
 							</div>
 						</div>
 					<!-- ENDIF -->		
+					
 					<!-- IF S_SELECT_NOTIFY -->
 						<div class="form-group">
-							<label class="control-label col-md-4" for="notifymethod0">{L_NOTIFY_METHOD}:</label>
+							<label class="control-label col-md-4" for="notifymethod0">{L_NOTIFY_METHOD}{L_COLON}</label>
 							<div class="col-md-8">
-								<label for="notifymethod0" class="radio-inline"><input type="radio" name="notifymethod" id="notifymethod0" value="0"<!-- IF S_NOTIFY_EMAIL --> checked="checked"<!-- ENDIF --> /> {L_NOTIFY_METHOD_EMAIL}</label> 
-								<label for="notifymethod1" class="radio-inline"><input type="radio" name="notifymethod" id="notifymethod1" value="1"<!-- IF S_NOTIFY_IM --> checked="checked"<!-- ENDIF --> /> {L_NOTIFY_METHOD_IM}</label> 
+								<label for="notifymethod0" class="radio-inline"><input type="radio" name="notifymethod" id="notifymethod0" value="0"<!-- IF S_NOTIFY_EMAIL --> checked="checked"<!-- ENDIF --> /> {L_NOTIFY_METHOD_EMAIL}</label>
+								<label for="notifymethod1" class="radio-inline"><input type="radio" name="notifymethod" id="notifymethod1" value="1"<!-- IF S_NOTIFY_IM --> checked="checked"<!-- ENDIF --> /> {L_NOTIFY_METHOD_IM}</label>
 								<label for="notifymethod2" class="radio-inline"><input type="radio" name="notifymethod" id="notifymethod2" value="2"<!-- IF S_NOTIFY_BOTH --> checked="checked"<!-- ENDIF --> /> {L_NOTIFY_METHOD_BOTH}</label>
 							</div>
 						</div>
 					<!-- ENDIF -->
-					<div class="form-group">
-						<label class="control-label col-md-4" for="notifypm1">{L_NOTIFY_ON_PM}:</label>
-						<div class="col-md-8">
-							<label for="notifypm1" class="radio-inline"><input type="radio" name="notifypm" id="notifypm1" value="1"<!-- IF S_NOTIFY_PM --> checked="checked"<!-- ENDIF --> /> {L_YES}</label> 
-							<label for="notifypm0" class="radio-inline"><input type="radio" name="notifypm" id="notifypm0" value="0"<!-- IF not S_NOTIFY_PM --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="control-label col-md-4" for="popuppm0">{L_POPUP_ON_PM}:</label>
-						<div class="col-md-8">
-							<label for="popuppm1" class="radio-inline"><input type="radio" name="popuppm" id="popuppm1" value="1"<!-- IF S_POPUP_PM --> checked="checked"<!-- ENDIF --> /> {L_YES}</label> 
-							<label for="popuppm0" class="radio-inline"><input type="radio" name="popuppm" id="popuppm0" value="0"<!-- IF not S_POPUP_PM --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
-						</div>
-					</div>
+					
 					<div class="form-group">
 						<label class="control-label col-md-4" for="lang">{L_BOARD_LANGUAGE}:</label>
 						<div class="col-md-8">
@@ -92,13 +80,6 @@
 								</optgroup>
 								<!-- END timezone_select -->
 							</select>
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="control-label col-md-4" for="dst1">{L_BOARD_DST}:</label>
-						<div class="col-md-8">
-							<label for="dst1" class="radio-inline"><input type="radio" name="dst" id="dst1" value="1"<!-- IF S_DST --> checked="checked"<!-- ENDIF --> /> {L_YES}</label> 
-							<label for="dst0" class="radio-inline"><input type="radio" name="dst" id="dst0" value="0"<!-- IF not S_DST --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
 						</div>
 					</div>
 					<div class="form-group">
