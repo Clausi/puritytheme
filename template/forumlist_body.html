@@ -52,7 +52,7 @@
 						<td class="topics hidden-xs"><div class="text-center"><span class="badge">{forumrow.TOPICS}</span></div></td>
 						<td class="posts hidden-xs"><div class="text-center"><span class="badge">{forumrow.POSTS}</span></div></td>
 						<td class="lastpost hidden-xs"><span>
-							<!-- IF forumrow.U_UNAPPROVED_TOPICS --><a href="{forumrow.U_UNAPPROVED_TOPICS}">{UNAPPROVED_IMG}</a><!-- ENDIF -->
+							<!-- IF forumrow.U_UNAPPROVED_TOPICS --><a href="{forumrow.U_UNAPPROVED_TOPICS}" class="btn btn-warning btn-xs"><i class="fa fa-exclamation-triangle"></i></a><!-- ENDIF -->
 							<!-- IF forumrow.LAST_POST_TIME --><dfn>{L_LAST_POST}</dfn> {L_POST_BY_AUTHOR} {forumrow.LAST_POSTER_FULL}
 							<!-- IF not S_IS_BOT --><a href="{forumrow.U_LAST_POST}"><i class="fa fa-angle-double-right"></i></a> <!-- ENDIF --><br />{forumrow.LAST_POST_TIME}<!-- ELSE -->{L_NO_POSTS}<br />&nbsp;<!-- ENDIF --></span>
 						</td>

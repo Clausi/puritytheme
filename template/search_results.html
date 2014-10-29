@@ -55,9 +55,9 @@
 			<thead class="topiclist">
 				<tr class="icon">
 					<th>{L_TOPICS}</th>
-					<th class="posts">{L_REPLIES}</th>
-					<th class="views">{L_VIEWS}</th>
-					<th class="lastpost"><span>{L_LAST_POST}</span></th>
+					<th class="posts hidden-xs">{L_REPLIES}</th>
+					<th class="views hidden-xs">{L_VIEWS}</th>
+					<th class="lastpost hidden-xs"><span>{L_LAST_POST}</span></th>
 				</tr>			
 			</thead>
 			<tbody class="topiclist topics">
@@ -94,9 +94,9 @@
 							<a href="{searchresults.U_VIEW_TOPIC}" class="topictitle"><strong>{searchresults.TOPIC_TITLE}</strong></a><br/>
 							<small>{L_POST_BY_AUTHOR} {searchresults.TOPIC_AUTHOR_FULL} &raquo; {searchresults.FIRST_POST_TIME} &raquo; {L_IN} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_TITLE}</a></small>
 						</td>
-						<td class="posts">{searchresults.TOPIC_REPLIES}</td>
-						<td class="views">{searchresults.TOPIC_VIEWS}</td>
-						<td class="lastpost"><span>
+						<td class="posts hidden-xs">{searchresults.TOPIC_REPLIES}</td>
+						<td class="views hidden-xs">{searchresults.TOPIC_VIEWS}</td>
+						<td class="lastpost hidden-xs"><span>
 							{L_POST_BY_AUTHOR} {searchresults.LAST_POST_AUTHOR_FULL}
 							<!-- IF not S_IS_BOT --><a href="{searchresults.U_LAST_POST}"><i class="fa fa-angle-double-right"></i></a> <!-- ENDIF --><br />{searchresults.LAST_POST_TIME}<br /> </span>
 						</td>
