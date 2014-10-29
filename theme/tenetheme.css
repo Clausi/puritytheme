@@ -711,7 +711,7 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 @media(min-width:768px) {
 	body {
 		padding-top: 100px;
-		background: #0e1316 url('images/silvanas_bg.jpg') no-repeat center top;
+	/*	background: #0e1316 url('images/silvanas_bg.jpg') no-repeat center top; */
 		background-size: 1280px auto;
 	}
 
