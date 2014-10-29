@@ -26,15 +26,21 @@
 </div>
 
 <div class="row bottom10">
-	<!-- IF not S_IS_BOT and S_DISPLAY_REPLY_INFO -->
 		<div class="col-md-3">
+		<!-- EVENT viewtopic_buttons_top_before -->
+		
+		<!-- IF not S_IS_BOT and S_DISPLAY_REPLY_INFO -->
 			<!-- IF S_IS_LOCKED -->
 				<a class="btn btn-danger btn-labeled btn-sm disabled" href="{U_POST_REPLY_TOPIC}" title="{L_TOPIC_LOCKED}"><span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span> {L_TOPIC_LOCKED_SHORT}</a>
 			<!-- ELSE -->
 				<a class="btn btn-primary btn-labeled btn-sm" href="{U_POST_REPLY_TOPIC}" title="{L_POST_REPLY}"><span class="btn-label"><i class="fa fa-pencil-square-o"></i></span> {L_POST_REPLY}</a>
 			<!-- ENDIF -->
+		<!-- ENDIF -->
+		
+		<!-- EVENT viewtopic_buttons_top_after -->
+		
+		<!-- INCLUDE viewtopic_topic_tools.html -->
 		</div>
-	<!-- ENDIF -->
 	
 	<!-- IF PAGINATION or TOTAL_POSTS -->
 		<div class="col-md-6 text-center">
@@ -262,15 +268,24 @@
 <!-- ENDIF -->
 
 <div class="row">
-	<!-- IF not S_IS_BOT and S_DISPLAY_REPLY_INFO -->
+	
 		<div class="col-md-3">
+		<!-- EVENT viewtopic_buttons_bottom_before -->
+		
+		<!-- IF not S_IS_BOT and S_DISPLAY_REPLY_INFO -->
 			<!-- IF S_IS_LOCKED -->
 				<a class="btn btn-danger btn-labeled btn-sm disabled" href="{U_POST_REPLY_TOPIC}" title="{L_TOPIC_LOCKED}"><span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span> {L_TOPIC_LOCKED_SHORT}</a>
 			<!-- ELSE -->
 				<a class="btn btn-primary btn-labeled btn-sm" href="{U_POST_REPLY_TOPIC}" title="{L_POST_REPLY}"><span class="btn-label"><i class="fa fa-pencil-square-o"></i></span> {L_POST_REPLY}</a>
 			<!-- ENDIF -->
+		<!-- ENDIF -->
+		
+		<!-- EVENT viewtopic_buttons_bottom_after -->
+		
+		<!-- INCLUDE viewtopic_topic_tools.html -->
+		
+		<!-- INCLUDE viewtopic_topic_modtools.html -->
 		</div>
-	<!-- ENDIF -->
 		
 	<!-- IF PAGINATION or TOTAL_POSTS -->
 		<div class="col-md-6 text-center">
@@ -307,22 +322,6 @@
 </div>
 
 <!-- INCLUDE jumpbox.html -->
-
-<!-- IF S_TOPIC_MOD -->
-	<div class="panel panel-info">
-		<div class="panel-heading">
-			<h3 class="panel-title">{L_QUICK_MOD}</h3>
-		</div>
-		<div class="panel-body">
-			<form method="post" action="{S_MOD_ACTION}" class="form-inline alert-danger">
-				<fieldset class="quickmod">
-					{S_TOPIC_MOD} <input type="submit" value="{L_GO}" class="btn btn-default" />
-					{S_FORM_TOKEN}
-				</fieldset>
-			</form>
-		</div>
-	</div>
-<!-- ENDIF -->
 
 <!-- IF S_NUM_POSTS > 1 or PREVIOUS_PAGE -->
 	<div class="well well-sm">
