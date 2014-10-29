@@ -37,11 +37,6 @@
 	var onload_functions = new Array();
 	var onunload_functions = new Array();
 
-	<!-- IF S_USER_PM_POPUP and S_NEW_PM -->
-		var url = '{UA_POPUP_PM}';
-		window.open(url.replace(/&amp;/g, '&'), '_phpbbprivmsg', 'height=225,resizable=yes,scrollbars=yes, width=400');
-	<!-- ENDIF -->
-
 	/**
 	* Find a member
 	*/
@@ -102,6 +97,9 @@
 </head>
 
 <body id="phpbb" class="section-{SCRIPT_NAME} {S_CONTENT_DIRECTION}">
+
+	<!-- EVENT overall_header_body_before -->
+	
 	<a id="top" accesskey="t"></a>
 	
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="main-nav">
@@ -211,6 +209,8 @@
 		</div>
 	</nav>
 	
+	<!-- EVENT overall_header_page_body_before -->
+	
 	<!-- IF S_STARTPAGE -->
 		<!-- INCLUDE slider.html -->
 	<!-- ENDIF -->
@@ -233,3 +233,5 @@
 				<strong>{L_INFORMATION}:</strong> {L_BOARD_DISABLED}
 			</div>
 		<!-- ENDIF -->
+		
+		<!-- EVENT overall_header_content_before -->

@@ -917,3 +917,11 @@ blockquote cite:before {
 	font-family: FontAwesome;
 	content: " ";
 }
+
+.pagination {
+	margin: 0;
+}
+
+.pagination li > a {
+	border-radius: 3px 0 0 3px;
+}
