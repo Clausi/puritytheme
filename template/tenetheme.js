@@ -170,7 +170,7 @@ $(document).ready(function() {
 
 	
     $('#site-logo img').attr('class','img-responsive center-block');
-	$('.content img').attr('class','img-responsive');
+	$('.content img:not(".smilies")').attr('class','img-responsive');
 
     $('.pagination-line a:not(.btn)').attr('class','btn btn-default btn-xs');
     $('.topic-pagination a:not(.btn)').attr('class','btn btn-default btn-sm');

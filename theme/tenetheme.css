@@ -897,3 +897,23 @@ table a:not(.btn), .table a:not(.btn) {
 .bg-primary {
 	background-color: #116BA5;
 }
+
+blockquote {
+	font-size: 14px;
+	border-left: 5px solid #ccc;
+	background-color: #282828;
+}
+
+blockquote cite {
+	display: block;
+	font-weight: bold;
+}
+
+blockquote cite:after {
+	content: " ";
+}
+
+blockquote cite:before {
+	font-family: FontAwesome;
+	content: " ";
+}
