@@ -1,0 +1,304 @@
+ PHP Events (Hook Locations)
+Identifier 	Placement 	Arguments 	Added in Release 	Explanation
+core.acp_ban_after 	includes/acp/acp_ban.php 	ban, ban_exclude, ban_give_reason, ban_length, ban_length_other, ban_reason, mode 	3.1.0-RC5 	Use this event to perform actions after the ban has been performed
+core.acp_ban_before 	includes/acp/acp_ban.php 	abort_ban, ban, ban_exclude, ban_give_reason, ban_length, ban_length_other, ban_reason, mode 	3.1.0-RC5 	Use this event to modify the ban details before the ban is performed
+core.acp_bbcodes_display_bbcodes 	includes/acp/acp_bbcodes.php 	bbcodes_array, row, u_action 	3.1.0-a3 	Modify display of custom bbcodes in the form
+core.acp_bbcodes_display_form 	includes/acp/acp_bbcodes.php 	action, sql_ary, template_data, u_action 	3.1.0-a3 	Modify custom bbcode template data before we display the form
+core.acp_bbcodes_edit_add 	includes/acp/acp_bbcodes.php 	action, bbcode_id, bbcode_tokens, tpl_ary 	3.1.0-a3 	Modify custom bbcode template data before we display the add/edit form
+core.acp_bbcodes_modify_create 	includes/acp/acp_bbcodes.php 	action, bbcode_helpline, bbcode_id, bbcode_match, bbcode_tpl, display_on_posting, hidden_fields, sql_ary 	3.1.0-a3 	Modify custom bbcode data before the modify/create action
+core.acp_board_config_edit_add 	includes/acp/acp_board.php 	display_vars, mode, submit 	3.1.0-a4 	Event to add and/or modify acp_board configurations
+core.acp_main_notice 	includes/acp/acp_main.php 		3.1.0-RC3 	Notice admin
+core.acp_manage_forums_display_form 	includes/acp/acp_forums.php 	action, errors, forum_data, forum_id, parents_list, row, template_data, update 	3.1.0-a1 	Modify forum template data before we display the form
+core.acp_manage_forums_initialise_data 	includes/acp/acp_forums.php 	action, forum_data, forum_id, parents_list, row, update 	3.1.0-a1 	Initialise data before we display the add/edit form
+core.acp_manage_forums_move_children 	includes/acp/acp_forums.php 	errors, from_id, to_id 	3.1.0-a1 	Event when we move all children of one forum to another
+core.acp_manage_forums_move_content 	includes/acp/acp_forums.php 	errors, from_id, sync, to_id 	3.1.0-a1 	Event when we move content from one forum to another
+core.acp_manage_forums_request_data 	includes/acp/acp_forums.php 	action, forum_data 	3.1.0-a1 	Request forum data and operate on it (parse texts, etc.)
+core.acp_manage_forums_update_data_after 	includes/acp/acp_forums.php 	errors, forum_data, forum_data_sql, is_new_forum 	3.1.0-a1 	Event after a forum was updated or created
+core.acp_manage_forums_update_data_before 	includes/acp/acp_forums.php 	forum_data, forum_data_sql 	3.1.0-a1 	Remove invalid values from forum_data_sql that should not be updated
+core.acp_manage_forums_validate_data 	includes/acp/acp_forums.php 	errors, forum_data 	3.1.0-a1 	Validate the forum data before we create/update the forum
+core.acp_manage_group_display_form 	includes/acp/acp_groups.php 	action, error, group_desc_data, group_id, group_name, group_rank, group_row, group_type, rank_options, update 	3.1.0-b5 	Modify group template data before we display the form
+core.acp_manage_group_initialise_data 	includes/acp/acp_groups.php 	action, allow_desc_bbcode, allow_desc_smilies, allow_desc_urls, error, group_desc, group_id, group_name, group_row, group_type, submit_ary, test_variables 	3.1.0-b5 	Initialise data before we display the add/edit form
+core.acp_manage_group_request_data 	includes/acp/acp_groups.php 	action, allow_desc_bbcode, allow_desc_smilies, allow_desc_urls, error, group_desc, group_id, group_name, group_row, group_type, submit_ary, validation_checks 	3.1.0-b5 	Request group data and operate on it
+core.acp_ranks_edit_modify_tpl_ary 	includes/acp/acp_ranks.php 	ranks, tpl_ary 	3.1.0-RC3 	Modify the template output array for editing/adding ranks
+core.acp_ranks_list_modify_rank_row 	includes/acp/acp_ranks.php 	rank_row, row 	3.1.0-RC3 	Modify the template output array for each listed rank
+core.acp_ranks_save_modify_sql_ary 	includes/acp/acp_ranks.php 	rank_id, sql_ary 	3.1.0-RC3 	Modify the SQL array when saving a rank
+core.acp_users_display_overview 	includes/acp/acp_users.php 	quick_tool_ary, user_row 	3.1.0-a1 	Add additional quick tool options and overwrite user data
+core.acp_users_overview_modify_data 	includes/acp/acp_users.php 	data, sql_ary, user_row 	3.1.0-a1 	Modify user data before we update it
+core.acp_users_overview_run_quicktool 	includes/acp/acp_users.php 	action, user_row 	3.1.0-a1 	Run custom quicktool code
+core.acp_users_prefs_modify_data 	includes/acp/acp_users.php 	data, user_row 	3.1.0-b3 	Modify users preferences data
+core.acp_users_prefs_modify_sql 	includes/acp/acp_users.php 	data, error, sql_ary, user_row 	3.1.0-b3 	Modify SQL query before users preferences are updated
+core.acp_users_prefs_modify_template_data 	includes/acp/acp_users.php 	data, user_prefs_data, user_row 	3.1.0-b3 	Modify users preferences data before assigning it to the template
+core.add_form_key 	includes/functions.php 	form_name, now, s_fields, token, token_sid 	3.1.0-RC3 	Perform additional actions on creation of the form token
+core.add_log 	phpbb/log/log.php 	additional_data, log_ip, log_operation, log_time, mode, sql_ary, user_id 	3.1.0-a1 	Allows to modify log data before we add it to the database
+core.adm_page_footer 	includes/functions_acp.php 	adm_page_footer_override, copyright_html 	3.1.0-a1 	Execute code and/or overwrite adm_page_footer()
+core.adm_page_header 	includes/functions_acp.php 	adm_page_header_override, page_title 	3.1.0-a1 	Execute code and/or overwrite adm_page_header()
+core.adm_page_header_after 	includes/functions_acp.php 	http_headers, page_title 	3.1.0-RC3 	Execute code and/or overwrite _common_ template variables after they have been assigned.
+core.append_sid 	includes/functions.php 	append_sid_overwrite, is_amp, is_route, params, session_id, url 	3.1.0-a1 	This event can either supplement or override the append_sid() function
+core.build_config_template 	includes/functions_acp.php 	key, name, new, tpl, tpl_type, vars 	3.1.0-a1 	Overwrite the html code we display for the config value
+core.common 	common.php 		3.1.0-a1 	Main event which is triggered on every page
+core.delete_group_after 	includes/functions_user.php 	group_id, group_name 	3.1.0-a1 	Event after a group is deleted
+core.delete_log 	phpbb/log/log.php 	conditions, log_type, mode 	3.1.0-b4 	Allows to modify log data before we delete it from the database
+core.delete_pm_before 	includes/functions_privmsgs.php 	folder_id, msg_ids, user_id 	3.1.0-b5 	Get all info for PM(s) before they are deleted
+core.delete_posts_after 	includes/functions_admin.php 	delete_notifications_types, forum_ids, post_ids, poster_ids, topic_ids, where_ids, where_type 	3.1.0-a4 	Perform additional actions after post(s) deletion
+core.delete_posts_before 	includes/functions_admin.php 	auto_sync, call_delete_topics, delete_notifications_types, post_count_sync, posted_sync, where_ids, where_type 	3.1.0-a4 	Perform additional actions before post(s) deletion
+core.delete_posts_in_transaction 	includes/functions_admin.php 	delete_notifications_types, forum_ids, post_ids, poster_ids, topic_ids, where_ids, where_type 	3.1.0-a4 	Perform additional actions during post(s) deletion
+core.delete_user_after 	includes/functions_user.php 	mode, retain_username, user_ids 	3.1.0-a1 	Event after a user is deleted
+core.delete_user_before 	includes/functions_user.php 	mode, retain_username, user_ids 	3.1.0-a1 	Event before a user is deleted
+core.display_custom_bbcodes 	includes/functions_display.php 		3.1.0-a1 	Display custom bbcodes
+core.display_custom_bbcodes_modify_row 	includes/functions_display.php 	custom_tags, row 	3.1.0-a1 	Event to modify the template data block of a custom bbcode
+core.display_custom_bbcodes_modify_sql 	includes/functions_display.php 	num_predefined_bbcodes, sql_ary 	3.1.0-a3 	Event to modify the SQL query before custom bbcode data is queried
+core.display_forums_add_template_data 	includes/functions_display.php 	catless, forum_row, row, subforums_list, subforums_row 	3.1.0-b5 	Modify and/or assign additional template data for the forum
+core.display_forums_after 	includes/functions_display.php 	active_forum_ary, display_moderators, forum_moderators, forum_rows, return_moderators, root_data 	3.1.0-RC5 	Event to perform additional actions after the forum list has been generated
+core.display_forums_modify_category_template_vars 	includes/functions_display.php 	cat_row, catless, last_catless, root_data, row 	3.1.0-RC4 	Modify the template data block of the 'category'
+core.display_forums_modify_forum_rows 	includes/functions_display.php 	branch_root_id, forum_rows, parent_id, row, subforums 	3.1.0-a1 	Event to modify the forum rows data set
+core.display_forums_modify_row 	includes/functions_display.php 	branch_root_id, row 	3.1.0-a1 	Event to modify the data set of a forum
+core.display_forums_modify_sql 	includes/functions_display.php 	sql_ary 	3.1.0-a1 	Event to modify the SQL query before the forum data is queried
+core.display_forums_modify_template_vars 	includes/functions_display.php 	forum_row, row, subforums_row 	3.1.0-a1 	Modify the template data block of the forum
+core.display_user_activity_modify_actives 	includes/functions_display.php 	active_f_row, active_t_row, userdata 	3.1.0-RC3 	Alter list of forums and topics to display as active
+core.functions.redirect 	includes/functions.php 	disable_cd_check, return, url 	3.1.0-RC3 	Execute code and/or overwrite redirect()
+core.garbage_collection 	includes/functions.php 		3.1.0-a1 	Unload some objects, to free some memory, before we finish our task
+core.generate_profile_fields_template_data 	phpbb/profilefields/manager.php 	profile_row, tpl_fields, use_contact_fields 	3.1.0-b3 	Event to modify template data of the generated profile fields
+core.generate_profile_fields_template_data_before 	phpbb/profilefields/manager.php 	profile_row, tpl_fields, use_contact_fields 	3.1.0-b3 	Event to modify data of the generated profile fields, before the template assignment loop
+core.generate_smilies_after 	includes/functions_posting.php 	display_link, forum_id, mode 	3.1.0-a1 	This event is called after the smilies are populated
+core.get_logs_get_additional_data 	phpbb/log/log.php 	log, reportee_id_list, topic_id_list 	3.1.0-a1 	Get some additional data after we got all log entries
+core.get_logs_modify_entry_data 	phpbb/log/log.php 	log_entry_data, row 	3.1.0-a1 	Modify the entry's data before it is returned
+core.get_logs_modify_type 	phpbb/log/log.php 	count_logs, forum_id, keywords, limit, log_time, log_type, mode, offset, profile_url, sort_by, sql_additional, topic_id, user_id 	3.1.0-a1 	Overwrite log type and limitations before we count and get the logs
+core.grab_profile_fields_data 	phpbb/profilefields/manager.php 	field_data, user_ids 	3.1.0-b3 	Event to modify profile fields data retrieved from the database
+core.group_delete_user_before 	includes/functions_user.php 	group_id, group_name, user_id_ary, username_ary 	3.1.0-a1 	Event before users are removed from a group
+core.index_modify_page_title 	index.php 	page_title 	3.1.0-a1 	You can use this event to modify the page title and load data for the index
+core.load_drafts_draft_list_result 	includes/functions_posting.php 	draft_rows, topic_ids, topic_rows 	3.1.0-RC3 	Drafts found and their topics
+core.login_box_redirect 	includes/functions.php 	admin, redirect, return 	3.1.0-RC5 	This event allows an extension to modify the redirection when a user successfully logs in
+core.login_forum_box 	includes/functions.php 	forum_data, password 	3.1.0-RC3 	Performing additional actions, load additional data on forum login
+core.mcp_ban_after 	includes/mcp/mcp_ban.php 	ban, ban_exclude, ban_give_reason, ban_length, ban_length_other, ban_reason, mode 	3.1.0-RC5 	Use this event to perform actions after the ban has been performed
+core.mcp_ban_before 	includes/mcp/mcp_ban.php 	abort_ban, ban, ban_exclude, ban_give_reason, ban_length, ban_length_other, ban_reason, mode 	3.1.0-RC5 	Use this event to modify the ban details before the ban is performed
+core.mcp_ban_confirm 	includes/mcp/mcp_ban.php 	hidden_fields 	3.1.0-RC5 	Use this event to pass data from the ban form to the confirmation screen
+core.mcp_ban_main 	includes/mcp/mcp_ban.php 	bansubmit, mode, unbansubmit 	3.1.0-RC5 	Use this event to pass perform actions when a ban is issued or revoked
+core.mcp_front_reports_listing_query_before 	includes/mcp/mcp_front.php 	forum_list, sql_ary 	3.1.0-RC3 	Alter sql query to get latest reported posts
+core.mcp_front_view_queue_postid_list_after 	includes/mcp/mcp_front.php 	forum_list, forum_names, post_list, total 	3.1.0-RC3 	Alter list of posts and total as required
+core.mcp_queue_get_posts_for_topics_query_before 	includes/mcp/mcp_queue.php 	forum_list, limit_time_sql, sort_order_sql, sql, topic_id, visibility_const 	3.1.0-RC3 	Alter sql query to get information on all topics in the list of forums provided.
+core.mcp_queue_get_posts_query_before 	includes/mcp/mcp_queue.php 	forum_list, limit_time_sql, sort_order_sql, sql, topic_id, visibility_const 	3.1.0-RC3 	Alter sql query to get posts in queue to be accepted
+core.mcp_reports_get_reports_query_before 	includes/mcp/mcp_reports.php 	forum_list, limit_time_sql, sort_order_sql, sql, topic_id 	3.1.0-RC4 	Alter sql query to get report id of all reports for requested forum and topic or just forum
+core.mcp_view_forum_modify_topicrow 	includes/mcp/mcp_forum.php 	row, topic_row 	3.1.0-a1 	Modify the topic data before it is assigned to the template in MCP
+core.mcp_warn_post_after 	includes/mcp/mcp_warn.php 	message, notify, post_id, user_row, warning 	3.1.0-b4 	Event for after warning a user for a post.
+core.mcp_warn_post_before 	includes/mcp/mcp_warn.php 	notify, post_id, s_mcp_warn_post, user_row, warning 	3.1.0-b4 	Event for before warning a user for a post.
+core.mcp_warn_user_after 	includes/mcp/mcp_warn.php 	message, notify, user_row, warning 	3.1.0-b4 	Event for after warning a user from MCP.
+core.mcp_warn_user_before 	includes/mcp/mcp_warn.php 	notify, s_mcp_warn_user, user_row, warning 	3.1.0-b4 	Event for before warning a user from MCP.
+core.memberlist_prepare_profile_data 	includes/functions_display.php 	data, template_data 	3.1.0-a1 	Preparing a user's data before displaying it in profile and memberlist
+core.memberlist_view_profile 	memberlist.php 	foe, foes_enabled, friend, friends_enabled, member, profile_fields, user_notes_enabled, warn_user_enabled, zebra_enabled 	3.1.0-a1 	Modify user data before we display the profile
+core.modify_bbcode_init 	includes/message_parser.php 	bbcodes, rowset 	3.1.0-a3 	Event to modify the bbcode data for later parsing
+core.modify_format_display_text_after 	includes/message_parser.php 	allow_bbcode, allow_magic_url, allow_smilies, text, uid, update_this_message 	3.1.0-a3 	Event to modify the text after it is parsed
+core.modify_mcp_modules_display_option 	mcp.php 	forum_id, id, mode, module, post_id, topic_id, user_id, username 	3.1.0-b2 	This event allows you to set display option for custom MCP modules
+core.modify_module_row 	includes/functions_module.php 	custom_func, lang_func, module_row, row, url_func 	3.1.0-b3 	This event allows to modify parameters for building modules list
+core.modify_posting_parameters 	posting.php 	cancel, delete, draft_id, error, forum_id, lastclick, load, mode, post_id, preview, refresh, save, submit, topic_id 	3.1.0-a1 	This event allows you to alter the above parameters, such as submit and mode
+core.modify_quickmod_actions 	includes/mcp/mcp_main.php 	action, quickmod 	3.1.0-a4 	This event allows you to handle custom quickmod options
+core.modify_quickmod_options 	mcp.php 	action, is_valid_action, module 	3.1.0-a4 	This event allows you to add custom quickmod options
+core.modify_submit_post_data 	includes/functions_posting.php 	data, mode, poll, subject, topic_type, update_message, update_search_index, username 	3.1.0-a4 	Modify the data for post submitting
+core.modify_text_for_display_after 	includes/functions_content.php 	bitfield, flags, text, uid 	3.1.0-a1 	Use this event to modify the text after it is parsed
+core.modify_text_for_display_before 	includes/functions_content.php 	bitfield, censor_text, flags, text, uid 	3.1.0-a1 	Use this event to modify the text before it is parsed
+core.modify_text_for_edit_after 	includes/functions_content.php 	flags, text 	3.1.0-a1 	Use this event to modify the text after it is decoded for editing
+core.modify_text_for_edit_before 	includes/functions_content.php 	flags, text, uid 	3.1.0-a1 	Use this event to modify the text before it is decoded for editing
+core.modify_text_for_storage_after 	includes/functions_content.php 	bitfield, flags, text, uid 	3.1.0-a1 	Use this event to modify the text after it is prepared for storage
+core.modify_text_for_storage_before 	includes/functions_content.php 	allow_bbcode, allow_smilies, allow_urls, bitfield, flags, text, uid 	3.1.0-a1 	Use this event to modify the text before it is prepared for storage
+core.modify_uploaded_file 	includes/functions_posting.php 	filedata, is_image 	3.1.0-RC3 	Event to modify uploaded file before submit to the post
+core.modify_user_rank 	includes/functions_display.php 	user_data, user_posts 	3.1.0-RC4 	Preparing a user's rank before displaying
+core.modify_username_string 	includes/functions_content.php 	_profile_cache, custom_profile_url, guest_username, mode, user_id, username, username_colour, username_string 	3.1.0-a1 	Use this event to change the output of get_username_string()
+core.module_auth 	includes/functions_module.php 	forum_id, module_auth, valid_tokens 	3.1.0-a3 	Alter tokens for module authorisation check
+core.page_footer 	includes/functions.php 	page_footer_override, run_cron 	3.1.0-a1 	Execute code and/or overwrite page_footer()
+core.page_footer_after 	includes/functions.php 	display_template, exit_handler 	3.1.0-RC5 	Execute code and/or modify output before displaying the template.
+core.page_header 	includes/functions.php 	display_online_list, item, item_id, page_header_override, page_title 	3.1.0-a1 	Execute code and/or overwrite page_header()
+core.page_header_after 	includes/functions.php 	display_online_list, http_headers, item, item_id, page_title 	3.1.0-b3 	Execute code and/or overwrite _common_ template variables after they have been assigned.
+core.pagination_generate_page_link 	phpbb/pagination.php 	base_url, generate_page_link_override, on_page, per_page, start_name 	3.1.0-RC5 	Execute code and/or override generate_page_link()
+core.parse_attachments_modify_template_data 	includes/functions_content.php 	attachment, block_array, display_cat, download_link, extensions, forum_id, preview, update_count 	3.1.0-RC5 	Use this event to modify the attachment template data.
+core.permissions 	phpbb/permissions.php 	categories, permissions, types 	3.1.0-a1 	Allows to specify additional permission categories, types and permissions
+core.phpbb_generate_debug_output 	includes/functions.php 	debug_info 	3.1.0-RC3 	Modify debug output information
+core.posting_modify_cannot_edit_conditions 	posting.php 	force_edit_allowed, post_data, s_cannot_edit, s_cannot_edit_locked, s_cannot_edit_time 	3.1.0-b4 	This event allows you to modify the conditions for the "cannot edit post" checks
+core.posting_modify_submission_errors 	posting.php 	error, forum_id, mode, page_title, post_data, post_id, submit, topic_id 	3.1.0-RC5 	This event allows you to define errors before the post action is performed
+core.posting_modify_submit_post_after 	posting.php 	data, error, forum_id, mode, page_title, poll, post_author_name, post_data, post_id, redirect_url, submit, topic_id, update_message, update_subject 	3.1.0-RC5 	This event allows you to define errors after the post action is performed
+core.posting_modify_submit_post_before 	posting.php 	data, error, forum_id, mode, page_title, poll, post_author_name, post_data, post_id, submit, topic_id, update_message, update_subject 	3.1.0-RC5 	This event allows you to define errors before the post action is performed
+core.posting_modify_template_vars 	posting.php 	cancel, delete, error, form_enctype, forum_id, load, message_parser, mode, moderators, page_data, page_title, post_data, post_id, preview, refresh, s_action, s_hidden_fields, s_topic_icons, save, submit, topic_id 	3.1.0-a1 	This event allows you to modify template variables for the posting screen
+core.search_get_posts_data 	search.php 	author_id_ary, ex_fid_ary, keywords, s_limit_days, s_sort_dir, s_sort_key, search_fields, search_id, sort_by_sql, sql_array, start, total_match_count, zebra 	3.1.0-b3 	Event to modify the SQL query before the posts data is retrieved
+core.search_get_topic_data 	search.php 	sql_from, sql_select, sql_where, total_match_count 	3.1.0-a1 	Event to modify the SQL query before the topic data is retrieved
+core.search_modify_rowset 	search.php 	attachments, hilit, rowset, show_results, topic_tracking_info, u_hilit, view, zebra 	3.1.0-b4 	Modify the rowset data
+core.search_modify_tpl_ary 	search.php 	attachments, folder_alt, folder_img, posts_unapproved, replies, row, show_results, topic_deleted, topic_title, topic_type, topic_unapproved, tpl_ary, u_mcp_queue, unread_topic, view_topic_url, zebra 	3.1.0-a1 	Modify the topic data before it is assigned to the template
+core.search_results_modify_search_title 	search.php 	author_id, l_search_title, search_id, show_results, start 	3.1.0-RC4 	Modify the title and/or load data for the search results page
+core.submit_pm_after 	includes/functions_privmsgs.php 	data, mode, pm_data, subject 	3.1.0-b5 	Get PM message ID after submission to DB
+core.submit_pm_before 	includes/functions_privmsgs.php 	data, mode, subject 	3.1.0-b3 	Get all parts of the PM that are to be submited to the DB.
+core.submit_post_end 	includes/functions_posting.php 	data, mode, poll, post_visibility, subject, topic_type, update_message, update_search_index, url, username 	3.1.0-a3 	This event is used for performing actions directly after a post or topic
+core.ucp_add_zebra 	includes/ucp/ucp_zebra.php 	mode, sql_ary 	3.1.0-a1 	Add users to friends/foes
+core.ucp_display_module_before 	ucp.php 	id, mode, module 	3.1.0-a1 	Use this event to enable and disable additional UCP modules
+core.ucp_pm_compose_compose_pm_basic_info_query_before 	includes/ucp/ucp_pm_compose.php 	action, delete, forum_list, limit_time_sql, msg_id, preview, reply_to_all, sort_order_sql, sql, submit, to_group_id, to_user_id, visibility_const 	3.1.0-RC5 	Alter sql query to get message for user to write the PM
+core.ucp_pm_compose_quotepost_query_after 	includes/ucp/ucp_pm_compose.php 	action, delete, msg_id, post, preview, reply_to_all, sql, submit, to_group_id, to_user_id, topic_id, visibility_const 	3.1.0-RC5 	Get the result of querying for the post to be quoted in the pm message
+core.ucp_pm_view_messsage 	includes/ucp/ucp_pm_viewmessage.php 	cp_row, folder, folder_id, id, message_row, mode, msg_data, msg_id 	3.1.0-a1 	Modify pm and sender data before it is assigned to the template
+core.ucp_prefs_modify_common 	includes/ucp/ucp_prefs.php 	data, error, mode, s_hidden_fields 	3.1.0-RC3 	Modify UCP preferences data before the page load
+core.ucp_prefs_personal_data 	includes/ucp/ucp_prefs.php 	data, submit 	3.1.0-a1 	Add UCP edit global settings data before they are assigned to the template or submitted
+core.ucp_prefs_personal_update_data 	includes/ucp/ucp_prefs.php 	data, sql_ary 	3.1.0-a1 	Update UCP edit global settings data on form submit
+core.ucp_prefs_post_data 	includes/ucp/ucp_prefs.php 	data, submit 	3.1.0-a1 	Add UCP edit posting defaults data before they are assigned to the template or submitted
+core.ucp_prefs_post_update_data 	includes/ucp/ucp_prefs.php 	data, sql_ary 	3.1.0-a1 	Update UCP edit posting defaults data on form submit
+core.ucp_prefs_view_data 	includes/ucp/ucp_prefs.php 	data, submit 	3.1.0-a1 	Add UCP edit display options data before they are assigned to the template or submitted
+core.ucp_prefs_view_update_data 	includes/ucp/ucp_prefs.php 	data, sql_ary 	3.1.0-a1 	Update UCP edit display options data on form submit
+core.ucp_remove_zebra 	includes/ucp/ucp_zebra.php 	mode, user_ids 	3.1.0-a1 	Remove users from friends/foes
+core.update_username 	includes/functions_user.php 	new_name, old_name 	3.1.0-a1 	Update a username when it is changed
+core.user_add_after 	includes/functions_user.php 	cp_data, user_id, user_row 	3.1.0-b5 	Event that returns user id, user detals and user CPF of newly registared user
+core.user_add_modify_data 	includes/functions_user.php 	cp_data, sql_ary, user_row 	3.1.0-a1 	Use this event to modify the values to be inserted when a user is added
+core.user_set_default_group 	includes/functions_user.php 	group_attributes, group_id, sql_ary, update_listing, user_id_ary 	3.1.0-a1 	Event when the default group is set for an array of users
+core.user_setup 	phpbb/user.php 	lang_set, lang_set_ext, style_id, user_data, user_date_format, user_lang_name, user_timezone 	3.1.0-a1 	Event to load language files and modify user data on every page
+core.validate_config_variable 	includes/functions_acp.php 	cfg_array, config_definition, config_name, error 	3.1.0-a1 	Validate a config value
+core.viewforum_get_shadowtopic_data 	viewforum.php 	sql_array 	3.1.0-a1 	Event to modify the SQL query before the shadowtopic data is retrieved
+core.viewforum_get_topic_data 	viewforum.php 	forum_data, sql_array 	3.1.0-a1 	Event to modify the SQL query before the topic data is retrieved
+core.viewforum_get_topic_ids_data 	viewforum.php 	sql_approved, sql_ary, sql_limit, sql_limit_time, sql_sort_order, sql_start, sql_where, store_reverse 	3.1.0-RC4 	Event to modify the SQL query before the topic ids data is retrieved
+core.viewforum_modify_topicrow 	viewforum.php 	row, topic_row 	3.1.0-a1 	Modify the topic data before it is assigned to the template
+core.viewforum_modify_topics_data 	viewforum.php 	rowset, topic_list, total_topic_count 	3.1.0-b3 	Modify topics data before we display the viewforum page
+core.viewonline_modify_sql 	viewonline.php 	forum_data, guest_counter, show_guests, sql_ary 	3.1.0-a1 	Modify the SQL query for getting the user data to display viewonline list
+core.viewonline_modify_user_row 	viewonline.php 	forum_data, on_page, row, template_row 	3.1.0-RC4 	Modify viewonline template data before it is displayed in the list
+core.viewonline_overwrite_location 	viewonline.php 	forum_data, location, location_url, on_page, row 	3.1.0-a1 	Overwrite the location's name and URL, which are displayed in the list
+core.viewtopic_assign_template_vars_before 	viewtopic.php 	base_url, forum_id, post_id, quickmod_array, start, topic_data, topic_id, topic_tracking_info, total_posts 	3.1.0-RC4 	Event to modify data before template variables are being assigned
+core.viewtopic_cache_guest_data 	viewtopic.php 	poster_id, row, user_cache_data 	3.1.0-a1 	Modify the guest user's data displayed with the posts
+core.viewtopic_cache_user_data 	viewtopic.php 	poster_id, row, user_cache_data 	3.1.0-a1 	Modify the users' data displayed with their posts
+core.viewtopic_get_post_data 	viewtopic.php 	forum_id, post_list, sort_days, sort_dir, sort_key, sql_ary, start, topic_data, topic_id 	3.1.0-a1 	Event to modify the SQL query before the post and poster data is retrieved
+core.viewtopic_modify_page_title 	viewtopic.php 	forum_id, page_title, post_list, start, topic_data 	3.1.0-a1 	You can use this event to modify the page title of the viewtopic page
+core.viewtopic_modify_post_action_conditions 	viewtopic.php 	force_delete_allowed, force_edit_allowed, row, s_cannot_delete, s_cannot_delete_lastpost, s_cannot_delete_locked, s_cannot_delete_time, s_cannot_edit, s_cannot_edit_locked, s_cannot_edit_time, topic_data 	3.1.0-b4 	This event allows you to modify the conditions for the "can edit post" and "can delete post" checks
+core.viewtopic_modify_post_data 	viewtopic.php 	attachments, can_receive_pm_list, display_notice, forum_id, has_approved_attachments, permanently_banned_users, post_list, rowset, sort_days, sort_dir, sort_key, start, topic_data, topic_id, user_cache 	3.1.0-RC3 	Event to modify the post, poster and attachment data before assigning the posts
+core.viewtopic_modify_post_row 	viewtopic.php 	attachments, cp_row, current_row_number, end, post_row, poster_id, row, start, topic_data, total_posts, user_poster_data 	3.1.0-a1 	Modify the posts template block
+core.viewtopic_post_row_after 	viewtopic.php 	attachments, cp_row, current_row_number, end, post_row, row, start, topic_data, total_posts, user_poster_data 	3.1.0-a3 	Event after the post data has been assigned to the template
+core.viewtopic_post_rowset_data 	viewtopic.php 	row, rowset_data 	3.1.0-a1 	Modify the post rowset containing data to be displayed with posts
+Template Events
+Identifier 	Prosilver Placement (If applicable) 	Subsilver Placement (If applicable) 	Added in Release 	Explanation
+forumlist_body_category_header_after 	forumlist_body.html 	forumlist_body.html 	3.1.0-a4 	Add content after the header of the category on the forum list.
+forumlist_body_category_header_before 	forumlist_body.html 	forumlist_body.html 	3.1.0-a4 	Add content before the header of the category on the forum list.
+forumlist_body_forum_row_after 	forumlist_body.html 	forumlist_body.html 	3.1.0-RC5 	Add content after the forum list item.
+forumlist_body_forum_row_append 	forumlist_body.html 	forumlist_body.html 	3.1.0-RC5 	Add content at the start of the forum list item.
+forumlist_body_forum_row_before 	forumlist_body.html 	forumlist_body.html 	3.1.0-RC5 	Add content before the forum list item.
+forumlist_body_forum_row_prepend 	forumlist_body.html 	forumlist_body.html 	3.1.0-RC5 	Add content at the end of the forum list item.
+forumlist_body_last_post_title_prepend 	forumlist_body.html 	forumlist_body.html 	3.1.0-a1 	Add content before the post title of the latest post in a forum on the forum list.
+forumlist_body_subforums_after 	forumlist_body.html 	forumlist_body.html 	3.1.0-a4 	Add content after the list of subforums (if any) for each forum on the forum list.
+forumlist_body_subforums_before 	forumlist_body.html 	forumlist_body.html 	3.1.0-a4 	Add content before the list of subforums (if any) for each forum on the forum list.
+forumlist_body_last_row_after 	forumlist_body.html 	forumlist_body.html 	3.1.0-b2 	Add content after the very last row of the forum list.
+index_body_block_birthday_append 	index_body.html 	index_body.html 	3.1.0-b3 	Append content to the birthday list on the Board index
+index_body_block_birthday_prepend 	index_body.html 	index_body.html 	3.1.0-b3 	Prepend content to the birthday list on the Board index
+index_body_block_online_append 	index_body.html 	index_body.html 	3.1.0-b3 	Append content to the online list on the Board index
+index_body_block_online_prepend 	index_body.html 	index_body.html 	3.1.0-b3 	Prepend content to the online list on the Board index
+index_body_block_stats_append 	index_body.html 	index_body.html 	3.1.0-b3 	Append content to the statistics list on the Board index
+index_body_block_stats_prepend 	index_body.html 	index_body.html 	3.1.0-b3 	Prepend content to the statistics list on the Board index
+index_body_markforums_after 	index_body.html 	index_body.html 	3.1.0-RC2 	Add content after the mark-read link above the forum list on Board index
+index_body_markforums_before 	index_body.html 	index_body.html 	3.1.0-RC2 	Add content before the mark-read link above the forum list on Board index
+index_body_stat_blocks_after 	index_body.html 	index_body.html 	3.1.0-b3 	Add new statistic blocks below the Who Is Online and Board Statistics blocks
+index_body_stat_blocks_before 	index_body.html 	index_body.html 	3.1.0-a1 	Add new statistic blocks above the Who Is Online and Board Statistics blocks
+mcp_ban_fields_after 	mcp_ban.html 	mcp_ban.html 	3.1.0-RC3 	Add additional fields to the ban form in MCP
+mcp_ban_fields_before 	mcp_ban.html 	mcp_ban.html 	3.1.0-RC3 	Add additional fields to the ban form in MCP
+mcp_ban_unban_after 	mcp_ban.html 	mcp_ban.html 	3.1.0-RC3 	Add additional fields to the unban form in MCP
+mcp_ban_unban_before 	mcp_ban.html 	mcp_ban.html 	3.1.0-RC3 	Add additional fields to the unban form in MCP
+memberlist_body_username_append 	memberlist_body.html 	memberlist_body.html 	3.1.0-a1 	Add information after every username in the memberlist. Works in all display modes (leader, group and normal memberlist).
+memberlist_body_username_prepend 	memberlist_body.html 	memberlist_body.html 	3.1.0-a1 	Add information before every username in the memberlist. Works in all display modes (leader, group and normal memberlist).
+memberlist_view_contact_after 	memberlist_view.html 	memberlist_view.html 	3.1.0-b2 	Add content after the user contact part of any user profile
+memberlist_view_contact_before 	memberlist_view.html 	memberlist_view.html 	3.1.0-b2 	Add content before the user contact part of any user profile
+memberlist_view_content_append 	memberlist_view.html 	memberlist_view.html 	3.1.0-b2 	Add custom content to the user profile view after the main content
+memberlist_view_content_prepend 	memberlist_view.html 	memberlist_view.html 	3.1.0-b3 	Add custom content to the user profile view before the main content
+memberlist_view_user_statistics_after 	memberlist_view.html 	memberlist_view.html 	3.1.0-a1 	Add entries after the user statistics part of any user profile
+memberlist_view_user_statistics_before 	memberlist_view.html 	memberlist_view.html 	3.1.0-a1 	Add entries before the user statistics part of any user profile
+mcp_warn_post_add_warning_field_after 	mcp_warn_post.html 	mcp_warn_post.html 	3.1.0-RC4 	Add content during warning for a post - after add warning field.
+mcp_warn_post_add_warning_field_before 	mcp_warn_post.html 	mcp_warn_post.html 	3.1.0-RC4 	Add content during warning for a post - before add warning field.
+mcp_warn_user_add_warning_field_after 	mcp_warn_user.html 	mcp_warn_user.html 	3.1.0-RC4 	Add content during warning a user - after add warning field.
+mcp_warn_user_add_warning_field_before 	mcp_warn_user.html 	mcp_warn_user.html 	3.1.0-RC4 	Add content during warning a user - before add warning field.
+navbar_header_logged_out_content 	navbar_header.html 		3.1.0-RC1 	Add text and HTML in place of the username when not logged in.
+navbar_header_profile_list_after 	navbar_header.html 		3.1.0-RC2 	Add links to the bottom of the profile drop-down menu in the header navbar
+navbar_header_profile_list_before 	navbar_header.html 		3.1.0-RC2 	Add links to the top of the profile drop-down menu in the header navbar
+navbar_header_quick_links_after 	navbar_header.html 		3.1.0-RC2 	Add links to the bottom of the quick-links drop-down menu in the header
+navbar_header_quick_links_before 	navbar_header.html 		3.1.0-RC2 	Add links to the top of the quick-links drop-down menu in the header
+navbar_header_username_append 	navbar_header.html 		3.1.0-RC1 	Add text and HTMl after the username shown in the navbar.
+navbar_header_username_prepend 	navbar_header.html 		3.1.0-RC1 	Add text and HTMl before the username shown in the navbar.
+overall_footer_after 	overall_footer.html 	overall_footer.html 	3.1.0-a1 	Add content at the end of the file, directly prior to the `</body>` tag
+overall_footer_breadcrumb_append 	navbar_footer.html 	breadcrumbs.html 	3.1.0-a1 	Add links to the list of breadcrumbs in the footer
+overall_footer_breadcrumb_prepend 	navbar_footer.html 	breadcrumbs.html 	3.1.0-RC3 	Add links to the list of breadcrumbs in the footer (after site-home, but before board-index)
+overall_footer_content_after 	overall_footer.html 	overall_footer.html 	3.1.0-a3 	Add content on all pages after the main content, before the footer
+overall_footer_copyright_append 	overall_footer.html 	overall_footer.html 	3.1.0-a1 	Add content after the copyright line (no new line by default), before the ACP link
+overall_footer_copyright_prepend 	overall_footer.html 	overall_footer.html 	3.1.0-a1 	Add content before the copyright line
+overall_footer_page_body_after 	overall_footer.html 	overall_footer.html 	3.1.0-b3 	Add content after the page-body, but before the footer
+overall_footer_teamlink_after 	navbar_footer.html 	index_body.html 	3.1.0-b3 	Add contents after the team-link in the footer
+overall_footer_teamlink_before 	navbar_footer.html 	index_body.html 	3.1.0-b3 	Add contents before the team-link in the footer
+overall_footer_timezone_after 	navbar_footer.html 	breadcrumbs.html 	3.1.0-b3 	Add content to the navbar in the page footer, after "Timezone"
+overall_footer_timezone_before 	navbar_footer.html 	breadcrumbs.html 	3.1.0-b3 	Add content to the navbar in the page footer, before "Timezone"
+overall_header_breadcrumb_append 	navbar_header.html 	breadcrumbs.html 	3.1.0-a1 	Add links to the list of breadcrumbs in the header
+overall_header_breadcrumb_prepend 	navbar_header.html 	breadcrumbs.html 	3.1.0-RC3 	Add links to the list of breadcrumbs in the header (after site-home, but before board-index)
+overall_header_breadcrumbs_after 	navbar_header.html 	breadcrumbs.html 	3.1.0-RC3 	Add content after the breadcrumbs (outside of the breadcrumbs container)
+overall_header_breadcrumbs_before 	navbar_header.html 	breadcrumbs.html 	3.1.0-RC3 	Add content before the breadcrumbs (outside of the breadcrumbs container)
+overall_header_navlink_append 	navbar_header.html 	breadcrumbs.html 	3.1.0-b3 	Add content after each individual navlink (breadcrumb)
+overall_header_navlink_prepend 	navbar_header.html 	breadcrumbs.html 	3.1.0-b3 	Add content before each individual navlink (breadcrumb)
+posting_editor_buttons_after 	posting_buttons.html 	posting_buttons.html 	3.1.0-a3 	Add content after the BBCode posting buttons
+posting_editor_buttons_before 	posting_buttons.html 	posting_buttons.html 	3.1.0-a3 	Add content before the BBCode posting buttons
+posting_editor_message_after 	posting_editor.html 	posting_body.html 	3.1.0-a2 	Add field (e.g. textbox) to the posting screen after the message
+posting_editor_message_before 	posting_editor.html 	posting_body.html 	3.1.0-a2 	Add field (e.g. textbox) to the posting screen before the message
+posting_editor_options_prepend 	posting_editor.html 	posting_body.html 	3.1.0-a1 	Add posting options on the posting screen
+posting_editor_subject_after 	posting_editor.html 	posting_body.html 	3.1.0-a2 	Add field (e.g. textbox) to the posting screen after the subject
+posting_editor_subject_before 	posting_editor.html 	posting_body.html 	3.1.0-a2 	Add field (e.g. textbox) to the posting screen before the subject
+posting_pm_header_find_username_after 	posting_pm_header.html 	ucp_header.html 	3.1.0-RC4 	Add content after the find username link on composing pm
+posting_pm_header_find_username_before 	posting_pm_header.html 	ucp_header.html 	3.1.0-RC4 	Add content before the find username link on composing pm
+quickreply_editor_panel_after 	quickreply_editor.html 	quickreply_editor.html 	3.1.0-b2 	Add content after the quick reply panel (but inside the form)
+quickreply_editor_panel_before 	quickreply_editor.html 	quickreply_editor.html 	3.1.0-b2 	Add content before the quick reply panel (but inside the form)
+quickreply_editor_message_after 	quickreply_editor.html 	quickreply_editor.html 	3.1.0-a4 	Add content after the quick reply textbox
+quickreply_editor_message_before 	quickreply_editor.html 	quickreply_editor.html 	3.1.0-a4 	Add content before the quick reply textbox
+search_results_post_after 	search_results.html 	search_results.html 	3.1.0-b3 	Add data after search result posts
+search_results_post_before 	search_results.html 	search_results.html 	3.1.0-b3 	Add data before search result posts
+search_results_postprofile_after 	search_results.html 		3.1.0-b3 	Add content after the post author and stats in search results (posts view mode)
+search_results_postprofile_before 	search_results.html 		3.1.0-b3 	Add content directly before the post author in search results (posts view mode)
+search_results_topic_after 	search_results.html 	search_results.html 	3.1.0-b4 	Add data after search result topics
+search_results_topic_before 	search_results.html 	search_results.html 	3.1.0-b4 	Add data before search result topics
+simple_footer_after 	simple_footer.html 	simple_footer.html 	3.1.0-a1 	Add content directly prior to the `</body>` tag of the simple footer
+simple_header_body_before 	simple_header.html 	simple_header.html 	3.1.0-b2 	Add content to the header body
+simple_header_head_append 	simple_header.html 	simple_header.html 	3.1.0-b4 	Add asset calls directly before the `</head>` tag
+simple_header_stylesheets_after 	simple_header.html 	simple_header.html 	3.1.0-RC3 	Add asset calls after stylesheets within the `</head>` tag. Note that INCLUDECSS will not work with this event.
+topiclist_row_prepend 	search_results.html, viewforum_body.html 	search_results.html, viewforum_body.html 	3.1.0-a1 	Add content into topic rows (inside the elements containing topic titles)
+topiclist_row_append 	search_results.html, viewforum_body.html 	search_results.html, viewforum_body.html 	3.1.0-a1 	Add content into topic rows (inside the elements containing topic titles)
+ucp_agreement_terms_after 	ucp_agreement.html 	ucp_agreement.html 	3.1.0-b3 	Add content after the terms of agreement text at user registration
+ucp_agreement_terms_before 	ucp_agreement.html 	ucp_agreement.html 	3.1.0-b3 	Add content before the terms of agreement text at user registration
+ucp_pm_viewmessage_avatar_after 	ucp_pm_viewmessage.html 		3.1.0-RC3 	Add content right after the avatar when viewing a private message
+ucp_pm_viewmessage_avatar_before 	ucp_pm_viewmessage.html 		3.1.0-RC3 	Add content right before the avatar when viewing a private message
+ucp_pm_viewmessage_contact_fields_after 	ucp_pm_viewmessage.html 		3.1.0-b1 	Add data after the contact fields on the user profile when viewing a private message
+ucp_pm_viewmessage_contact_fields_before 	ucp_pm_viewmessage.html 		3.1.0-b1 	Add data before the contact fields on the user profile when viewing a private message
+ucp_pm_viewmessage_custom_fields_after 	ucp_pm_viewmessage.html 		3.1.0-a1 	Add data after the custom fields on the user profile when viewing a private message
+ucp_pm_viewmessage_custom_fields_before 	ucp_pm_viewmessage.html 		3.1.0-a1 	Add data before the custom fields on the user profile when viewing a private message
+ucp_pm_viewmessage_post_buttons_after 	ucp_pm_viewmessage.html 	ucp_pm_viewmessage.html 	3.1.0-RC3 	Add post button to private messages (next to edit, quote etc), at the end of the list.
+ucp_pm_viewmessage_post_buttons_before 	ucp_pm_viewmessage.html 	ucp_pm_viewmessage.html 	3.1.0-RC3 	Add post button to private messages (next to edit, quote etc), at the start of the list.
+ucp_pm_viewmessage_print_head_append 	ucp_pm_viewmessage_print.html 	ucp_pm_viewmessage_print.html 	3.1.0-a1 	Add asset calls directly before the `</head>` tag of the Print PM screen
+ucp_prefs_personal_prepend 	ucp_prefs_personal.html 	ucp_prefs_personal.html 	3.1.0-a1 	Add user options to the top of the Edit Global Settings block
+ucp_prefs_personal_append 	ucp_prefs_personal.html 	ucp_prefs_personal.html 	3.1.0-a1 	Add user options to the bottom of the Edit Global Settings block
+ucp_prefs_post_prepend 	ucp_prefs_post.html 	ucp_prefs_post.html 	3.1.0-a1 	Add user options to the top of the Edit Posting Defaults block
+ucp_prefs_post_append 	ucp_prefs_post.html 	ucp_prefs_post.html 	3.1.0-a1 	Add user options to the bottom of the Edit Posting Defaults block
+ucp_prefs_view_radio_buttons_prepend 	ucp_prefs_view.html 	ucp_prefs_view.html 	3.1.0-a1 	Add options to the top of the radio buttons block of the Edit Display Options screen
+ucp_prefs_view_radio_buttons_append 	ucp_prefs_view.html 	ucp_prefs_view.html 	3.1.0-a1 	Add options to the bottom of the radio buttons block of the Edit Display Options screen
+ucp_prefs_view_select_menu_prepend 	ucp_prefs_view.html 	ucp_prefs_view.html 	3.1.0-a1 	Add options to the top of the drop-down lists block of the Edit Display Options screen
+ucp_prefs_view_select_menu_append 	ucp_prefs_view.html 	ucp_prefs_view.html 	3.1.0-a1 	Add options to the bottom of the drop-down lists block of the Edit Display Options screen
+ucp_register_credentials_before 	ucp_register.html 	ucp_register.html 	3.1.0-b5 	Add options in registration page fieldset - before first field.
+ucp_register_profile_fields_after 	ucp_register.html 	ucp_register.html 	3.1.0-b5 	Add options in registration page fieldset - after last field.
+ucp_register_credentials_after 	ucp_register.html 	ucp_register.html 	3.1.0-b5 	Add options in registration page fieldset - after password field.
+ucp_register_options_before 	ucp_register.html 	ucp_register.html 	3.1.0-b5 	Add options in registration page fieldset - before language selector.
+ucp_register_profile_fields_before 	ucp_register.html 	ucp_register.html 	3.1.0-b5 	Add options in registration page fieldset - before profile fields.
+ucp_friend_list_before 	ucp_zebra_friends.html 	ucp_zebra_friends.html 	3.1.0-a4 	Add optional elements before list of friends in UCP
+ucp_friend_list_after 	ucp_zebra_friends.html 	ucp_zebra_friends.html 	3.1.0-a4 	Add optional elements after list of friends in UCP
+viewforum_buttons_bottom_before 	viewforum_body.html 	viewforum_body.html 	3.1.0-RC5 	Add buttons before New Topic button on the bottom of the topic's list
+viewforum_buttons_bottom_after 	viewforum_body.html 	viewforum_body.html 	3.1.0-RC5 	Add buttons after New Topic button on the bottom of the topic's list
+viewforum_buttons_top_before 	viewforum_body.html 	viewforum_body.html 	3.1.0-RC5 	Add buttons before New Topic button on the top of the topic's list
+viewforum_buttons_top_after 	viewforum_body.html 	viewforum_body.html 	3.1.0-RC5 	Add buttons after New Topic button on the top of the topic's list
+viewforum_forum_name_append 	viewforum_body.html 	viewforum_body.html 	3.1.0-b3 	Add content directly after the forum name link on the View forum screen
+viewforum_forum_name_prepend 	viewforum_body.html 	viewforum_body.html 	3.1.0-b3 	Add content directly before the forum name link on the View forum screen
+viewtopic_print_head_append 	viewtopic_print.html 	viewtopic_print.html 	3.1.0-a1 	Add asset calls directly before the `</head>` tag of the Print Topic screen
+viewtopic_body_avatar_after 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-RC3 	Add content right after the avatar when viewing topics
+viewtopic_body_avatar_before 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-RC3 	Add content right before the avatar when viewing topics
+viewtopic_body_contact_fields_after 	viewtopic_body.html 		3.1.0-b3 	Add data after the contact fields on the user profile when viewing a post
+viewtopic_body_contact_fields_before 	viewtopic_body.html 		3.1.0-b3 	Add data before the contact fields on the user profile when viewing a post
+viewtopic_body_footer_before 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-a1 	Add content to the bottom of the View topic screen below the posts and quick reply, directly before the jumpbox in Prosilver, breadcrumbs in Subsilver2.
+viewtopic_body_poll_option_after 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-b3 	Add content after the poll option the list.
+viewtopic_body_poll_option_before 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-b3 	Add content before the poll option the list.
+viewtopic_body_poll_question_append 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-b3 	Add content directly after the poll question on the View topic screen
+viewtopic_body_poll_question_prepend 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-b3 	Add content directly before the poll question on the View topic screen
+viewtopic_body_post_buttons_after 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-a1 	Add post button to posts (next to edit, quote etc), at the end of the list.
+viewtopic_body_post_buttons_before 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-a1 	Add post button to posts (next to edit, quote etc), at the start of the list.
+viewtopic_body_postrow_custom_fields_after 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-a1 	Add data after the custom fields on the user profile when viewing a post
+viewtopic_body_postrow_custom_fields_before 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-a1 	Add data before the custom fields on the user profile when viewing a post
+viewtopic_body_postrow_post_after 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-a4 	Add data after posts
+viewtopic_body_postrow_post_before 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-a4 	Add data before posts
+viewtopic_body_postrow_post_content_footer 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-RC4 	Add data at the end of the posts.
+viewtopic_body_postrow_post_notices_after 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-b2 	Add posts specific custom notices at the notices bottom.
+viewtopic_body_postrow_post_notices_before 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-b2 	Add posts specific custom notices at the notices top.
+viewtopic_body_topic_actions_before 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-a4 	Add data before the topic actions buttons (after the posts sorting options)
+viewtopic_topic_title_append 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-b3 	Add content directly after the topic title link on the View topic screen
+viewtopic_topic_title_prepend 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-a1 	Add content directly before the topic title link on the View topic screen
