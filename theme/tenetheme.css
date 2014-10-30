@@ -930,3 +930,7 @@ blockquote cite:before {
 .pagination li > a {
 	border-radius: 3px 0 0 3px;
 }
+
+.flip-clock-label {
+	color: #e0e0e0 !important;
+}

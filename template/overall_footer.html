@@ -118,6 +118,20 @@
 <!-- INCLUDEJS tenetheme.js -->
 <!-- INCLUDEJS ajax.js -->
 
+<!-- IF S_STARTPAGE -->
+<script src="{T_THEME_PATH}/libs/FlipClock/flipclock.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var date  = new Date(Date.UTC(2014, 10, 13, 0, 0, 0)),
+now   = new Date(),
+diff  = date.getTime()/1000 - now.getTime()/1000;
+var clock = $('#wodrelease').FlipClock(diff, {
+	clockFace: 'DailyCounter',
+	countdown: true,
+	defaultLanguage: 'de',
+});
+</script>
+<!-- ENDIF -->
+
 <!-- EVENT overall_footer_after -->
 
 {$SCRIPTS}
