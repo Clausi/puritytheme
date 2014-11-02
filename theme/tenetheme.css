@@ -733,6 +733,7 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	
 	.navbar-brand img {
 		max-height: 57px;
+		max-width: 200px;
 		width: auto;
 		transition: all 300ms ease;
 	}
