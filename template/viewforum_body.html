@@ -30,7 +30,7 @@
 
 <!-- IF S_HAS_SUBFORUM -->
 	<!-- IF not S_IS_BOT and U_MARK_FORUMS -->
-		<div class="row">
+		<div class="row bottom5">
 			<div class="col-md-12">
 				<ul class="list-unstyled">
 					<li class="pull-right"><a href="{U_MARK_FORUMS}" class="btn btn-default btn-sm" data-ajax="mark_forums_read">{L_MARK_SUBFORUMS_READ}</a></li>
@@ -42,7 +42,7 @@
 <!-- ENDIF -->
 
 <!-- IF S_DISPLAY_POST_INFO or PAGINATION or TOTAL_POSTS or TOTAL_TOPICS -->
-        <div class="row" <!-- IF S_HAS_SUBFORUM -->style="margin-top: 2em;"<!-- ENDIF -->>        
+        <div class="row<!-- IF S_HAS_SUBFORUM --> top5<!-- ENDIF --> bottom5">        
 			<!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
 				<div class="col-md-3">
 					<!-- IF S_IS_LOCKED -->
@@ -184,7 +184,7 @@
 							<div class="text-center"><span class="badge">{topicrow.VIEWS}</span></div>
 						</td>
 						<td class="lastpost hidden-xs<!-- IF topicrow.S_POST_GLOBAL --> warning-color<!-- ENDIF --><!-- IF topicrow.S_POST_ANNOUNCE --> info-color<!-- ENDIF --><!-- IF topicrow.S_POST_STICKY --> success-color<!-- ENDIF --><!-- IF topicrow.S_TOPIC_REPORTED --> danger-color<!-- ENDIF -->"><span><dfn>{L_LAST_POST} </dfn>{L_POST_BY_AUTHOR} {topicrow.LAST_POST_AUTHOR_FULL}
-							<!-- IF not S_IS_BOT --><a href="{topicrow.U_LAST_POST}"><i class="fa fa-angle-double-right"></i></a> <!-- ENDIF --><br />{topicrow.LAST_POST_TIME}</span>
+							<!-- IF not S_IS_BOT --><a href="{topicrow.U_LAST_POST}"><i class="fa fa-angle-double-right"></i></a> <!-- ENDIF --><br /><small>{topicrow.LAST_POST_TIME}</small></span>
 						</td>
 					</tr>
 		<!-- IF topicrow.S_LAST_ROW -->
@@ -203,7 +203,7 @@
 <!-- END topicrow -->
 
 <!-- IF .topicrow and not S_DISPLAY_ACTIVE -->
-    <div class="row">
+    <div class="row bottom5">
 		<!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
 			<div class="col-md-3">
 				<!-- IF S_IS_LOCKED -->

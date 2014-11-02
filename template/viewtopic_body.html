@@ -76,16 +76,17 @@
 				<p class="author">{L_POLL_LENGTH}<!-- IF S_CAN_VOTE and L_POLL_LENGTH --><br /><!-- ENDIF --><!-- IF S_CAN_VOTE -->{L_MAX_VOTES}<!-- ENDIF --></p>
 				<fieldset class="polls">
 				<!-- BEGIN poll_option -->
-					<div <!-- IF poll_option.POLL_OPTION_VOTED -->class="voted" title="{L_POLL_VOTED_OPTION}"<!-- ENDIF -->>
+					<div class="row bottom5<!-- IF poll_option.POLL_OPTION_VOTED --> voted<!-- ENDIF -->"<!-- IF poll_option.POLL_OPTION_VOTED --> title="{L_POLL_VOTED_OPTION}"<!-- ENDIF -->>
 						<!-- IF poll_option.POLL_OPTION_VOTED or S_DISPLAY_RESULTS --><div class="col-md-3"><!-- ELSE --><div class="col-md-12"><!-- ENDIF -->
 							<!-- IF S_CAN_VOTE -->
 								<!-- IF S_IS_MULTI_CHOICE --><div class="checkbox"><!-- ELSE --><div class="radio"><!-- ENDIF -->
-								<label for="vote_{poll_option.POLL_OPTION_ID}">{poll_option.POLL_OPTION_CAPTION}</label>
+								<label for="vote_{poll_option.POLL_OPTION_ID}">
 								<!-- IF S_IS_MULTI_CHOICE -->
 									<input type="checkbox" name="vote_id[]" id="vote_{poll_option.POLL_OPTION_ID}" value="{poll_option.POLL_OPTION_ID}"<!-- IF poll_option.POLL_OPTION_VOTED --> checked="checked"<!-- ENDIF --> />
 								<!-- ELSE -->
 									<input type="radio" name="vote_id[]" id="vote_{poll_option.POLL_OPTION_ID}" value="{poll_option.POLL_OPTION_ID}"<!-- IF poll_option.POLL_OPTION_VOTED --> checked="checked"<!-- ENDIF --> />
 								<!-- ENDIF -->
+								{poll_option.POLL_OPTION_CAPTION}</label>
 								</div>
 							<!-- ELSE -->
 								{poll_option.POLL_OPTION_CAPTION}
@@ -94,7 +95,7 @@
 						<!-- IF S_DISPLAY_RESULTS -->
 							<div class="col-md-7 vote-progress">
 								<div class="progress">
-									<div class="progress-bar <!-- IF poll_option.POLL_OPTION_PCT < 33 -->progress-bar-danger<!-- ELSEIF poll_option.POLL_OPTION_PCT < 66 -->progress-bar-warning<!-- ELSE -->progress-bar-success<!-- ENDIF -->"  role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:<!-- IF poll_option.POLL_OPTION_PCT < 10 -->10%<!-- ELSE -->{poll_option.POLL_OPTION_PERCENT}<!-- ENDIF -->;">
+									<div class="progress-bar <!-- IF poll_option.POLL_OPTION_PCT < 33 -->progress-bar-danger<!-- ELSEIF poll_option.POLL_OPTION_PCT < 66 -->progress-bar-warning<!-- ELSE -->progress-bar-success<!-- ENDIF -->"  role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:<!-- IF poll_option.POLL_OPTION_PCT < 10 -->1%<!-- ELSE -->{poll_option.POLL_OPTION_PERCENT}<!-- ENDIF -->;">
 										<!-- IF poll_option.POLL_OPTION_RESULT == 0 -->{L_NO_VOTES}<!-- ELSE -->{poll_option.POLL_OPTION_PERCENT}<!-- ENDIF -->
 									</div>
 								</div>
@@ -202,25 +203,17 @@
 						<!-- ELSE -->
 							<div class="row post-head">
 								<div class="col-md-6 col-xs-6">
-									<!-- IF S_IS_BOT --><i class="fa fa-file-o"></i><!-- ELSE --><a href="{postrow.U_MINI_POST}"><i class="fa fa-file-o"></i></a> <!-- ENDIF -->{L_POST_BY_AUTHOR} <strong>{postrow.POST_AUTHOR_FULL}</strong> &raquo; {postrow.POST_DATE}
+									<!-- IF S_IS_BOT --><i class="fa fa-file-o"></i><!-- ELSE --><a href="{postrow.U_MINI_POST}" title="{postrow.POST_DATE}"><i class="fa fa-file-o"></i></a> <!-- ENDIF -->{L_POST_BY_AUTHOR} <strong>{postrow.POST_AUTHOR_FULL}</strong> &raquo; {postrow.POST_DATE}
 								</div>
 								<div class="col-md-6 col-xs-6">
 								<!-- IF not S_IS_BOT -->
 									<!-- IF postrow.U_EDIT or postrow.U_DELETE or postrow.U_REPORT or postrow.U_WARN or postrow.U_INFO or postrow.U_QUOTE -->
 										<div class="btn-toolbar topic-buttons" role="toolbar">
 											<div class="btn-group">
-												<!-- IF U_EMAIL_TOPIC --><a class="btn btn-info btn-xs" href="{U_EMAIL_TOPIC}" title="{L_EMAIL_TOPIC}"><i class="fa fa-envelope"></i></a><!-- ENDIF -->
-												<!-- IF U_EMAIL_PM --><a class="btn btn-info btn-xs" href="{U_EMAIL_PM}" title="{L_EMAIL_PM}"><i class="fa fa-envelope"></i></a><!-- ENDIF -->
-												<!-- IF U_PRINT_TOPIC --><a class="btn btn-info btn-xs" href="{U_PRINT_TOPIC}" title="{L_PRINT_TOPIC}" accesskey="p"><i class="fa fa-print"></i></a><!-- ENDIF -->
-												<!-- IF U_PRINT_PM --><a class="btn btn-info btn-xs" href="{U_PRINT_PM}" title="{L_PRINT_PM}" accesskey="p"><i class="fa fa-print"></i></a><!-- ENDIF -->
-											</div>
-											<div class="btn-group">
 												<!-- IF postrow.U_EDIT --><a class="btn btn-warning btn-xs" href="{postrow.U_EDIT}" title="{L_EDIT_POST}"><i class="fa fa-pencil"></i></a><!-- ENDIF -->
 												<!-- IF postrow.U_DELETE --><a class="btn btn-danger btn-xs" href="{postrow.U_DELETE}" title="{L_DELETE_POST}"><i class="fa fa-trash-o"></i></a><!-- ENDIF -->
 											</div>
 											<div class="btn-group">
-												<!-- IF postrow.U_REPORT --><a class="btn btn-danger btn-xs" href="{postrow.U_REPORT}" title="{L_REPORT_POST}"><i class="fa fa-exclamation"></i></a><!-- ENDIF -->
-												<!-- IF postrow.U_WARN --><a class="btn btn-warning btn-xs" href="{postrow.U_WARN}" title="{L_WARN_USER}"><i class="fa fa-minus"></i></a><!-- ENDIF -->
 												<!-- IF postrow.U_INFO --><a class="btn btn-primary btn-xs" href="{postrow.U_INFO}" title="{L_INFORMATION}"><i class="fa fa-info"></i></a><!-- ENDIF -->
 												<!-- IF postrow.U_QUOTE --><a class="btn btn-success btn-xs" href="{postrow.U_QUOTE}" title="{L_REPLY_WITH_QUOTE}"><i class="fa fa-quote-left"></i></a><!-- ENDIF -->
 											</div>

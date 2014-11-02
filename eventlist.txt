@@ -199,30 +199,6 @@ mcp_warn_post_add_warning_field_after 	mcp_warn_post.html 	mcp_warn_post.html 	3
 mcp_warn_post_add_warning_field_before 	mcp_warn_post.html 	mcp_warn_post.html 	3.1.0-RC4 	Add content during warning for a post - before add warning field.
 mcp_warn_user_add_warning_field_after 	mcp_warn_user.html 	mcp_warn_user.html 	3.1.0-RC4 	Add content during warning a user - after add warning field.
 mcp_warn_user_add_warning_field_before 	mcp_warn_user.html 	mcp_warn_user.html 	3.1.0-RC4 	Add content during warning a user - before add warning field.
-navbar_header_logged_out_content 	navbar_header.html 		3.1.0-RC1 	Add text and HTML in place of the username when not logged in.
-navbar_header_profile_list_after 	navbar_header.html 		3.1.0-RC2 	Add links to the bottom of the profile drop-down menu in the header navbar
-navbar_header_profile_list_before 	navbar_header.html 		3.1.0-RC2 	Add links to the top of the profile drop-down menu in the header navbar
-navbar_header_quick_links_after 	navbar_header.html 		3.1.0-RC2 	Add links to the bottom of the quick-links drop-down menu in the header
-navbar_header_quick_links_before 	navbar_header.html 		3.1.0-RC2 	Add links to the top of the quick-links drop-down menu in the header
-navbar_header_username_append 	navbar_header.html 		3.1.0-RC1 	Add text and HTMl after the username shown in the navbar.
-navbar_header_username_prepend 	navbar_header.html 		3.1.0-RC1 	Add text and HTMl before the username shown in the navbar.
-overall_footer_after 	overall_footer.html 	overall_footer.html 	3.1.0-a1 	Add content at the end of the file, directly prior to the `</body>` tag
-overall_footer_breadcrumb_append 	navbar_footer.html 	breadcrumbs.html 	3.1.0-a1 	Add links to the list of breadcrumbs in the footer
-overall_footer_breadcrumb_prepend 	navbar_footer.html 	breadcrumbs.html 	3.1.0-RC3 	Add links to the list of breadcrumbs in the footer (after site-home, but before board-index)
-overall_footer_content_after 	overall_footer.html 	overall_footer.html 	3.1.0-a3 	Add content on all pages after the main content, before the footer
-overall_footer_copyright_append 	overall_footer.html 	overall_footer.html 	3.1.0-a1 	Add content after the copyright line (no new line by default), before the ACP link
-overall_footer_copyright_prepend 	overall_footer.html 	overall_footer.html 	3.1.0-a1 	Add content before the copyright line
-overall_footer_page_body_after 	overall_footer.html 	overall_footer.html 	3.1.0-b3 	Add content after the page-body, but before the footer
-overall_footer_teamlink_after 	navbar_footer.html 	index_body.html 	3.1.0-b3 	Add contents after the team-link in the footer
-overall_footer_teamlink_before 	navbar_footer.html 	index_body.html 	3.1.0-b3 	Add contents before the team-link in the footer
-overall_footer_timezone_after 	navbar_footer.html 	breadcrumbs.html 	3.1.0-b3 	Add content to the navbar in the page footer, after "Timezone"
-overall_footer_timezone_before 	navbar_footer.html 	breadcrumbs.html 	3.1.0-b3 	Add content to the navbar in the page footer, before "Timezone"
-overall_header_breadcrumb_append 	navbar_header.html 	breadcrumbs.html 	3.1.0-a1 	Add links to the list of breadcrumbs in the header
-overall_header_breadcrumb_prepend 	navbar_header.html 	breadcrumbs.html 	3.1.0-RC3 	Add links to the list of breadcrumbs in the header (after site-home, but before board-index)
-overall_header_breadcrumbs_after 	navbar_header.html 	breadcrumbs.html 	3.1.0-RC3 	Add content after the breadcrumbs (outside of the breadcrumbs container)
-overall_header_breadcrumbs_before 	navbar_header.html 	breadcrumbs.html 	3.1.0-RC3 	Add content before the breadcrumbs (outside of the breadcrumbs container)
-overall_header_navlink_append 	navbar_header.html 	breadcrumbs.html 	3.1.0-b3 	Add content after each individual navlink (breadcrumb)
-overall_header_navlink_prepend 	navbar_header.html 	breadcrumbs.html 	3.1.0-b3 	Add content before each individual navlink (breadcrumb)
 posting_editor_buttons_after 	posting_buttons.html 	posting_buttons.html 	3.1.0-a3 	Add content after the BBCode posting buttons
 posting_editor_buttons_before 	posting_buttons.html 	posting_buttons.html 	3.1.0-a3 	Add content before the BBCode posting buttons
 posting_editor_message_after 	posting_editor.html 	posting_body.html 	3.1.0-a2 	Add field (e.g. textbox) to the posting screen after the message

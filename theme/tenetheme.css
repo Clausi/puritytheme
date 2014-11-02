@@ -721,7 +721,6 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	}
 
 	.navbar-default {
-		z-index: 10000;
 		background-color: rgb(10,10,10);
 		background-color: rgba(10,10,10,0.8);
 	}
