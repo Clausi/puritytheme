@@ -9,12 +9,10 @@ phpbb.addAjaxCallback('mark_forums_read', function(res) {
 	var readTitle = res.NO_UNREAD_POSTS;
 	var unreadTitle = res.UNREAD_POSTS;
 	var iconsArray = {
-		'forum_unread': 'forum_read',
-		'forum_unread_subforum': 'forum_read_subforum',
-		'forum_unread_locked': 'forum_read_locked'
+		'btn-warning': 'btn-default',
 	};
 
-	$('li.row').find('dl[class*="forum_unread"]').each(function() {
+	$('td.forum-name').find('a[class*="btn-warning"]').each(function() {
 		var $this = $(this);
 
 		$.each(iconsArray, function(unreadClass, readClass) {
@@ -22,7 +20,7 @@ phpbb.addAjaxCallback('mark_forums_read', function(res) {
 				$this.removeClass(unreadClass).addClass(readClass);
 			}
 		});
-		$this.children('dt[title="' + unreadTitle + '"]').attr('title', readTitle);
+		$this.children('a[data-original-title="' + unreadTitle + '"]').attr('title', readTitle);
 	});
 
 	// Mark subforums read
