@@ -94,8 +94,11 @@
 	
 	<!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
 
-<script src="{T_JQUERY_LINK}"></script>
-<!-- IF S_ALLOW_CDN --><script>window.jQuery || document.write(unescape('%3Cscript src="{T_ASSETS_PATH}/javascript/jquery.min.js?assets_version={T_ASSETS_VERSION}" type="text/javascript"%3E%3C/script%3E'));</script><!-- ENDIF -->
+<script type="text/javascript" src="{T_JQUERY_LINK}"></script>
+<!-- IF S_ALLOW_CDN --><script type="text/javascript">window.jQuery || document.write(unescape('%3Cscript src="{T_ASSETS_PATH}/javascript/jquery.min.js?assets_version={T_ASSETS_VERSION}" type="text/javascript"%3E%3C/script%3E'));</script><!-- ENDIF -->
+<!-- INCLUDEJS ajax.js -->
+<script type="text/javascript" src="{T_SUPER_TEMPLATE_PATH}/styleswitcher.js"></script>
+<script type="text/javascript" src="{T_SUPER_TEMPLATE_PATH}/forum_fn.js"></script>
 
 <script src="{T_THEME_PATH}/libs/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="{T_THEME_PATH}/libs/bootstrap-select/js/bootstrap-select.js" type="text/javascript"></script>
@@ -105,25 +108,12 @@
 <script src="{T_THEME_PATH}/libs/darktip/DarkTip.wow.js" type="text/javascript"></script>
 
 <script type="text/javascript" src="{T_ASSETS_PATH}/javascript/core.js?assets_version={T_ASSETS_VERSION}"></script>
-<!-- INCLUDEJS forum_fn.js -->
-<!-- INCLUDEJS tenetheme.js -->
-<!-- INCLUDEJS ajax.js -->
 
-<!-- IF S_STARTPAGE and CLAUSI -->
-<script src="{T_THEME_PATH}/libs/FlipClock/flipclock.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-var date  = new Date(Date.UTC(2014, 10, 13, 0, 0, 0)),
-now   = new Date(),
-diff  = date.getTime()/1000 - now.getTime()/1000 -3600;
-var clock = $('#wodrelease').FlipClock(diff, {
-	clockFace: 'DailyCounter',
-	countdown: true,
-	defaultLanguage: 'de',
-});
-</script>
-<!-- ENDIF -->
+<!-- INCLUDEJS tenetheme.js -->
 
 <!-- EVENT overall_footer_after -->
+
+<!-- IF S_PLUPLOAD --><!-- INCLUDE plupload.html --><!-- ENDIF -->
 
 {$SCRIPTS}
 
@@ -166,10 +156,7 @@ $(document).ready(function() {
 		  filterTable(rosterTable, selectedValue);
 	});
 	
-});
-
-<!-- IF U_ACP -->
-$(document).ready(function() {
+	<!-- IF U_ACP -->
 	$('#datatables-rosterexmember').DataTable( {
 		"oLanguage": {
 			"sUrl": "{T_THEME_PATH}/libs/datatables/lang/dataTables.german.txt"
@@ -187,8 +174,9 @@ $(document).ready(function() {
 		  { "orderData": [6,7], "targets": [ 7 ] }
 		],
 	});
+	<!-- ENDIF -->
+	
 });
-<!-- ENDIF -->
 
 </script>
 <!-- ENDIF -->

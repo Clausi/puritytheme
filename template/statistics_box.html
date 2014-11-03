@@ -12,7 +12,7 @@
 		</ul>
 		<hr/>
 		<p><!-- IF S_USER_LOGGED_IN -->{LAST_VISIT_DATE}<!-- ELSE -->{CURRENT_TIME}<!-- ENDIF --></p>
-		<!-- IF U_MCP --><p>[&nbsp;<a href="{U_MCP}">{L_MCP}</a>&nbsp;]</p><!-- ELSEIF S_USER_LOGGED_IN --><p>{CURRENT_TIME}</p><!-- ENDIF -->
+		<!-- IF S_USER_LOGGED_IN --><p>{CURRENT_TIME}</p><!-- ENDIF -->
 	</div>
 </div>
 <!-- ENDIF -->

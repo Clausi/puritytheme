@@ -523,6 +523,10 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
   border-left: 10px solid #adadad;
 }
 
+.btn-default {
+    border-color: #4E4E4E;
+}
+
 /** Primary button **/
 .btn-primary:hover {
 	color: #F0F0F0;
@@ -931,6 +935,22 @@ blockquote cite:before {
 	border-radius: 3px 0 0 3px;
 }
 
-.flip-clock-label {
-	color: #e0e0e0 !important;
+.btn-file {
+	position: relative;
+	overflow: hidden;
+}
+.btn-file input[type=file] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 100%;
+	min-height: 100%;
+	font-size: 100px;
+	text-align: right;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	outline: none;
+	background: white;
+	cursor: inherit;
+	display: block;
 }

@@ -1,30 +1,24 @@
-<form method="post" action="{U_QR_ACTION}">
-	<div class="panel panel-default" id="qr_ns_editor_div">
+<form method="post" action="{U_QR_ACTION}" id="qr_postform" role="form">
+	<div class="panel panel-default">
 		<div class="panel-heading">
     		<h3 class="panel-title">{L_QUICKREPLY}</h3>
     	</div>
     	<div class="panel-body">
-			<fieldset>
-				<div class="form-horizontal">
-					<div class="form-group">
-						<label class="control-label col-md-2" for="subject">{L_SUBJECT}:</label>
-						<div class="col-md-10">
-							<input type="text" name="subject" id="subject-ns" size="45" maxlength="64" tabindex="2" value="{SUBJECT}" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-md-12">
-							<textarea style="height: 9em;" name="message" rows="7" cols="76" tabindex="3" class="form-control"></textarea>
-						</div>
-					</div>
-				</div>
-			</fieldset>
-			<fieldset class="submit-buttons">
-				{S_FORM_TOKEN}
-				{QR_HIDDEN_FIELDS}
-				<input type="submit" accesskey="f" tabindex="7" name="full_editor" value="{L_FULL_EDITOR}" class="btn btn-default" />
-				<input type="submit" accesskey="s" tabindex="6" name="post" value="{L_SUBMIT}" class="btn btn-success" />
-			</fieldset>
+			<div class="form-group">
+				<label for="subject">{L_SUBJECT}:</label>
+				<input type="text" name="subject" id="subject-ns" size="45" maxlength="64" tabindex="2" value="{SUBJECT}" class="form-control" />
+			</div>
+			<!-- EVENT quickreply_editor_message_before -->
+			<div class="form-group">
+				<textarea name="message" id="message" rows="7" cols="76" tabindex="3" class="form-control"></textarea>
+			</div>
+			<!-- EVENT quickreply_editor_message_after -->
+		</div>
+		<div class="panel-footer">
+			{S_FORM_TOKEN}
+			{QR_HIDDEN_FIELDS}
+			<input type="submit" accesskey="f" tabindex="6" name="preview" value="{L_FULL_EDITOR}" class="btn btn-primary" id="qr_full_editor" />&nbsp;
+			<input type="submit" accesskey="s" tabindex="7" name="post" value="{L_SUBMIT}" class="btn btn-success" />&nbsp;
 		</div>
 	</div>
 </form>

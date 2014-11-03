@@ -1,0 +1,10 @@
+<!-- IF S_DISPLAY_ONLINE_LIST -->
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<!-- IF U_VIEWONLINE --><h3 class="panel-title"><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3 class="panel-title">{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
+	</div>
+	<div class="panel-body">
+		{LOGGED_IN_USER_LIST}
+	</div>
+</div>
+<!-- ENDIF -->
