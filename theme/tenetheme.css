@@ -172,8 +172,8 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	margin-top:20px
 }
 
-#format-buttons .btn {
-	margin-bottom: 0px !important;
+#format-buttons .btn-group {
+	margin-bottom: 2px;
 }
 
 .colorgraph {
