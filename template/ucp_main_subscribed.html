@@ -37,13 +37,13 @@
 				<hr class="dashed"/>
 				<div class="text-center">
 					<div class="btn-group">
-						<!-- IF TOTAL_TOPICS --> <span class="btn btn-default btn-sm disabled">{TOTAL_TOPICS}</span><!-- ENDIF -->
+						<!-- IF TOTAL_TOPICS --> <span class="btn btn-default disabled">{TOTAL_TOPICS}</span><!-- ENDIF -->
 						<!-- IF PAGE_NUMBER -->
 							<!-- IF PAGINATION -->
 								<a href="#" class="btn bn-default" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}"><span class="label">{PAGE_NUMBER}</span></a>
-								<span class="btn btn-default btn-sm">{PAGINATION}</span>
+								<span class="btn btn-default">{PAGINATION}</span>
 							<!-- ELSE -->
-								<span class="btn btn-default btn-sm disabled">{PAGE_NUMBER}</span>
+								<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
 							<!-- ENDIF -->
 						<!-- ENDIF -->
 					</div>
@@ -83,8 +83,8 @@
 	<!-- IF .topicrow or .forumrow -->
 		<fieldset class="row display-actions">
 			<div class="btn-group">
-				<a class="btn btn-success btn-sm" href="#" onclick="marklist('ucp', 't', true); marklist('ucp', 'f', true); return false;">{L_MARK_ALL}</a>
-				<a class="btn btn-warning btn-sm" href="#" onclick="marklist('ucp', 't', false); marklist('ucp', 'f', false); return false;">{L_UNMARK_ALL}</a>
+				<a class="btn btn-success" href="#" onclick="marklist('ucp', 't', true); marklist('ucp', 'f', true); return false;">{L_MARK_ALL}</a>
+				<a class="btn btn-warning" href="#" onclick="marklist('ucp', 't', false); marklist('ucp', 'f', false); return false;">{L_UNMARK_ALL}</a>
 			</div>
 			<input type="submit" name="unwatch" value="{L_UNWATCH_MARKED}" class="btn btn-primary" />
 			{S_FORM_TOKEN}

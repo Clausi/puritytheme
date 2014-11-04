@@ -10,13 +10,13 @@
 			<!-- IF .attachrow -->
 				<div class="text-center">
 					<div class="btn-group">
-						<!-- IF TOTAL_ATTACHMENTS --><span class="btn btn-default btn-sm disabled">{TOTAL_ATTACHMENTS} {L_TITLE}</span><!-- ENDIF -->
+						<!-- IF TOTAL_ATTACHMENTS --><span class="btn btn-default disabled">{TOTAL_ATTACHMENTS} {L_TITLE}</span><!-- ENDIF -->
 						<!-- IF PAGE_NUMBER -->
 							<!-- IF PAGINATION -->
 								<a href="#" class="btn bn-default" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a>
-								<span class="btn btn-default btn-sm">{PAGINATION}</span>
+								<span class="btn btn-default">{PAGINATION}</span>
 							<!-- ELSE -->
-								<span class="btn btn-default btn-sm disabled">{PAGE_NUMBER}</span>
+								<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
 							<!-- ENDIF -->
 						<!-- ENDIF -->
 					</div>
@@ -54,13 +54,13 @@
 				<hr />
 				<div class="text-center">
 					<div class="btn-group">
-						<!-- IF TOTAL_ATTACHMENTS --><span class="btn btn-default btn-sm disabled">{TOTAL_ATTACHMENTS} {L_TITLE}</span><!-- ENDIF -->
+						<!-- IF TOTAL_ATTACHMENTS --><span class="btn btn-default disabled">{TOTAL_ATTACHMENTS} {L_TITLE}</span><!-- ENDIF -->
 						<!-- IF PAGE_NUMBER -->
 							<!-- IF PAGINATION -->
 								<a href="#" class="btn bn-default" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a>
-								<span class="btn btn-default btn-sm">{PAGINATION}</span>
+								<span class="btn btn-default">{PAGINATION}</span>
 							<!-- ELSE -->
-								<span class="btn btn-default btn-sm disabled">{PAGE_NUMBER}</span>
+								<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
 							<!-- ENDIF -->
 						<!-- ENDIF -->
 					</div>
@@ -71,10 +71,10 @@
 			<!-- IF S_ATTACHMENT_ROWS -->
 				<fieldset class="display-actions">
 					<div class="btn-group">	
-						<a class="btn btn-success btn-sm" href="#" onclick="marklist('ucp', 'attachment', true); return false;">{L_MARK_ALL}</a>
-						<a class="btn btn-warning btn-sm" href="#" onclick="marklist('ucp', 'attachment', false); return false;">{L_UNMARK_ALL}</a>
+						<a class="btn btn-success" href="#" onclick="marklist('ucp', 'attachment', true); return false;">{L_MARK_ALL}</a>
+						<a class="btn btn-warning" href="#" onclick="marklist('ucp', 'attachment', false); return false;">{L_UNMARK_ALL}</a>
 					</div>
-					<input class="btn btn-danger btn-sm" type="submit" name="delete" value="{L_DELETE_MARKED}" />
+					<input class="btn btn-danger" type="submit" name="delete" value="{L_DELETE_MARKED}" />
 					{S_FORM_TOKEN}
 				</fieldset>
 			<!-- ENDIF -->

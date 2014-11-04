@@ -33,7 +33,7 @@
 		<div class="row bottom5">
 			<div class="col-md-12">
 				<ul class="list-unstyled">
-					<li class="pull-right"><a href="{U_MARK_FORUMS}" class="btn btn-default btn-sm" data-ajax="mark_forums_read">{L_MARK_SUBFORUMS_READ}</a></li>
+					<li class="pull-right"><a href="{U_MARK_FORUMS}" class="btn btn-default" data-ajax="mark_forums_read">{L_MARK_SUBFORUMS_READ}</a></li>
 				</ul>
 			</div>
 		</div>
@@ -46,18 +46,18 @@
 			<!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
 				<div class="col-md-3">
 					<!-- IF S_IS_LOCKED -->
-						<a class="btn btn-danger btn-sm disabled" href="{U_POST_NEW_TOPIC}"><span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span> {L_FORUM_LOCKED}</a>
+						<a class="btn btn-danger disabled" href="{U_POST_NEW_TOPIC}"><span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span> {L_FORUM_LOCKED}</a>
 					<!-- ELSE -->
-						<a class="btn btn-primary btn-sm btn-labeled" href="{U_POST_NEW_TOPIC}"><span class="btn-label"><i class="fa fa-pencil-square-o"></i></span> {L_POST_TOPIC}</a>
+						<a class="btn btn-primary btn-labeled" href="{U_POST_NEW_TOPIC}"><span class="btn-label"><i class="fa fa-pencil-square-o"></i></span> {L_POST_TOPIC}</a>
 					<!-- ENDIF -->
 				</div>
 			<!-- ENDIF -->
 			<!-- IF PAGINATION or TOTAL_POSTS or TOTAL_TOPICS -->
 				<div class="col-md-6 text-center">
 					<div class="btn-group">
-						<!-- IF not S_IS_BOT and U_MARK_TOPICS --><a href="{U_MARK_TOPICS}" class="btn btn-default btn-sm" accesskey="m" data-ajax="mark_topics_read"><i class="icon-check"></i> {L_MARK_TOPICS_READ}</a><!-- ENDIF --><!-- IF TOTAL_TOPICS --><span class="btn btn-default btn-sm disabled">{TOTAL_TOPICS}</span><!-- ENDIF -->
+						<!-- IF not S_IS_BOT and U_MARK_TOPICS --><a href="{U_MARK_TOPICS}" class="btn btn-default" accesskey="m" data-ajax="mark_topics_read"><i class="icon-check"></i> {L_MARK_TOPICS_READ}</a><!-- ENDIF --><!-- IF TOTAL_TOPICS --><span class="btn btn-default disabled">{TOTAL_TOPICS}</span><!-- ENDIF -->
 						<!-- IF PAGE_NUMBER -->
-							<!-- IF PAGINATION --> <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}"><span class="btn btn-default btn-sm disabled">{PAGE_NUMBER}</span></a><span>{PAGINATION}</span><!-- ELSE --><span class="btn btn-default btn-sm disabled">{PAGE_NUMBER}</span><!-- ENDIF -->
+							<!-- IF PAGINATION --> <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}"><span class="btn btn-default disabled">{PAGE_NUMBER}</span></a><span>{PAGINATION}</span><!-- ELSE --><span class="btn btn-default disabled">{PAGE_NUMBER}</span><!-- ENDIF -->
 						<!-- ENDIF -->
 					</div>
 				</div>
@@ -69,7 +69,7 @@
 							<input class="input-medium search form-control input-sm" type="text" name="keywords" id="search_keywords" size="20" placeholder="{L_SEARCH_FORUM}"/>
 							<span class="input-group-btn">
 								{S_SEARCH_LOCAL_HIDDEN_FIELDS}
-								<button type="submit" class="btn btn-default btn-sm">{L_SEARCH}</button>
+								<button type="submit" class="btn btn-default">{L_SEARCH}</button>
 							</span>
 						</div>
 					</form>
@@ -136,7 +136,7 @@
 					<tr class="t-row<!-- IF topicrow.S_POST_GLOBAL --> warning-color<!-- ENDIF --><!-- IF topicrow.S_POST_ANNOUNCE --> info-color<!-- ENDIF --><!-- IF topicrow.S_POST_STICKY --> success-color<!-- ENDIF --><!-- IF topicrow.S_TOPIC_REPORTED --> danger-color<!-- ENDIF -->">                        
 						<td class="topic-name <!-- IF topicrow.S_POST_GLOBAL --> warning-color<!-- ENDIF --><!-- IF topicrow.S_POST_ANNOUNCE --> info-color<!-- ENDIF --><!-- IF topicrow.S_POST_STICKY --> success-color<!-- ENDIF --><!-- IF topicrow.S_TOPIC_REPORTED --> danger-color<!-- ENDIF -->" title="{topicrow.TOPIC_FOLDER_IMG_ALT}">
 							<div class="pull-left forum-topic-icon">
-								<span><a href="{topicrow.U_VIEW_TOPIC}" class="btn <!-- IF topicrow.S_UNREAD_TOPIC -->btn-warning<!-- ELSE -->btn-default<!-- ENDIF --> tooltip-link" title="{topicrow.TOPIC_FOLDER_IMG_ALT}">
+								<span><a href="<!-- IF topicrow.S_UNREAD_TOPIC -->{topicrow.U_NEWEST_POST}<!-- ELSE -->{topicrow.U_VIEW_TOPIC}<!-- ENDIF -->" class="btn <!-- IF topicrow.S_UNREAD_TOPIC -->btn-warning<!-- ELSE -->btn-default<!-- ENDIF --> tooltip-link" title="{topicrow.TOPIC_FOLDER_IMG_ALT}">
 									<!-- IF topicrow.S_TOPIC_LOCKED -->
 										<i class="fa fa-lock"></i>
 									<!-- ELSEIF topicrow.S_POST_GLOBAL -->
@@ -207,18 +207,18 @@
 		<!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
 			<div class="col-md-3">
 				<!-- IF S_IS_LOCKED -->
-					<a class="btn btn-danger btn-sm disabled" href="{U_POST_NEW_TOPIC}"><span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span> {L_FORUM_LOCKED}</a>
+					<a class="btn btn-danger disabled" href="{U_POST_NEW_TOPIC}"><span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span> {L_FORUM_LOCKED}</a>
 				<!-- ELSE -->
-					<a class="btn btn-primary btn-sm btn-labeled" href="{U_POST_NEW_TOPIC}"><span class="btn-label"><i class="fa fa-pencil-square-o"></i></span> {L_POST_TOPIC}</a>
+					<a class="btn btn-primary btn-labeled" href="{U_POST_NEW_TOPIC}"><span class="btn-label"><i class="fa fa-pencil-square-o"></i></span> {L_POST_TOPIC}</a>
 				<!-- ENDIF -->
 			</div>
         <!-- ENDIF -->
         <!-- IF PAGINATION or TOTAL_POSTS or TOTAL_TOPICS -->
             <div class="col-md-6 text-center">
 				<div class="btn-group">
-					<!-- IF not S_IS_BOT and U_MARK_TOPICS --><a href="{U_MARK_TOPICS}" class="btn btn-default btn-sm" accesskey="m" data-ajax="mark_topics_read"><i class="icon-check"></i> {L_MARK_TOPICS_READ}</a><!-- ENDIF --><!-- IF TOTAL_TOPICS --><span class="btn btn-default btn-sm disabled">{TOTAL_TOPICS}</span><!-- ENDIF -->
+					<!-- IF not S_IS_BOT and U_MARK_TOPICS --><a href="{U_MARK_TOPICS}" class="btn btn-default" accesskey="m" data-ajax="mark_topics_read"><i class="icon-check"></i> {L_MARK_TOPICS_READ}</a><!-- ENDIF --><!-- IF TOTAL_TOPICS --><span class="btn btn-default disabled">{TOTAL_TOPICS}</span><!-- ENDIF -->
 					<!-- IF PAGE_NUMBER -->
-						<!-- IF PAGINATION --> <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}"><span class="btn btn-default btn-sm disabled">{PAGE_NUMBER}</span></a><span>{PAGINATION}</span><!-- ELSE --><span class="btn btn-default btn-sm disabled">{PAGE_NUMBER}</span><!-- ENDIF -->
+						<!-- IF PAGINATION --> <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}"><span class="btn btn-default disabled">{PAGE_NUMBER}</span></a><span>{PAGINATION}</span><!-- ELSE --><span class="btn btn-default disabled">{PAGE_NUMBER}</span><!-- ENDIF -->
 					<!-- ENDIF -->
 				</div>
 			</div>
@@ -230,7 +230,7 @@
 						<input class="input-medium search form-control input-sm" type="text" name="keywords" id="search_keywords" size="20" placeholder="{L_SEARCH_FORUM}"/>
 						<span class="input-group-btn">
 							{S_SEARCH_LOCAL_HIDDEN_FIELDS}
-							<button type="submit" class="btn btn-default btn-sm">{L_SEARCH}</button>
+							<button type="submit" class="btn btn-default">{L_SEARCH}</button>
 						</span>
 					</div>
 				</form>
@@ -243,12 +243,12 @@
 	<div class="well well-sm">
 		<form method="post" action="{S_FORUM_ACTION}" class="form-inline">
 			<fieldset class="display-options">
-				<!-- IF PREVIOUS_PAGE --><a class="btn btn-inverse btn-sm" href="{PREVIOUS_PAGE}" class="left-box {S_CONTENT_FLOW_BEGIN}">{L_PREVIOUS}</a><!-- ENDIF -->
-				<!-- IF NEXT_PAGE --><a class="btn btn-inverse btn-sm" href="{NEXT_PAGE}" class="right-box {S_CONTENT_FLOW_END}">{L_NEXT}</a><!-- ENDIF -->
+				<!-- IF PREVIOUS_PAGE --><a class="btn btn-inverse" href="{PREVIOUS_PAGE}" class="left-box {S_CONTENT_FLOW_BEGIN}">{L_PREVIOUS}</a><!-- ENDIF -->
+				<!-- IF NEXT_PAGE --><a class="btn btn-inverse" href="{NEXT_PAGE}" class="right-box {S_CONTENT_FLOW_END}">{L_NEXT}</a><!-- ENDIF -->
 				<!-- IF not S_IS_BOT -->
 					<label>{L_DISPLAY_TOPICS}: {S_SELECT_SORT_DAYS}</label>
 					<label>{L_SORT_BY} {S_SELECT_SORT_KEY}</label>
-					<label>{S_SELECT_SORT_DIR} <input type="submit" name="sort" value="{L_GO}" class="btn btn-default btn-sm" /></label>
+					<label>{S_SELECT_SORT_DIR} <input type="submit" name="sort" value="{L_GO}" class="btn btn-default" /></label>
 				<!-- ENDIF -->
 			</fieldset>
 		</form>

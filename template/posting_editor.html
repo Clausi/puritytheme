@@ -10,7 +10,7 @@
 							<!-- BEGIN to_recipient -->
 								<!-- IF not to_recipient.S_FIRST_ROW and to_recipient.S_ROW_COUNT mod 2 eq 0 --></dd><dd><!-- ENDIF -->
 								<!-- IF to_recipient.IS_GROUP --><a href="{to_recipient.U_VIEW}"><strong>{to_recipient.NAME}</strong></a>&nbsp;<!-- ELSE -->{to_recipient.NAME_FULL}&nbsp;<!-- ENDIF -->
-								<!-- IF not S_EDIT_POST --><input type="submit" name="remove_{to_recipient.TYPE}[{to_recipient.UG_ID}]" value="x" class="btn btn-danger btn-sm" />&nbsp;<!-- ENDIF -->
+								<!-- IF not S_EDIT_POST --><input type="submit" name="remove_{to_recipient.TYPE}[{to_recipient.UG_ID}]" value="x" class="btn btn-danger" />&nbsp;<!-- ENDIF -->
 							<!-- END to_recipient -->
 						</dd>
 					</dl>
@@ -22,7 +22,7 @@
 							<!-- BEGIN bcc_recipient -->
 								<!-- IF not bcc_recipient.S_FIRST_ROW and bcc_recipient.S_ROW_COUNT mod 2 eq 0 --></dd><dd><!-- ENDIF -->
 								<!-- IF bcc_recipient.IS_GROUP --><a href="{bcc_recipient.U_VIEW}"><strong>{bcc_recipient.NAME}</strong></a><!-- ELSE -->{bcc_recipient.NAME_FULL}&nbsp;<!-- ENDIF -->
-								<!-- IF not S_EDIT_POST --><input type="submit" name="remove_{bcc_recipient.TYPE}[{bcc_recipient.UG_ID}]" value="x" class="btn btn-danger btn-sm" />&nbsp;<!-- ENDIF -->
+								<!-- IF not S_EDIT_POST --><input type="submit" name="remove_{bcc_recipient.TYPE}[{bcc_recipient.UG_ID}]" value="x" class="btn btn-danger" />&nbsp;<!-- ENDIF -->
 							<!-- END bcc_recipient -->
 						</dd>
 					</dl>
@@ -33,9 +33,9 @@
 							<textarea id="username_list" name="username_list" class="form-control" cols="40" rows="1"></textarea>
 						</div>
 						<div class="btn-group">
-							<a class="btn btn-default btn-sm" href="{U_FIND_USERNAME}" onclick="find_username(this.href); return false;">{L_FIND_USERNAME}</a>
-							<button type="submit" name="add_to" value="{L_ADD}" class="btn btn-default btn-sm">{L_ADD}</button>
-							<button type="submit" name="add_bcc" value="{L_ADD_BCC}" class="btn btn-default btn-sm">{L_ADD_BCC}</button>
+							<a class="btn btn-default" href="{U_FIND_USERNAME}" onclick="find_username(this.href); return false;">{L_FIND_USERNAME}</a>
+							<button type="submit" name="add_to" value="{L_ADD}" class="btn btn-default">{L_ADD}</button>
+							<button type="submit" name="add_bcc" value="{L_ADD_BCC}" class="btn btn-default">{L_ADD_BCC}</button>
 						</div>
 						<hr />
 					</div>

@@ -13,13 +13,13 @@
 			<!-- IF PAGINATION or TOTAL_TOPICS -->
 				<div class="text-center row">
 					<div class="btn-group">
-						<!-- IF TOTAL_TOPICS --><span class="btn btn-default btn-sm disabled">{TOTAL_TOPICS}</span><!-- ENDIF -->
+						<!-- IF TOTAL_TOPICS --><span class="btn btn-default disabled">{TOTAL_TOPICS}</span><!-- ENDIF -->
 						<!-- IF PAGE_NUMBER -->
 							<!-- IF PAGINATION -->
 								<a href="#" class="btn bn-default" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}"><span>{PAGE_NUMBER}</span></a>
-								<span class="btn btn-default btn-sm">{PAGINATION}</span>
+								<span class="btn btn-default">{PAGINATION}</span>
 							<!-- ELSE -->
-								<span class="btn btn-default btn-sm disabled">{PAGE_NUMBER}</span>
+								<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
 							<!-- ENDIF -->
 						<!-- ENDIF -->
 					</div>
@@ -67,13 +67,13 @@
 			<!-- IF PAGINATION or TOTAL_TOPICS -->
 				<div class="text-center row">
 					<div class="btn-group">
-						<!-- IF TOTAL_TOPICS --><span class="btn btn-default btn-sm disabled">{TOTAL_TOPICS}</span><!-- ENDIF -->
+						<!-- IF TOTAL_TOPICS --><span class="btn btn-default disabled">{TOTAL_TOPICS}</span><!-- ENDIF -->
 						<!-- IF PAGE_NUMBER -->
 							<!-- IF PAGINATION -->
 								<a href="#" class="btn bn-default" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}"><span>{PAGE_NUMBER}</span></a>
-								<span class="btn btn-default btn-sm">{PAGINATION}</span>
+								<span class="btn btn-default">{PAGINATION}</span>
 							<!-- ELSE -->
-								<span class="btn btn-default btn-sm disabled">{PAGE_NUMBER}</span>
+								<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
 							<!-- ENDIF -->
 						<!-- ENDIF -->
 					</div>
@@ -86,14 +86,14 @@
 				<label>{L_DISPLAY_TOPICS}: {S_SELECT_SORT_DAYS}</label>
 				<label>{L_SORT_BY} {S_SELECT_SORT_KEY}</label>
 				<label>{S_SELECT_SORT_DIR} </label>
-				<input type="submit" name="sort" value="{L_GO}" class="btn btn-default btn-sm" />
+				<input type="submit" name="sort" value="{L_GO}" class="btn btn-default" />
 			</fieldset>
 			<hr />
 			<fieldset class="display-actions">
 				<!-- IF not S_MERGE_SELECT -->
 					<div class="btn-group">
-						<a href="#" class="btn btn-success btn-sm" onclick="marklist('mcp', 'topic_id_list', true); return false;">{L_MARK_ALL}</a>
-						<a href="#" class="btn btn-danger btn-sm" onclick="marklist('mcp', 'topic_id_list', false); return false;">{L_UNMARK_ALL}</a>
+						<a href="#" class="btn btn-success" onclick="marklist('mcp', 'topic_id_list', true); return false;">{L_MARK_ALL}</a>
+						<a href="#" class="btn btn-danger" onclick="marklist('mcp', 'topic_id_list', false); return false;">{L_UNMARK_ALL}</a>
 					</div>
 					<select name="action">
 						<option value="" selected="selected">{L_SELECT_ACTION}</option>
@@ -110,7 +110,7 @@
 							<option value="make_global">{L_MAKE_GLOBAL}</option>
 						<!-- ENDIF -->
 					</select>
-					<input class="btn btn-default btn-sm" type="submit" value="{L_SUBMIT}" />
+					<input class="btn btn-default" type="submit" value="{L_SUBMIT}" />
 				<!-- ENDIF -->
 				{S_FORM_TOKEN}
 			</fieldset>

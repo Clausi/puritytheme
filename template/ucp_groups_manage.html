@@ -172,8 +172,8 @@
 				<hr class="dashed" />
 				<fieldset class="text-right">
 					<div class="btn-group">	
-						<a class="btn btn-success btn-sm" href="#" onclick="marklist('ucp', 'mark', true); return false;">{L_MARK_ALL}</a>
-						<a class="btn btn-warning btn-sm" href="#" onclick="marklist('ucp', 'mark', false); return false;">{L_UNMARK_ALL}</a>
+						<a class="btn btn-success" href="#" onclick="marklist('ucp', 'mark', true); return false;">{L_MARK_ALL}</a>
+						<a class="btn btn-warning" href="#" onclick="marklist('ucp', 'mark', false); return false;">{L_UNMARK_ALL}</a>
 					</div>
 					<select name="action"><option value="">{L_SELECT_OPTION}</option>{S_ACTION_OPTIONS}</select>
 					<input class="btn btn-primary" type="submit" name="update" value="{L_SUBMIT}" />
@@ -196,7 +196,7 @@
 							<div class="col-md-8">
 								<textarea name="usernames" id="usernames" rows="3" cols="30" class="form-control"></textarea>
 								<div class="spacer"></div>
-								<a class="btn btn-default btn-sm btn-success" href="{U_FIND_USERNAME}" onclick="find_username(this.href); return false;">{L_FIND_USERNAME}</a>
+								<a class="btn btn-default btn-success" href="{U_FIND_USERNAME}" onclick="find_username(this.href); return false;">{L_FIND_USERNAME}</a>
 								<span class="help-block">{L_USERNAMES_EXPLAIN}</span>
 							</div>
 						</div>
@@ -221,7 +221,7 @@
 									<td><a href="{leader.U_EDIT}" class="topictitle"<!-- IF leader.GROUP_COLOUR --> style="color: #{leader.GROUP_COLOUR};"<!-- ENDIF -->>{leader.GROUP_NAME}</a>
 										<!-- IF leader.GROUP_DESC --><br />{leader.GROUP_DESC}<!-- ENDIF -->
 									</td>
-									<td class="option"><span><a class="btn btn-default btn-sm" href="{leader.U_EDIT}" >{L_EDIT}</a></span> <span><a class="btn btn-default btn-sm" href="{leader.U_LIST}">{L_GROUP_LIST}</a></span></td>
+									<td class="option"><span><a class="btn btn-default" href="{leader.U_EDIT}" >{L_EDIT}</a></span> <span><a class="btn btn-default" href="{leader.U_LIST}">{L_GROUP_LIST}</a></span></td>
 								</tr>
 							<!-- END leader -->
 						</tbody>

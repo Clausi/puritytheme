@@ -118,9 +118,12 @@
 		<!-- IF not S_STARTPAGE and not S_GUILDPAGE and not S_APPLYPAGE and not S_RAIDPLANER_PAGE -->
 			<div class="row bottom5">
 				<div class="col-md-12">
-					<div class="btn-group btn-breadcrumb">
-						 <a href="{U_INDEX}" accesskey="h" class="btn btn-default btn-sm" title="{L_INDEX}" data-placement="bottom"><i class="glyphicon glyphicon-home"></i></a> <!-- BEGIN navlinks --> <a href="{navlinks.U_VIEW_FORUM}" class="btn btn-default btn-sm<!-- IF navlinks.FORUM_ID == S_FORUM_ID --> active<!-- ENDIF -->">{navlinks.FORUM_NAME}</a><!-- END navlinks -->
-					</div>
+					<ol class="breadcrumb">
+						<li><a href="{U_INDEX}" accesskey="h" title="{L_INDEX}" data-placement="bottom"><i class="glyphicon glyphicon-home"></i></a></li>
+						<!-- BEGIN navlinks -->	
+						<li<!-- IF navlinks.FORUM_ID == S_FORUM_ID --> class="active"<!-- ENDIF -->><a href="{navlinks.U_VIEW_FORUM}">{navlinks.FORUM_NAME}</a></li>
+						<!-- END navlinks -->
+					</ol>
 				</div>
 			</div>
 		<!-- ENDIF -->

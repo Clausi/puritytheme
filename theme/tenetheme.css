@@ -64,7 +64,7 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
   padding-top: 10px;
 }
 
-.forum-button, .forum-topic-icon {
+.forum-button, .forum-topic-icon, .pm-topic-icon {
   padding-right: 5px;
   padding-left: 5px;
 }
@@ -125,6 +125,10 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 .reg-button {
 	padding:0px;
 	display:inline
+}
+
+#navloginform > .btn {
+	width: 100%;
 }
 
 .forum-selector {
@@ -540,73 +544,11 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	background-color: #116BA5;
 }
 
-.btn-breadcrumb .btn.btn-primary:not(:last-child):after {
-  border-left: 10px solid #428bca;
-}
-.btn-breadcrumb .btn.btn-primary:not(:last-child):before {
-  border-left: 10px solid #357ebd;
-}
-.btn-breadcrumb .btn.btn-primary:hover:not(:last-child):after {
-  border-left: 10px solid #3276b1;
-}
-.btn-breadcrumb .btn.btn-primary:hover:not(:last-child):before {
-  border-left: 10px solid #285e8e;
-}
-
-/** Success button **/
-.btn-breadcrumb .btn.btn-success:not(:last-child):after {
-  border-left: 10px solid #5cb85c;
-}
-.btn-breadcrumb .btn.btn-success:not(:last-child):before {
-  border-left: 10px solid #4cae4c;
-}
-.btn-breadcrumb .btn.btn-success:hover:not(:last-child):after {
-  border-left: 10px solid #47a447;
-}
-.btn-breadcrumb .btn.btn-success:hover:not(:last-child):before {
-  border-left: 10px solid #398439;
-}
-
-/** Danger button **/
-.btn-breadcrumb .btn.btn-danger:not(:last-child):after {
-  border-left: 10px solid #d9534f;
-}
-.btn-breadcrumb .btn.btn-danger:not(:last-child):before {
-  border-left: 10px solid #d43f3a;
-}
-.btn-breadcrumb .btn.btn-danger:hover:not(:last-child):after {
-  border-left: 10px solid #d2322d;
-}
-.btn-breadcrumb .btn.btn-danger:hover:not(:last-child):before {
-  border-left: 10px solid #ac2925;
-}
-
-/** Warning button **/
-.btn-breadcrumb .btn.btn-warning:not(:last-child):after {
-  border-left: 10px solid #f0ad4e;
-}
-.btn-breadcrumb .btn.btn-warning:not(:last-child):before {
-  border-left: 10px solid #eea236;
-}
-.btn-breadcrumb .btn.btn-warning:hover:not(:last-child):after {
-  border-left: 10px solid #ed9c28;
-}
-.btn-breadcrumb .btn.btn-warning:hover:not(:last-child):before {
-  border-left: 10px solid #d58512;
-}
-
-/** Info button **/
-.btn-breadcrumb .btn.btn-info:not(:last-child):after {
-  border-left: 10px solid #5bc0de;
-}
-.btn-breadcrumb .btn.btn-info:not(:last-child):before {
-  border-left: 10px solid #46b8da;
-}
-.btn-breadcrumb .btn.btn-info:hover:not(:last-child):after {
-  border-left: 10px solid #39b3d7;
-}
-.btn-breadcrumb .btn.btn-info:hover:not(:last-child):before {
-  border-left: 10px solid #269abc;
+.btn:not(.navbar-btn) {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
 }
 
 

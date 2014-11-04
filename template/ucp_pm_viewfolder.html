@@ -113,28 +113,28 @@
 						<option value="XML">{L_EXPORT_AS_XML}</option>
 					</select>
 				</label>
-				<input class="btn btn-default btn-sm" type="submit" name="submit_export" value="{L_GO}" /><br />
+				<input class="btn btn-default" type="submit" name="submit_export" value="{L_GO}" /><br />
 			</div>
 			<div class="pull-right btn-group">
-				<a href="#" class="btn btn-sm btn-success" onclick="marklist('viewfolder', 'marked_msg', true); return false;">{L_MARK_ALL}</a>
-				<a href="#" class="btn btn-sm btn-warning" onclick="marklist('viewfolder', 'marked_msg', false); return false;">{L_UNMARK_ALL}</a>
+				<a href="#" class="btn btn-success" onclick="marklist('viewfolder', 'marked_msg', true); return false;">{L_MARK_ALL}</a>
+				<a href="#" class="btn btn-warning" onclick="marklist('viewfolder', 'marked_msg', false); return false;">{L_UNMARK_ALL}</a>
 			</div>
 			<div class="clearfix"></div>
 			<select name="mark_option">{S_MARK_OPTIONS}{S_MOVE_MARKED_OPTIONS}</select>
-			<input class="btn btn-default btn-sm" type="submit" name="submit_mark" value="{L_GO}" />
+			<input class="btn btn-default" type="submit" name="submit_mark" value="{L_GO}" />
 		</fieldset>
 		<hr />
 		<!-- IF TOTAL_MESSAGES or S_VIEW_MESSAGE -->
 			<div class="text-center row bottom5">
 				<div class="col-md-12">
 					<div class="btn-group">
-						<!-- IF TOTAL_MESSAGES --><span class="btn btn-default btn-sm disabled">{TOTAL_MESSAGES}</span><!-- ENDIF -->
+						<!-- IF TOTAL_MESSAGES --><span class="btn btn-default disabled">{TOTAL_MESSAGES}</span><!-- ENDIF -->
 						<!-- IF PAGE_NUMBER -->
 							<!-- IF PAGINATION -->
 								<a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a>
-								<span class="btn btn-default btn-sm">{PAGINATION}</span>
+								<span class="btn btn-default">{PAGINATION}</span>
 							<!-- ELSE -->
-								<span class="btn btn-default btn-sm disabled">{PAGE_NUMBER}</span>
+								<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
 							<!-- ENDIF -->
 						<!-- ENDIF -->
 					</div>
@@ -149,7 +149,7 @@
 			<label>{L_DISPLAY}: {S_SELECT_SORT_DAYS}</label>
 			<label>{L_SORT_BY} {S_SELECT_SORT_KEY}</label>
 			<label>{S_SELECT_SORT_DIR}</label>
-			<input type="submit" name="sort" value="{L_GO}" class="btn btn-default btn-sm" />
+			<input type="submit" name="sort" value="{L_GO}" class="btn btn-default" />
 			<input type="hidden" name="cur_folder_id" value="{CUR_FOLDER_ID}" />
 		</fieldset>
 	<!-- ENDIF -->

@@ -107,10 +107,10 @@
 <!-- IF S_IN_SEARCH_POPUP and not S_SELECT_SINGLE -->
 	<fieldset class="text-center row">
 		<div class="btn-group">
-			<a href="#" class="btn btn-sm btn-success" onclick="marklist('results', 'user', true); return false;">{L_MARK_ALL}</a>
-			<a href="#" class="btn btn-sm btn-warning" onclick="marklist('results', 'user', false); return false;">{L_UNMARK_ALL}</a>
+			<a href="#" class="btn btn-success" onclick="marklist('results', 'user', true); return false;">{L_MARK_ALL}</a>
+			<a href="#" class="btn btn-warning" onclick="marklist('results', 'user', false); return false;">{L_UNMARK_ALL}</a>
 		</div>
-		<input type="submit" name="submit" value="{L_SELECT_MARKED}" class="btn btn-sm btn-default" />
+		<input type="submit" name="submit" value="{L_SELECT_MARKED}" class="btn btn-default" />
 	</fieldset>
 <!-- ENDIF -->
 
@@ -132,11 +132,11 @@
 
 <div class="text-center">
 	<div class="btn-group">
-		<span class="btn btn-default btn-sm disabled">{TOTAL_USERS}</span>
+		<span class="btn btn-default disabled">{TOTAL_USERS}</span>
 		<!-- IF PAGINATION -->
 			<a href="#" class="btn bn-default" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}"><span class="badge">{PAGE_NUMBER}</span></a> <span class="badge">{PAGINATION}</span>
 		<!-- ELSE -->
-			<span class="btn btn-default btn-sm disabled">{PAGE_NUMBER}</span>
+			<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
 		<!-- ENDIF -->
 	</div>
 </div>

@@ -13,8 +13,8 @@
 		<div class="row bottom5">
 			<div class="col-md-12 text-center">
 				<div class="btn-group">
-					<span class="btn btn-default btn-sm disabled">{SEARCH_MATCHES}</span>
-					<!-- IF .pagination --> <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}" class="btn btn-default btn-sm no-btn">{PAGE_NUMBER}</a><!-- ELSE --> <span class="btn btn-default btn-sm disabled">{PAGE_NUMBER}</span><!-- ENDIF -->
+					<span class="btn btn-default disabled">{SEARCH_MATCHES}</span>
+					<!-- IF .pagination --> <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}" class="btn btn-default no-btn">{PAGE_NUMBER}</a><!-- ELSE --> <span class="btn btn-default disabled">{PAGE_NUMBER}</span><!-- ENDIF -->
 				</div>
 			</div>
 		</div>
@@ -22,9 +22,9 @@
 			<!-- IF SEARCH_MATCHES -->
 				<div class="col-md-3">
 					<!-- IF SEARCH_TOPIC -->
-						<a class="btn btn-default btn-labeled btn-sm" href="{U_SEARCH_TOPIC}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_RETURN_TO}: {SEARCH_TOPIC}</a>
+						<a class="btn btn-default btn-labeled" href="{U_SEARCH_TOPIC}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_RETURN_TO}: {SEARCH_TOPIC}</a>
 					<!-- ELSE -->
-						<a class="btn btn-default btn-labeled btn-sm" href="{U_SEARCH}" title="{L_SEARCH_ADV}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_GO_TO_SEARCH_ADV}</a>
+						<a class="btn btn-default btn-labeled" href="{U_SEARCH}" title="{L_SEARCH_ADV}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_GO_TO_SEARCH_ADV}</a>
 					<!-- ENDIF -->
 				</div>
 			<!-- ENDIF -->
@@ -39,7 +39,7 @@
 						<div class="input-group">
 							<input type="text" name="add_keywords" id="add_keywords" value="" class="input-medium form-control" placeholder="{L_SEARCH_IN_RESULTS}"/>
 							<span class="input-group-btn">
-								<input class="btn btn-default btn-sm" type="submit" name="submit" value="{L_SEARCH}" />
+								<input class="btn btn-default" type="submit" name="submit" value="{L_SEARCH}" />
 							</span>
 						</div>
 					<!-- ENDIF -->
@@ -67,7 +67,7 @@
 						<td>
 							<!-- EVENT topiclist_row_prepend -->
 							<div class="pull-left forum-topic-icon">
-								<span><a href="{searchresults.U_VIEW_TOPIC}" class="btn <!-- IF searchresults.S_UNREAD_TOPIC -->btn-warning<!-- ELSE -->btn-default<!-- ENDIF --> tooltip-link" title="{searchresults.TOPIC_FOLDER_IMG_ALT}">
+								<span><a href="<!-- IF searchresults.S_UNREAD_TOPIC -->{searchresults.U_NEWEST_POST}<!-- ELSE -->{searchresults.U_VIEW_TOPIC}<!-- ENDIF -->" class="btn <!-- IF searchresults.S_UNREAD_TOPIC -->btn-warning<!-- ELSE -->btn-default<!-- ENDIF --> tooltip-link" title="{searchresults.TOPIC_FOLDER_IMG_ALT}">
 									<i class="fa fa-file-text-o"></i>
 								</a></span>
 							</div>
@@ -174,7 +174,7 @@
 				<!-- IF NEXT_PAGE --><a href="{NEXT_PAGE}" class="right-box {S_CONTENT_FLOW_END}">{L_NEXT}</a><!-- ENDIF -->
 				<!-- IF S_SELECT_SORT_DAYS or S_SELECT_SORT_KEY -->
 					<label><!-- IF S_SHOW_TOPICS -->{L_DISPLAY_POSTS}<!-- ELSE -->{L_SORT_BY}</label><label><!-- ENDIF --> {S_SELECT_SORT_DAYS}<!-- IF S_SELECT_SORT_KEY --></label> <label>{S_SELECT_SORT_KEY}</label>
-					<label>{S_SELECT_SORT_DIR}<!-- ENDIF --> <input type="submit" name="sort" value="{L_GO}" class="btn btn-default btn-sm" /></label>
+					<label>{S_SELECT_SORT_DIR}<!-- ENDIF --> <input type="submit" name="sort" value="{L_GO}" class="btn btn-default" /></label>
 				<!-- ENDIF -->
 			</fieldset>
 		</form>
@@ -187,9 +187,9 @@
 			<!-- IF SEARCH_MATCHES -->
 				<div class="col-md-3">
 					<!-- IF SEARCH_TOPIC -->
-						<a class="btn btn-default btn-labeled btn-sm" href="{U_SEARCH_TOPIC}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_RETURN_TO}: {SEARCH_TOPIC}</a>
+						<a class="btn btn-default btn-labeled" href="{U_SEARCH_TOPIC}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_RETURN_TO}: {SEARCH_TOPIC}</a>
 					<!-- ELSE -->
-						<a class="btn btn-default btn-labeled btn-sm" href="{U_SEARCH}" title="{L_SEARCH_ADV}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_GO_TO_SEARCH_ADV}</a>
+						<a class="btn btn-default btn-labeled" href="{U_SEARCH}" title="{L_SEARCH_ADV}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_GO_TO_SEARCH_ADV}</a>
 					<!-- ENDIF -->
 				</div>
 			<!-- ENDIF -->
@@ -214,8 +214,8 @@
 		<div class="row bottom5">
 			<div class="col-md-12 text-center">
 				<div class="btn-group">
-					<span class="btn btn-default btn-sm disabled">{SEARCH_MATCHES}</span>
-					<!-- IF .pagination --> <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}" class="btn btn-default btn-sm no-btn">{PAGE_NUMBER}</a><!-- ELSE --> <span class="btn btn-default btn-sm disabled">{PAGE_NUMBER}</span><!-- ENDIF -->
+					<span class="btn btn-default disabled">{SEARCH_MATCHES}</span>
+					<!-- IF .pagination --> <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}" class="btn btn-default no-btn">{PAGE_NUMBER}</a><!-- ELSE --> <span class="btn btn-default disabled">{PAGE_NUMBER}</span><!-- ENDIF -->
 				</div>
 			</div>
 		</div>

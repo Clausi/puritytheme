@@ -177,14 +177,6 @@ $(document).ready(function() {
     $('#site-logo img').attr('class','img-responsive center-block');
 	$('.content img:not(".smilies")').attr('class','img-responsive');
 
-    $('.pagination-line a:not(.btn)').attr('class','btn btn-default btn-xs');
-    $('.topic-pagination a:not(.btn)').attr('class','btn btn-default btn-sm');
-    if (!($('.topic-pagination a').hasClass('no-btn'))){
-        $('.topic-pagination strong').attr('class','btn btn-primary btn-sm disabled');
-    };
-
-    $('.pm-to a:not(.btn)').attr('class','btn btn-default btn-sm');
-
     $(".btn-radio-group .btn-radio").click(function() {
         $(this).parents('.btn-radio-group').find('.btn-radio.active').removeClass('active');
         $(this).addClass('active');
