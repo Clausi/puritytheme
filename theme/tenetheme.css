@@ -483,7 +483,7 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	background-color: #116BA5;
 }
 
-.btn:not(.navbar-btn):not(.tooltip-link) {
+.btn:not(.navbar-btn):not(.tooltip-link):not(.btn-xs):not(.btn-lg) {
     padding: 5px 10px;
     font-size: 12px;
     line-height: 1.5;
