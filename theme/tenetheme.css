@@ -15,7 +15,11 @@ a:hover {
 }
 
 h2 {
-	font-size: 30px;
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 20px;
 }
 
 #site-logo {
@@ -462,71 +466,6 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
     background: #222;
 }
 
-/* Breadcrumb
-------------------------- */
-
-.btn-breadcrumb a {
-	color: #EFEFEF;
-}
-
-.btn-breadcrumb .btn:not(:last-child):after {
-  content: " ";
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 17px solid transparent;
-  border-bottom: 17px solid transparent;
-  border-left: 10px solid #F0F0F0;
-  position: absolute;
-  top: 50%;
-  margin-top: -17px;
-  left: 100%;
-  z-index: 3;
-}
-.btn-breadcrumb .btn:not(:last-child):before {
-  content: " ";
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 17px solid transparent;
-  border-bottom: 17px solid transparent;
-  border-left: 10px solid #F0F0F0;
-  position: absolute;
-  top: 50%;
-  margin-top: -17px;
-  margin-left: 1px;
-  left: 100%;
-  z-index: 3;
-}
-
-/** The Spacing **/
-.btn-breadcrumb .btn {
-  padding:6px 12px 6px 24px;
-}
-.btn-breadcrumb .btn:first-child {
-  padding:6px 6px 6px 10px;
-}
-.btn-breadcrumb .btn:last-child {
-  padding:6px 18px 6px 24px;
-}
-.btn-breadcrumb .btn:only-child {
-	padding: 6px 10px !important;
-}
-
-/** Default button **/
-.btn-breadcrumb .btn.btn-default:not(:last-child):after {
-  border-left: 10px solid #fff;
-}
-.btn-breadcrumb .btn.btn-default:not(:last-child):before {
-  border-left: 10px solid #ccc;
-}
-.btn-breadcrumb .btn.btn-default:hover:not(:last-child):after {
-  border-left: 10px solid #ebebeb;
-}
-.btn-breadcrumb .btn.btn-default:hover:not(:last-child):before {
-  border-left: 10px solid #adadad;
-}
-
 .btn-default {
     border-color: #4E4E4E;
 }
@@ -544,7 +483,7 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	background-color: #116BA5;
 }
 
-.btn:not(.navbar-btn) {
+.btn:not(.navbar-btn):not(.tooltip-link) {
     padding: 5px 10px;
     font-size: 12px;
     line-height: 1.5;

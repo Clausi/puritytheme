@@ -145,7 +145,7 @@ function selectCode(a) {
 	'use strict';
 
 	// Get ID of code block
-	var e = a.parentNode.parentNode.getElementsByTagName('CODE')[0];
+	var e = a.parentNode.parentNode.getElementsByTagName('PRE')[0];
 	var s, r;
 
 	// Not IE and IE9+
