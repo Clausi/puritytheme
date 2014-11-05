@@ -115,18 +115,6 @@
 	<a id="start_here"></a>
 	
 	<div class="container" id="content-wrapper">
-		<!-- IF not S_IN_SEARCH and not S_STARTPAGE and not S_GUILDPAGE and not S_APPLYPAGE and not S_RAIDPLANER_PAGE -->
-			<div class="row bottom5">
-				<div class="col-md-12">
-					<ol class="breadcrumb">
-						<li><a href="{U_INDEX}" accesskey="h" title="{L_INDEX}" data-placement="bottom"><i class="glyphicon glyphicon-home"></i></a></li>
-						<!-- BEGIN navlinks -->	
-						<li<!-- IF navlinks.FORUM_ID == S_FORUM_ID --> class="active"<!-- ENDIF -->><a href="{navlinks.U_VIEW_FORUM}">{navlinks.FORUM_NAME}</a></li>
-						<!-- END navlinks -->
-					</ol>
-				</div>
-			</div>
-		<!-- ENDIF -->
 		
 		<!-- IF S_BOARD_DISABLED and S_USER_LOGGED_IN and (U_MCP or U_ACP) -->
 			<div class="alert alert-danger row rules">
