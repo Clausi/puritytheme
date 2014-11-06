@@ -55,7 +55,6 @@
 				<tr class="icon">
 					<th>{L_TOPICS}</th>
 					<th class="posts hidden-xs">{L_REPLIES}</th>
-					<th class="views hidden-xs">{L_VIEWS}</th>
 					<th class="lastpost hidden-xs"><span>{L_LAST_POST}</span></th>
 				</tr>			
 			</thead>
@@ -67,7 +66,7 @@
 							<!-- EVENT topiclist_row_prepend -->
 							<div class="pull-left forum-topic-icon">
 								<span><a href="<!-- IF searchresults.S_UNREAD_TOPIC -->{searchresults.U_NEWEST_POST}<!-- ELSE -->{searchresults.U_VIEW_TOPIC}<!-- ENDIF -->" class="btn <!-- IF searchresults.S_UNREAD_TOPIC -->btn-warning<!-- ELSE -->btn-default<!-- ENDIF --> tooltip-link" title="{searchresults.TOPIC_FOLDER_IMG_ALT}">
-									<i class="fa fa-file-text-o"></i>
+									<i class="fa fa-file-text-o fa-fw"></i>
 								</a></span>
 							</div>
 							<div class="pull-right">
@@ -96,11 +95,9 @@
 							<small>{L_POST_BY_AUTHOR} {searchresults.TOPIC_AUTHOR_FULL} &raquo; {searchresults.FIRST_POST_TIME} &raquo; {L_IN} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_TITLE}</a></small>
 							<!-- EVENT topiclist_row_append -->
 						</td>
-						<td class="posts hidden-xs">{searchresults.TOPIC_REPLIES}</td>
-						<td class="views hidden-xs">{searchresults.TOPIC_VIEWS}</td>
-						<td class="lastpost hidden-xs"><span>
-							{L_POST_BY_AUTHOR} {searchresults.LAST_POST_AUTHOR_FULL}
-							<!-- IF not S_IS_BOT --><a href="{searchresults.U_LAST_POST}"><i class="fa fa-angle-double-right"></i></a> <!-- ENDIF --><br /><small>{searchresults.LAST_POST_TIME}</small><br /> </span>
+						<td class="posts hidden-xs text-center"><i class="fa fa-comment fa-fw"></i> {searchresults.TOPIC_REPLIES}</td>
+						<td class="lastpost hidden-xs">
+							<!-- IF not S_IS_BOT --><a href="{searchresults.U_LAST_POST}"><i class="fa fa-clock-o fa-fw"></i> {searchresults.LAST_POST_TIME} <i class="fa fa-angle-double-right fa-fw"></i></a><!-- ENDIF --><br /><small>{L_POST_BY_AUTHOR} {searchresults.LAST_POST_AUTHOR_FULL}</small>
 						</td>
 					</tr>
 				<!-- EVENT search_results_topic_after -->
