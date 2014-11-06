@@ -616,13 +616,14 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	}
 
 	.navbar-fixed-top .navbar-brand {
-		padding: 15px 0;
+		padding: 18px 0;
 		transition: all 300ms ease;
 	}
 	
 	.navbar-brand img {
 		max-height: 57px;
 		max-width: 200px;
+		padding-top: 5px;
 		width: auto;
 		transition: all 300ms ease;
 	}
