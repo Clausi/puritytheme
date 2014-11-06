@@ -6,7 +6,7 @@
 	<div class="col-md-9">
 
 <div class="page-header">
-	<h2><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></h2>
+	<h2><!-- EVENT viewforum_forum_name_prepend --><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a><!-- EVENT viewforum_forum_name_append --></h2>
 </div>
 
 <!-- IF FORUM_DESC or MODERATORS or U_MCP -->
@@ -47,11 +47,17 @@
         <div class="row<!-- IF S_HAS_SUBFORUM --> top5<!-- ENDIF --> bottom5">        
 			<!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
 				<div class="col-md-3">
+				
+					<!-- EVENT viewforum_buttons_top_before -->
+					
 					<!-- IF S_IS_LOCKED -->
 						<a class="btn btn-danger disabled" href="{U_POST_NEW_TOPIC}"><span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span> {L_FORUM_LOCKED}</a>
 					<!-- ELSE -->
 						<a class="btn btn-primary btn-labeled" href="{U_POST_NEW_TOPIC}"><span class="btn-label"><i class="fa fa-pencil-square-o"></i></span> {L_POST_TOPIC}</a>
 					<!-- ENDIF -->
+					
+					<!-- EVENT viewforum_buttons_top_after -->
+					
 				</div>
 			<!-- ENDIF -->
 			<!-- IF PAGINATION or TOTAL_POSTS or TOTAL_TOPICS -->
@@ -136,6 +142,9 @@
 	<!-- ENDIF -->
 					<tr class="t-row<!-- IF topicrow.S_POST_GLOBAL --> warning-color<!-- ENDIF --><!-- IF topicrow.S_POST_ANNOUNCE --> info-color<!-- ENDIF --><!-- IF topicrow.S_POST_STICKY --> success-color<!-- ENDIF --><!-- IF topicrow.S_TOPIC_REPORTED --> danger-color<!-- ENDIF -->">                        
 						<td class="topic-name <!-- IF topicrow.S_POST_GLOBAL --> warning-color<!-- ENDIF --><!-- IF topicrow.S_POST_ANNOUNCE --> info-color<!-- ENDIF --><!-- IF topicrow.S_POST_STICKY --> success-color<!-- ENDIF --><!-- IF topicrow.S_TOPIC_REPORTED --> danger-color<!-- ENDIF -->" title="{topicrow.TOPIC_FOLDER_IMG_ALT}">
+							
+							<!-- EVENT topiclist_row_prepend -->
+							
 							<div class="pull-left forum-topic-icon">
 								<span><a href="<!-- IF topicrow.S_UNREAD_TOPIC -->{topicrow.U_NEWEST_POST}<!-- ELSE -->{topicrow.U_VIEW_TOPIC}<!-- ENDIF -->" class="btn <!-- IF topicrow.S_UNREAD_TOPIC -->btn-warning<!-- ELSE -->btn-default<!-- ENDIF --> tooltip-link" title="{topicrow.TOPIC_FOLDER_IMG_ALT}">
 									<!-- IF topicrow.S_TOPIC_LOCKED -->
@@ -177,6 +186,9 @@
 							</div>
 							<a href="{topicrow.U_VIEW_TOPIC}" class="topictitle"><strong>{topicrow.TOPIC_TITLE}</strong></a><br/>
 							<small>{L_POST_BY_AUTHOR} {topicrow.TOPIC_AUTHOR_FULL} &raquo; {topicrow.FIRST_POST_TIME}</small>
+							
+							<!-- EVENT topiclist_row_append -->
+							
 						</td>
 						<td class="posts hidden-xs<!-- IF topicrow.S_POST_GLOBAL --> warning-color<!-- ENDIF --><!-- IF topicrow.S_POST_ANNOUNCE --> info-color<!-- ENDIF --><!-- IF topicrow.S_POST_STICKY --> success-color<!-- ENDIF --><!-- IF topicrow.S_TOPIC_REPORTED --> danger-color<!-- ENDIF -->">
 							<div class="text-center"><i class="fa fa-comment fa-fw"></i> {topicrow.REPLIES}</div>
@@ -204,11 +216,17 @@
     <div class="row bottom5">
 		<!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
 			<div class="col-md-3">
+				
+				<!-- EVENT viewforum_buttons_bottom_before -->
+				
 				<!-- IF S_IS_LOCKED -->
 					<a class="btn btn-danger disabled" href="{U_POST_NEW_TOPIC}"><span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span> {L_FORUM_LOCKED}</a>
 				<!-- ELSE -->
 					<a class="btn btn-primary btn-labeled" href="{U_POST_NEW_TOPIC}"><span class="btn-label"><i class="fa fa-pencil-square-o"></i></span> {L_POST_TOPIC}</a>
 				<!-- ENDIF -->
+				
+				<!-- EVENT viewforum_buttons_bottom_after -->
+				
 			</div>
         <!-- ENDIF -->
         <!-- IF PAGINATION or TOTAL_POSTS or TOTAL_TOPICS -->

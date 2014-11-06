@@ -87,6 +87,9 @@
 				<dd><input type="text" tabindex="1" name="username" id="username" size="25" value="{USERNAME}" class="form-control" /></dd>
 			</dl>
 		<!-- ENDIF -->
+		
+		<!-- EVENT posting_editor_subject_before -->
+		
 		<!-- IF S_POST_ACTION or S_PRIVMSGS or S_EDIT_DRAFT -->
 			<div class="form-group">
 				<label for="subject" class="col-md-2">{L_SUBJECT}:</label>
@@ -99,16 +102,26 @@
 				<!-- INCLUDE {CAPTCHA_TEMPLATE} -->
 			<!-- ENDIF -->
 		<!-- ENDIF -->
+		
+		<!-- EVENT posting_editor_subject_after -->
+		
 		<div class="form-group">
 			<div class="col-md-9">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<!-- INCLUDE posting_buttons.html -->
 					</div>
+					
 					<div class="panel-body no-padding">
+					
+						<!-- EVENT posting_editor_message_before -->
+					
 						<div id="message-box">
 							<textarea <!-- IF S_UCP_ACTION and not S_PRIVMSGS and not S_EDIT_DRAFT -->name="signature" id="signature" style="height: 9em;"<!-- ELSE -->name="message" id="message"<!-- ENDIF --> rows="15" cols="76" tabindex="4" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" onfocus="initInsertions();" class="form-control">{MESSAGE}{DRAFT_MESSAGE}{SIGNATURE}</textarea>
 						</div>
+						
+						<!-- EVENT posting_editor_message_after -->
+						
 					</div>
 				</div>
 			</div>
@@ -191,6 +204,9 @@
 		<!-- IF not S_SHOW_DRAFTS and not $SIG_EDIT eq 1 -->
 			<div class="tab-pane active" id="options-tab">
 				<fieldset class="fields1">
+				
+					<!-- EVENT posting_editor_options_prepend -->
+					
 					<!-- IF S_BBCODE_ALLOWED -->
 						<div>
 							<div class="checkbox">

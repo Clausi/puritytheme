@@ -3,9 +3,11 @@
 <!-- INCLUDE searchbox.html -->
 
 <div class="page-header">
-	<h2><!-- IF SEARCH_TITLE -->{SEARCH_TITLE}<!-- ELSE -->{SEARCH_MATCHES}<!-- ENDIF --><!-- IF SEARCH_WORDS -->: <a href="{U_SEARCH_WORDS}">{SEARCH_WORDS}</a><!-- ENDIF --></h2>
+	<h2><!-- IF SEARCH_TITLE -->{SEARCH_TITLE}<!-- ELSE -->{SEARCH_MATCHES}<!-- ENDIF --><!-- IF SEARCH_WORDS -->{L_COLON} <a href="{U_SEARCH_WORDS}">{SEARCH_WORDS}</a><!-- ENDIF --></h2>
+<!-- IF SEARCHED_QUERY --> <p>{L_SEARCHED_QUERY}{L_COLON} <strong>{SEARCHED_QUERY}</strong></p><!-- ENDIF -->
+<!-- IF IGNORED_WORDS --> <p>{L_IGNORED_TERMS}{L_COLON} <strong>{IGNORED_WORDS}</strong></p><!-- ENDIF -->
+<!-- IF PHRASE_SEARCH_DISABLED --> <p><strong>{L_PHRASE_SEARCH_DISABLED}</strong></p><!-- ENDIF -->
 </div>
-<!-- IF IGNORED_WORDS --> <p>{L_IGNORED_TERMS}: <strong>{IGNORED_WORDS}</strong></p><!-- ENDIF -->
 
 <!-- IF .pagination or SEARCH_MATCHES or PAGE_NUMBER -->
 	<form method="post" action="{S_SEARCH_ACTION}">
@@ -21,7 +23,7 @@
 			<!-- IF SEARCH_MATCHES -->
 				<div class="col-md-3">
 					<!-- IF SEARCH_TOPIC -->
-						<a class="btn btn-default btn-labeled" href="{U_SEARCH_TOPIC}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_RETURN_TO}: {SEARCH_TOPIC}</a>
+						<a class="btn btn-default btn-labeled" href="{U_SEARCH_TOPIC}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_RETURN_TO_TOPIC}</a>
 					<!-- ELSE -->
 						<a class="btn btn-default btn-labeled" href="{U_SEARCH}" title="{L_SEARCH_ADV}"><span class="btn-label"><i class="fa fa-arrow-left"></i></span>{L_GO_TO_SEARCH_ADV}</a>
 					<!-- ENDIF -->
