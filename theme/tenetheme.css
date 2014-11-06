@@ -105,10 +105,6 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
   height: 10px;
 }
 
-.jumpbox {
-  display: none;
-}
-
 .attach-image {
   margin: 3px 0;
   width: 100%;
@@ -843,4 +839,28 @@ blockquote cite:before {
 	background: white;
 	cursor: inherit;
 	display: block;
+}
+
+.pm_replied_colour td:first-child div a i:before, dd.pm_replied_colour:before {
+	font-family: FontAwesome;
+	content: "";
+}
+
+.pm_friend_colour td:first-child div a i:before, dd.pm_friend_colour:before {
+	font-family: FontAwesome;
+	content: "";
+}
+
+.pm_marked_colour td:first-child div a i:before, dd.pm_marked_colour:before {
+	font-family: FontAwesome;
+	content: "";
+}
+
+.pm_foe_colour td:first-child div a i:before, dd.pm_foe_colour:before {
+	font-family: FontAwesome;
+	content: "";
+}
+
+.topiclist th, .topiclist a {
+	color: #ccc;
 }

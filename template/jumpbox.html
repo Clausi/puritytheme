@@ -1,35 +1,20 @@
-<div class="jumpbox">
-<!-- IF S_VIEWTOPIC -->
-	<div class="row">
+<div class="jumpbox ">
+	<div class="row bottom10">
 		<div class="col-md-6">
-			<div class="col-md-6"><a href="{U_VIEW_FORUM}" class="btn btn-default" accesskey="r">{L_RETURN_TO} {FORUM_NAME}</a></div>
+		<!-- IF S_VIEWTOPIC -->
+			<a href="{U_VIEW_FORUM}" class="btn btn-default" accesskey="r">{L_RETURN_TO_FORUM}</a>
+		<!-- ELSEIF S_VIEWFORUM -->
+			<a href="{U_INDEX}" class="btn btn-default" accesskey="r">{L_RETURN_TO_INDEX}</a>
+		<!-- ELSEIF SEARCH_TOPIC -->
+			<a class="btn btn-default" href="{U_SEARCH_TOPIC}" accesskey="r">{L_RETURN_TO_TOPIC}</a>
+		<!-- ELSEIF S_SEARCH_ACTION -->
+			<a class="btn btn-default" href="{U_SEARCH}" title="{L_SEARCH_ADV}" accesskey="r">{L_GO_TO_SEARCH_ADV}</a>
+		<!-- ENDIF -->
 		</div>
-<!-- ELSEIF S_VIEWFORUM -->
-	<div class="row">
-		<div class="col-md-6">
-			<div class="col-md-6"><a href="{U_INDEX}" class="btn btn-default" accesskey="r">{L_RETURN_TO} {L_INDEX}</a></div>
-		</div>
-<!-- ELSEIF SEARCH_TOPIC -->
-	<div class="row">
-		<div class="col-md-6">
-			<div class="col-md-6"><a class="btn btn-default" href="{U_SEARCH_TOPIC}" accesskey="r">{L_RETURN_TO}: {SEARCH_TOPIC}</a></div>
-		</div>
-<!-- ELSEIF S_SEARCH_ACTION -->
-	<div class="row">
-		<div class="col-md-6">
-			<div class="col-md-6"><a class="btn btn-default" href="{U_SEARCH}" title="{L_SEARCH_ADV}" accesskey="r">{L_RETURN_TO_SEARCH_ADV}</a></div>
-		</div>
-<!-- ELSE -->
-	<div class="row">
-		<div class="col-md-6">
-			<div class="col-md-6"><span class="btn btn-default disabled">{LAST_VISIT_DATE}</span></div>
-		</div>
-<!-- ENDIF -->
-
 
 
 <!-- IF S_DISPLAY_JUMPBOX -->
-<div class="col-md-6">
+<div class="col-md-6 text-right">
 	<form method="post" id="jumpbox" action="{S_JUMPBOX_ACTION}" onsubmit="if(this.f.value == -1){return false;}" style="margin:0;">
 
 	<!-- IF $CUSTOM_FIELDSET_CLASS -->
@@ -48,8 +33,6 @@
 		</fieldset>
 	</form>
 </div>
-<!-- ELSE -->
-	<div class="col-md-6"><span class="label pull-right">{CURRENT_TIME}</span></div>
 <!-- ENDIF -->
 
 </div>
