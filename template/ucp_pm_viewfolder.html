@@ -65,7 +65,7 @@
 						<tr <!-- IF messagerow.PM_CLASS -->class="{messagerow.PM_CLASS}"<!-- ENDIF -->>
 							<td>
 								<div class="pull-left pm-topic-icon">
-									<a href="<!-- IF messagerow.S_PM_DELETED -->{messagerow.U_REMOVE_PM}<!-- ELSE -->{messagerow.U_VIEW_PM}<!-- ENDIF -->" class="btn <!-- IF topicrow.S_UNREAD_TOPIC -->btn-info<!-- ELSE -->btn-default<!-- ENDIF --> tooltip-link" title="{topicrow.PM_FOLDER_IMG_ALT}">
+									<a href="<!-- IF messagerow.S_PM_DELETED -->{messagerow.U_REMOVE_PM}<!-- ELSE -->{messagerow.U_VIEW_PM}<!-- ENDIF -->" class="btn <!-- IF messagerow.S_PM_UNREAD and not messagerow.S_PM_DELETED -->btn-warning<!-- ELSE -->btn-default<!-- ENDIF --> tooltip-link" title="{topicrow.PM_FOLDER_IMG_ALT}">
 										<i class="fa fa-file-text-o fa-fw"></i>
 									</a>
 									<!-- IF messagerow.PM_ICON_URL and S_PM_ICONS -->
