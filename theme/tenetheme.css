@@ -646,6 +646,11 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	.lastpost {
 		width: 35%;
 	}
+	
+	.dropdown-alerts {
+		 min-width: 400px;
+	}
+
 }
 
 @media(max-width:768px) {
@@ -720,12 +725,7 @@ table a:not(.btn), .table a:not(.btn) {
 }
 
 .dropdown-menu {
-	min-width: 220px;
 	background-color: rgba(10,10,10,0.95);
-}
-
-.dropdown-alerts {
-    min-width: 400px;
 }
 
 #notification_list img {
@@ -865,3 +865,8 @@ blockquote cite:before {
 .topiclist th, .topiclist a {
 	color: #ccc;
 }
+
+.media-body p {
+	white-space: normal;
+}
+
