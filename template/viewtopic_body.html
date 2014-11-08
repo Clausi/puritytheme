@@ -228,7 +228,11 @@
 									<!-- IF postrow.S_POST_REPORTED --><i class="fa fa-exclamation-triangle"></i> <a href="{postrow.U_MCP_REPORT}"><strong>{L_POST_REPORTED}</strong></a><!-- ENDIF -->
 								</p>
 							<!-- ENDIF -->
-							<div class="content top10 bottom10">{postrow.MESSAGE}</div>
+							<div class="content top10 bottom10">
+								<!-- EVENT viewtopic_content_before -->
+								{postrow.MESSAGE}
+								<!-- EVENT viewtopic_content_after -->
+							</div>
 							<!-- IF postrow.S_HAS_ATTACHMENTS -->
 								<dl class="attachbox">
 									<dt>{L_ATTACHMENTS}</dt>
