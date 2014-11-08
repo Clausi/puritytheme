@@ -1,15 +1,5 @@
 Template Events
 Identifier 	Prosilver Placement (If applicable) 	Subsilver Placement (If applicable) 	Added in Release 	Explanation
-forumlist_body_category_header_after 	forumlist_body.html 	forumlist_body.html 	3.1.0-a4 	Add content after the header of the category on the forum list.
-forumlist_body_category_header_before 	forumlist_body.html 	forumlist_body.html 	3.1.0-a4 	Add content before the header of the category on the forum list.
-forumlist_body_forum_row_after 	forumlist_body.html 	forumlist_body.html 	3.1.0-RC5 	Add content after the forum list item.
-forumlist_body_forum_row_append 	forumlist_body.html 	forumlist_body.html 	3.1.0-RC5 	Add content at the start of the forum list item.
-forumlist_body_forum_row_before 	forumlist_body.html 	forumlist_body.html 	3.1.0-RC5 	Add content before the forum list item.
-forumlist_body_forum_row_prepend 	forumlist_body.html 	forumlist_body.html 	3.1.0-RC5 	Add content at the end of the forum list item.
-forumlist_body_last_post_title_prepend 	forumlist_body.html 	forumlist_body.html 	3.1.0-a1 	Add content before the post title of the latest post in a forum on the forum list.
-forumlist_body_subforums_after 	forumlist_body.html 	forumlist_body.html 	3.1.0-a4 	Add content after the list of subforums (if any) for each forum on the forum list.
-forumlist_body_subforums_before 	forumlist_body.html 	forumlist_body.html 	3.1.0-a4 	Add content before the list of subforums (if any) for each forum on the forum list.
-forumlist_body_last_row_after 	forumlist_body.html 	forumlist_body.html 	3.1.0-b2 	Add content after the very last row of the forum list.
 mcp_ban_fields_after 	mcp_ban.html 	mcp_ban.html 	3.1.0-RC3 	Add additional fields to the ban form in MCP
 mcp_ban_fields_before 	mcp_ban.html 	mcp_ban.html 	3.1.0-RC3 	Add additional fields to the ban form in MCP
 mcp_ban_unban_after 	mcp_ban.html 	mcp_ban.html 	3.1.0-RC3 	Add additional fields to the unban form in MCP

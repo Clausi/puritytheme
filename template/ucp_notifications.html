@@ -75,7 +75,7 @@
 									<h4 class="media-heading"><!-- IF notification_list.URL --><a href="<!-- IF notification_list.UNREAD -->{notification_list.U_MARK_READ}<!-- ELSE -->{notification_list.URL}<!-- ENDIF -->"><!-- ENDIF -->{notification_list.FORMATTED_TITLE}<!-- IF notification_list.REFERENCE --> {notification_list.REFERENCE}<!-- ENDIF --><!-- IF notification_list.URL --></a><!-- ENDIF --></h4>
 									<!-- IF notification_list.FORUM -->{notification_list.FORUM}<!-- ENDIF -->
 									<!-- IF notification_list.REASON -->{notification_list.REASON}<!-- ENDIF -->
-									{notification_list.TIME}3
+									{notification_list.TIME}
 									<input type="checkbox" name="mark[]" class="pull-right" value="{notification_list.NOTIFICATION_ID}"<!-- IF not notification_list.UNREAD --> disabled="disabled"<!-- ENDIF --> />
 								</div>
 							</li>
