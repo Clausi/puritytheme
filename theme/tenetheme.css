@@ -734,6 +734,11 @@ table a:not(.btn), .table a:not(.btn) {
 	float: left !important;
 }
 
+.notification_list img {
+	width: 90px;
+	height: auto;
+}
+
 #notification_list a {
 	margin-top: 1px;
 }
