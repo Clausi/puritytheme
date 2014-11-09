@@ -655,8 +655,8 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 
 @media(max-width:768px) {
 	.navbar-brand img {
-		max-height: 50px;
-		width: auto;
+		max-height: auto;
+		max-width: 200px;
 	}
 	
 	.navbar-nav button {
