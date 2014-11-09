@@ -711,15 +711,15 @@ th.topics {
 }
 
 .badge-warning {
-    background-color: #f0ad4e;
+    background-color: #F80;
 }
 
 .badge-danger {
-    background-color: #d9534f;
+    background-color: #C00;
 }
 
 .badge-success {
-    background-color: #5cb85c;
+    background-color: #77B300;
 }
 
 .table {
