@@ -710,6 +710,18 @@ th.topics {
 	background-color: #147EC2;
 }
 
+.badge-warning {
+    background-color: #f0ad4e;
+}
+
+.badge-danger {
+    background-color: #d9534f;
+}
+
+.badge-success {
+    background-color: #5cb85c;
+}
+
 .table {
 	color: #EFEFEF;
 	background-color: rgba(10,10,10,0.8);
