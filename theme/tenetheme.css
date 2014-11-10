@@ -475,7 +475,7 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
     border-color: #4E4E4E;
 }
 
-.btn-default.active {
+.btn-default.active:not(.rp-checkbox) {
 	background-color: #F80;
 	border-color: #F80;
 }
