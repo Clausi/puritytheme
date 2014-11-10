@@ -8,8 +8,17 @@
 			<div class="form-group">
 				<input type="text" placeholder="{L_USERNAME}" name="username" id="username" class="form-control input-sm" />	
 				<input type="password" placeholder="{L_PASSWORD}" name="password" id="password" class="form-control input-sm" />
-				<!-- IF S_AUTOLOGIN_ENABLED --><div class="checkbox"><label for="autologin"><input type="checkbox" name="autologin" id="autologin" /> {L_LOG_ME_IN}</label></div><!-- ENDIF -->
-				<!-- IF S_DISPLAY_FULL_LOGIN --><div class="checkbox"><label for="viewonline"><input type="checkbox" name="viewonline" id="viewonline" /> {L_HIDE_ME}</label></div><!-- ENDIF -->
+				<!-- IF S_AUTOLOGIN_ENABLED -->
+					<label class="btn btn-default checkbox" data-toggle="buttons">
+						<input type="checkbox" class="hidden" name="autologin" id="autologin" tabindex="4" /> {L_LOG_ME_IN}
+					</label>
+				<!-- ENDIF -->
+				
+				<!-- IF S_DISPLAY_FULL_LOGIN -->
+				<label class="btn btn-default checkbox" data-toggle="buttons">
+					<input type="checkbox" class="hidden" name="viewonline" id="viewonline" tabindex="5" /> {L_HIDE_ME}
+				</label>
+				<!-- ENDIF -->
 				<input type="submit" name="login" value="{L_LOGIN}" class="btn btn-primary" />
 				
 				{S_LOGIN_REDIRECT}

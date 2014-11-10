@@ -203,73 +203,46 @@
 	<div class="tab-content well post-tabs">
 		<!-- IF not S_SHOW_DRAFTS and not $SIG_EDIT eq 1 -->
 			<div class="tab-pane active" id="options-tab">
-				<fieldset class="fields1">
+				<div class="btn-group-vertical text-left" data-toggle="buttons">
 				
 					<!-- EVENT posting_editor_options_prepend -->
 					
 					<!-- IF S_BBCODE_ALLOWED -->
-						<div>
-							<div class="checkbox">
-								<label for="disable_bbcode">
-									<input type="checkbox" name="disable_bbcode" id="disable_bbcode"{S_BBCODE_CHECKED} /> {L_DISABLE_BBCODE}
-								</label>
-							</div>
-						</div>
+						<label class="btn btn-default checkbox">
+							<input type="checkbox" name="disable_bbcode" id="disable_bbcode"{S_BBCODE_CHECKED} /> {L_DISABLE_BBCODE}
+						</label>
 					<!-- ENDIF -->
 					<!-- IF S_SMILIES_ALLOWED -->
-						<div>
-							<div class="checkbox">
-								<label for="disable_smilies">
-									<input type="checkbox" name="disable_smilies" id="disable_smilies"{S_SMILIES_CHECKED} /> {L_DISABLE_SMILIES}
-								</label>
-							</div>
-						</div>
+						<label class="btn btn-default checkbox">
+							<input type="checkbox" name="disable_smilies" id="disable_smilies"{S_SMILIES_CHECKED} /> {L_DISABLE_SMILIES}
+						</label>
 					<!-- ENDIF -->
 					<!-- IF S_LINKS_ALLOWED -->
-						<div>
-							<div class="checkbox">
-								<label for="disable_magic_url">
-									<input type="checkbox" name="disable_magic_url" id="disable_magic_url"{S_MAGIC_URL_CHECKED} /> {L_DISABLE_MAGIC_URL}
-								</label>
-							</div>
-						</div>
+						<label class="btn btn-default checkbox">
+							<input type="checkbox" name="disable_magic_url" id="disable_magic_url"{S_MAGIC_URL_CHECKED} /> {L_DISABLE_MAGIC_URL}
+						</label>
 					<!-- ENDIF -->
 					<!-- IF S_SIG_ALLOWED -->
-						<div>
-							<div class="checkbox">
-								<label for="attach_sig">
-									<input type="checkbox" name="attach_sig" id="attach_sig"{S_SIGNATURE_CHECKED} /> {L_ATTACH_SIG}
-								</label>
-							</div>
-						</div>
+						<label class="btn btn-default checkbox">
+							<input type="checkbox" name="attach_sig" id="attach_sig"{S_SIGNATURE_CHECKED} /> {L_ATTACH_SIG}
+						</label>
 					<!-- ENDIF -->
 					<!-- IF S_NOTIFY_ALLOWED -->
-						<div>
-							<div class="checkbox">
-								<label for="notify">
-									<input type="checkbox" name="notify" id="notify"{S_NOTIFY_CHECKED} /> {L_NOTIFY_REPLY}
-								</label>
-							</div>
-						</div>
+						<label class="btn btn-default checkbox">
+							<input type="checkbox" name="notify" id="notify" {S_NOTIFY_CHECKED} /> {L_NOTIFY_REPLY}
+						</label>
 					<!-- ENDIF -->
 					<!-- IF S_LOCK_TOPIC_ALLOWED -->
-						<div>
-							<div class="checkbox">
-								<label for="lock_topic">
-									<input type="checkbox" name="lock_topic" id="lock_topic"{S_LOCK_TOPIC_CHECKED} /> {L_LOCK_TOPIC}
-								</label>
-							</div>
-						</div>
+						<label class="btn btn-default checkbox">
+							<input type="checkbox" name="lock_topic" id="lock_topic"{S_LOCK_TOPIC_CHECKED} /> {L_LOCK_TOPIC}
+						</label>
 					<!-- ENDIF -->
 					<!-- IF S_LOCK_POST_ALLOWED -->
-						<div>
-							<div class="checkbox">
-								<label for="lock_post">
-									<input type="checkbox" name="lock_post" id="lock_post"{S_LOCK_POST_CHECKED} /> {L_LOCK_POST} [{L_LOCK_POST_EXPLAIN}]
-								</label>
-							</div>
-						</div>
+						<label class="btn btn-default checkbox">
+							<input type="checkbox" name="lock_post" id="lock_post"{S_LOCK_POST_CHECKED} /> {L_LOCK_POST} [{L_LOCK_POST_EXPLAIN}]
+						</label>
 					<!-- ENDIF -->
+					</div>
 					<!-- IF S_TYPE_TOGGLE or S_TOPIC_TYPE_ANNOUNCE or S_TOPIC_TYPE_STICKY -->
 						<hr class="dashed" />
 					<!-- ENDIF -->
@@ -282,7 +255,10 @@
 					<!-- IF S_TOPIC_TYPE_ANNOUNCE or S_TOPIC_TYPE_STICKY -->
 						<dl>
 							<dt><label for="topic_time_limit">{L_STICK_TOPIC_FOR}:</label></dt>
-							<dd><label for="topic_time_limit"><div class="input-append"><input type="text" name="topic_time_limit" id="topic_time_limit" size="3" maxlength="3" value="{TOPIC_TIME_LIMIT}" class="input-mini" /><span class="add-on">{L_DAYS}</span></div></label></dd>
+							<dd class="form-inline">
+								<label for="topic_time_limit">{L_DAYS}</span>
+								<input type="text" name="topic_time_limit" id="topic_time_limit" size="3" maxlength="3" value="{TOPIC_TIME_LIMIT}" class="form-control" />
+							</dd>
 							<dd><p>{L_STICK_TOPIC_FOR_EXPLAIN}</p></dd>
 						</dl>
 					<!-- ENDIF -->
@@ -292,7 +268,7 @@
 							<dd><input type="text" name="edit_reason" id="edit_reason" value="{EDIT_REASON}" class="form-control" /></dd>
 						</dl>
 					<!-- ENDIF -->
-				</fieldset>
+				
 			</div>
 		<!-- ENDIF -->
 	<!-- ENDIF -->

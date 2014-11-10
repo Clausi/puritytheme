@@ -53,7 +53,7 @@
 	<!-- ENDIF -->
 	
 	<!-- IF S_DISPLAY_SEARCHBOX -->
-		<div class="col-md-3">
+		<div class="col-md-3 hidden-xs">
 			<form method="get" id="topic-search" action="{S_SEARCHBOX_ACTION}" class="form-search pull-right no-margin">
 				<div class="input-group">
 					<input class="input-medium form-control input-sm"  type="text" name="keywords" id="search_keywords" size="20" placeholder="{LA_SEARCH_TOPIC}"/>
@@ -139,11 +139,26 @@
 			<div class="panel-heading">
 				<h3 class="panel-title<!-- IF postrow.S_FIRST_ROW --> first<!-- ENDIF -->"><!-- IF postrow.POST_ICON_IMG --><img src="{T_ICONS_PATH}{postrow.POST_ICON_IMG}" width="{postrow.POST_ICON_IMG_WIDTH}" height="{postrow.POST_ICON_IMG_HEIGHT}" alt="" /> <!-- ENDIF --><a href="#p{postrow.POST_ID}">{postrow.POST_SUBJECT}</a></h3>
 			</div>
-			<div class="panel-body badger-left <!-- IF postrow.S_ONLINE and not postrow.S_IGNORE_POST -->badger-success" data-badger="ONLINE<!-- ELSE -->badger-danger" data-badger="OFFLINE<!-- ENDIF -->">
+			<!-- IF postrow.S_POST_HIDDEN -->
+			<div class="panel-body">
+				<!-- IF postrow.S_POST_DELETED -->
+					<div class="ignore" id="post_hidden{postrow.POST_ID}">
+						{postrow.L_POST_DELETED_MESSAGE}<br />
+						{postrow.L_POST_DISPLAY}
+					</div>
+				<!-- ELSEIF postrow.S_IGNORE_POST -->
+					<div class="ignore" id="post_hidden{postrow.POST_ID}">
+						{postrow.L_IGNORE_POST}<br />
+						{postrow.L_POST_DISPLAY}
+					</div>
+				<!-- ENDIF -->
+			</div>
+			<!-- ENDIF -->
+			<div class="panel-body badger-left <!-- IF postrow.S_ONLINE and not postrow.S_IGNORE_POST -->badger-success" data-badger="ONLINE<!-- ELSE -->badger-danger" data-badger="OFFLINE<!-- ENDIF -->" id="post_content{postrow.POST_ID}"<!-- IF postrow.S_POST_HIDDEN --> style="display: none;"<!-- ENDIF -->>
 				<div class="container-fluid">
 					<div class="row">
 					<!-- IF not postrow.S_IGNORE_POST -->
-						<div class="col-md-3 post-info">
+						<div class="col-md-3 post-info hidden-xs">
 							<dl id="profile{postrow.POST_ID}">
 								<dt class="avatar text-center">
 									<!-- IF postrow.POSTER_AVATAR -->
@@ -164,46 +179,50 @@
 									<!-- Use a construct like this to include admin defined profile fields. Replace FIELD1 with the name of your field. -->
 									<dd><strong>{postrow.PROFILE_FIELD1_NAME}:</strong> {postrow.PROFILE_FIELD1_VALUE}</dd>
 								<!-- ENDIF -->
-								<!-- BEGIN custom_fields -->
-									<dd><strong>{postrow.custom_fields.PROFILE_FIELD_NAME}:</strong> {postrow.custom_fields.PROFILE_FIELD_VALUE}</dd>
-								<!-- END custom_fields -->
 								
-								<!-- IF not S_IS_BOT -->
-									<!-- IF postrow.U_PM or postrow.U_EMAIL or postrow.U_WWW or postrow.U_MSN or postrow.U_ICQ or postrow.U_YIM or postrow.U_AIM or postrow.U_JABBER -->
-										<dd>
-											<ul class="profile-links">
-												<!-- IF postrow.U_PM --><li class="pm"><a class="btn btn-mini btn-primary" href="{postrow.U_PM}" title="{L_PRIVATE_MESSAGE}"><i class="fa fa-comment"></i></a><!-- ENDIF -->
-												<!-- IF postrow.U_EMAIL --><li class="email"><a class="btn btn-mini btn-primary" href="{postrow.U_EMAIL}" title="{L_SEND_EMAIL_USER} {postrow.POST_AUTHOR}"><i class="fa fa-envelope"></i></a><!-- ENDIF -->
-												<!-- IF postrow.U_WWW --><li class="web"><a class="btn btn-mini btn-primary" href="{postrow.U_WWW}" title="{L_VISIT_WEBSITE}: {postrow.U_WWW}"><i class="fa fa-globe"></i></a><!-- ENDIF -->
-											</ul>
-											<!-- IF postrow.U_MSN or postrow.U_ICQ or postrow.U_AIM or postrow.U_JABBER -->
-												<div class="btn-group pull-left">
-													<a class="btn btn-mini btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
-														<i class="icon-plus-sign"></i>
-														<span class="caret"></span>
-													</a>
-													<ul class="dropdown-menu">
-														<!-- IF postrow.U_MSN --><li class="msnm"><a href="{postrow.U_MSN}" onclick="popup(this.href, 550, 320); return false;" title="{L_MSNM}"><i class="icon-comment"></i> MSN</a><!-- ENDIF -->
-														<!-- IF postrow.U_ICQ --><li class="icq"><a href="{postrow.U_ICQ}" onclick="popup(this.href, 550, 320); return false;" title="{L_ICQ}"><i class="icon-comment"></i> ICQ</a><!-- ENDIF -->
-														<!-- IF postrow.U_YIM --><li class="yahoo"><a href="{postrow.U_YIM}" onclick="popup(this.href, 780, 550); return false;" title="{L_YIM}"><i class="icon-comment"></i> YIM</a><!-- ENDIF -->
-														<!-- IF postrow.U_AIM --><li class="aim"><a href="{postrow.U_AIM}" onclick="popup(this.href, 550, 320); return false;" title="{L_AIM}"><i class="icon-comment"></i> AIM</a><!-- ENDIF -->
-														<!-- IF postrow.U_JABBER --><li class="jabber"><a href="{postrow.U_JABBER}" onclick="popup(this.href, 550, 320); return false;" title="{L_JABBER}"><i class="icon-comment"></i> Jabber</a><!-- ENDIF -->
-													</ul>
-												</div>
-											<!-- ENDIF -->
-										</dd>
+								<!-- EVENT viewtopic_body_postrow_custom_fields_before -->
+								<!-- BEGIN custom_fields -->
+									<!-- IF not postrow.custom_fields.S_PROFILE_CONTACT -->
+									<dd><strong>{postrow.custom_fields.PROFILE_FIELD_NAME}:</strong> {postrow.custom_fields.PROFILE_FIELD_VALUE}</dd>
 									<!-- ENDIF -->
+								<!-- END custom_fields -->
+								<!-- EVENT viewtopic_body_postrow_custom_fields_after -->
+								
+								<!-- EVENT viewtopic_body_contact_fields_before -->
+								<!-- IF not S_IS_BOT and .postrow.contact -->
+									<dd class="top5">
+										<div class="btn-group">
+											<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											{postrow.CONTACT_USER} <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu" role="menu">
+												<!-- BEGIN contact -->
+												<li>
+													<a href="<!-- IF postrow.contact.U_CONTACT -->{postrow.contact.U_CONTACT}<!-- ELSE -->{postrow.U_POST_AUTHOR}<!-- ENDIF -->" title="{postrow.contact.NAME}">
+														<i class="fa fa-<!-- IF postrow.contact.ID == 'pm' -->envelope
+															<!-- ELSEIF postrow.contact.ID == 'email' -->envelope-o
+															<!-- ELSEIF postrow.contact.ID == 'phpbb_website' -->home
+															<!-- ELSEIF postrow.contact.ID == 'phpbb_facebook' -->facebook
+															<!-- ELSEIF postrow.contact.ID == 'phpbb_twitter' -->twitter
+															<!-- ELSEIF postrow.contact.ID == 'phpbb_skype' -->skype
+															<!-- ELSEIF postrow.contact.ID == 'phpbb_youtube' -->youtube-play
+															<!-- ELSEIF postrow.contact.ID == 'phpbb_googleplus' -->google-plus
+															<!-- ELSE -->envelope<!-- ENDIF --> fa-fw"></i> {postrow.contact.NAME}
+													</a>
+												</li>
+												<!-- END contact -->
+											</ul>
+										</div>
+									</dd>
 								<!-- ENDIF -->
+								<!-- EVENT viewtopic_body_contact_fields_after -->
 							</dl>
 						</div>
 					<!-- ENDIF -->
 					<div class="col-md-9">
-						<!-- IF postrow.S_IGNORE_POST -->
-							<div class="ignore">{postrow.L_IGNORE_POST}</div>
-						<!-- ELSE -->
-							<div class="row post-head">
+							<div class="row post-head top20-xs">
 								<div class="col-md-6 col-xs-6">
-									<!-- IF S_IS_BOT --><i class="fa fa-file-o"></i><!-- ELSE --><a href="{postrow.U_MINI_POST}" title="{postrow.POST_DATE}"><i class="fa fa-file-o"></i></a> <!-- ENDIF -->{L_POST_BY_AUTHOR} <strong>{postrow.POST_AUTHOR_FULL}</strong> &raquo; {postrow.POST_DATE}
+									<!-- IF S_IS_BOT --><i class="fa fa-file-o"></i><!-- ELSE --><a href="{postrow.U_MINI_POST}" title="{postrow.POST_DATE}"><i class="fa fa-file-o fa-fw"></i></a> <!-- ENDIF -->{L_POST_BY_AUTHOR} <strong>{postrow.POST_AUTHOR_FULL}</strong><br class="visible-xs" /> <i class="fa fa-clock-o fa-fw"></i> <small>{postrow.POST_DATE}</small>
 								</div>
 								<div class="col-md-6 col-xs-6">
 								<!-- IF not S_IS_BOT -->
@@ -243,7 +262,6 @@
 							<!-- ENDIF -->
 							<!-- IF postrow.S_DISPLAY_NOTICE --><div class="rules">{L_DOWNLOAD_NOTICE}</div><!-- ENDIF -->
 							<!-- IF postrow.SIGNATURE --><div id="sig{postrow.POST_ID}" class="signature">{postrow.SIGNATURE}</div><!-- ENDIF -->
-						<!-- ENDIF -->
 					</div>
 					</div>
 				</div>
@@ -306,7 +324,7 @@
 <!-- INCLUDE jumpbox.html -->
 
 <!-- IF S_NUM_POSTS > 1 or PREVIOUS_PAGE -->
-	<div class="well well-sm">
+	<div class="well well-sm hidden-xs">
 		<form id="viewtopic" method="post" action="{S_TOPIC_ACTION}" class="form-inline">
 			<fieldset class="display-options" style="margin-top: 0; ">
 				<!-- IF not S_IS_BOT -->

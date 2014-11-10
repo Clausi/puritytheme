@@ -33,23 +33,21 @@
 						<!-- IF S_DISPLAY_FULL_LOGIN -->
 							<div class="row">
 								<!-- IF S_AUTOLOGIN_ENABLED -->
-									<div class="col-xs-6 col-sm-6 col-md-6">
-										<span class="button-checkbox">
-											<button type="button" class="btn btn-block" data-color="primary">{L_LOG_ME_IN}</button>
-											<input type="checkbox" class="hidden" name="autologin" id="autologin" tabindex="4" />
-										</span>
-									</div>
+								<div class="col-xs-6 col-sm-6 col-md-6" data-toggle="buttons">
+									<label class="btn btn-default btn-block checkbox">
+										<input type="checkbox" class="hidden" name="autologin" id="autologin" tabindex="4" /> {L_LOG_ME_IN}
+									</label>
+								</div>
 								<!-- ENDIF -->
-								<div class="col-xs-6 col-sm-6 col-md-6">
-									<span class="button-checkbox">
-										<button type="button" class="btn btn-block" data-color="primary">{L_HIDE_ME}</button>
-										<input type="checkbox" class="hidden" name="viewonline" id="viewonline" tabindex="5" /> </label>
-									</span>
+								<div class="col-xs-6 col-sm-6 col-md-6" data-toggle="buttons">
+									<label class="btn btn-default btn-block checkbox">
+										<input type="checkbox" class="hidden" name="viewonline" id="viewonline" tabindex="5" /> {L_HIDE_ME}
+									</label>
 								</div>
 							</div>
 						<!-- ENDIF -->
 						<!-- IF S_DISPLAY_FULL_LOGIN and (U_SEND_PASSWORD or U_RESEND_ACTIVATION) -->
-							<div class="row">
+							<div class="row top5">
 								<!-- IF U_SEND_PASSWORD -->
 									<div class="col-xs-6 col-sm-6 col-md-6">
 										<a href="{U_SEND_PASSWORD}" class="btn btn-danger btn-block">{L_FORGOT_PASS}</a>
