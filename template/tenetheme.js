@@ -24,6 +24,9 @@ function scrollHandler() {
 
 $(document).ready(function() {
 
+
+	$( '.swipebox' ).swipebox();
+
 	createSelectpicker();
 	createInputbox();
 	scrollHandler();
