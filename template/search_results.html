@@ -56,6 +56,7 @@
 			<thead class="topiclist">
 				<tr class="icon">
 					<th>{L_TOPICS}</th>
+					<th class="views hidden-xs">{L_VIEWS}</th>
 					<th class="posts hidden-xs">{L_REPLIES}</th>
 					<th class="lastpost hidden-xs"><span>{L_LAST_POST}</span></th>
 				</tr>			
@@ -97,7 +98,8 @@
 							<small>{L_POST_BY_AUTHOR} {searchresults.TOPIC_AUTHOR_FULL} &raquo; {searchresults.FIRST_POST_TIME} &raquo; {L_IN} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_TITLE}</a></small>
 							<!-- EVENT topiclist_row_append -->
 						</td>
-						<td class="posts hidden-xs text-center"><i class="fa fa-comment fa-fw"></i> {searchresults.TOPIC_REPLIES}</td>
+						<td class="views hidden-xs"><i class="fa fa-eye fa-fw"></i> {searchresults.TOPIC_VIEWS}</td>
+						<td class="posts hidden-xs"><i class="fa fa-comment fa-fw"></i> {searchresults.TOPIC_REPLIES}</td>
 						<td class="lastpost hidden-xs">
 							<!-- IF not S_IS_BOT --><a href="{searchresults.U_LAST_POST}"><i class="fa fa-clock-o fa-fw"></i> {searchresults.LAST_POST_TIME} <i class="fa fa-angle-double-right fa-fw"></i></a><!-- ENDIF --><br /><small>{L_POST_BY_AUTHOR} {searchresults.LAST_POST_AUTHOR_FULL}</small>
 						</td>

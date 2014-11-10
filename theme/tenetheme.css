@@ -628,13 +628,13 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	.navbar-brand img {
 		max-height: 57px;
 		max-width: 200px;
-		padding-top: 5px;
+		padding-top: 4px;
 		width: auto;
 		transition: all 300ms ease;
 	}
 	
 	#homepage-menu {
-		font-size: 18px;
+		font-size: 17px;
 	}
 	
 	.navbar-shrink  .nav, .navbar-shrink .navbar-brand{
@@ -701,7 +701,11 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	 background-color: rgba(10,10,10,0.6);
 }
 
-th.posts {
+th.posts, td.posts {
+	text-align: center;
+}
+
+th.views, td.views {
 	text-align: center;
 }
 

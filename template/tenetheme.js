@@ -30,6 +30,7 @@ $(document).ready(function() {
 	
 	$('.btn').tooltip({container: 'body'});
 	$('a').tooltip({container: 'body'});
+	$('#homepage-menu > li > a').tooltip('destroy')
 	
 	$('.progress-popover').popover({
 		html: true,
