@@ -12,16 +12,6 @@ function createInputbox() {
 	$("input.inputbox").addClass("form-control");
 }
 
-function scrollHandler() {
-	if ($(this).scrollTop() > 100) {
-		$('#back-to-top').fadeIn();
-		$('#main-nav').addClass('navbar-shrink');
-	} else {
-		$('#back-to-top').fadeOut();
-		$('#main-nav').removeClass('navbar-shrink');
-	}
-}
-
 $(document).ready(function() {
 
 
@@ -29,7 +19,6 @@ $(document).ready(function() {
 
 	createSelectpicker();
 	createInputbox();
-	scrollHandler();
 	
 	$('.btn').tooltip({container: 'body'});
 	$('a').tooltip({container: 'body'});
@@ -57,12 +46,7 @@ $(document).ready(function() {
         $(this).parents('.btn-radio-group').find('.btn-radio.active').removeClass('active');
         $(this).parent().addClass("active");
     })
-
-    $(window).scroll(function () {
-        scrollHandler();
-    });
 	
-    // scroll body to 0px on click
     $('#back-to-top').click(function (event) {
 		event.preventDefault();
         $('body,html').animate({

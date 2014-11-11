@@ -2,6 +2,7 @@
 
 <!-- INCLUDE breadcrumb.html -->
 
+<h2><!-- EVENT viewtopic_topic_title_prepend --><a href="{U_VIEW_TOPIC}">{TOPIC_TITLE}</a><!-- EVENT viewtopic_topic_title_append --></h2>
 <!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
 <!-- IF FORUM_DESC --><div style="display: none !important;">{FORUM_DESC}<br /></div><!-- ENDIF -->
 
@@ -53,7 +54,7 @@
 	<!-- ENDIF -->
 	
 	<!-- IF S_DISPLAY_SEARCHBOX -->
-		<div class="col-md-3 hidden-xs">
+		<div class="col-md-3 hidden-sm">
 			<form method="get" id="topic-search" action="{S_SEARCHBOX_ACTION}" class="form-search pull-right no-margin">
 				<div class="input-group">
 					<input class="input-medium form-control input-sm"  type="text" name="keywords" id="search_keywords" size="20" placeholder="{LA_SEARCH_TOPIC}"/>
@@ -158,7 +159,7 @@
 				<div class="container-fluid">
 					<div class="row">
 					<!-- IF not postrow.S_IGNORE_POST -->
-						<div class="col-md-3 post-info hidden-xs">
+						<div class="col-md-3 post-info hidden-sm">
 							<dl id="profile{postrow.POST_ID}">
 								<dt class="avatar text-center">
 									<!-- IF postrow.POSTER_AVATAR -->
@@ -220,7 +221,7 @@
 						</div>
 					<!-- ENDIF -->
 					<div class="col-md-9">
-							<div class="row post-head top20-xs">
+							<div class="row post-head top20-sm">
 								<div class="col-md-6 col-xs-6">
 									<!-- IF S_IS_BOT --><i class="fa fa-file-o"></i><!-- ELSE --><a href="{postrow.U_MINI_POST}" title="{postrow.POST_DATE}"><i class="fa fa-file-o fa-fw"></i></a> <!-- ENDIF -->{L_POST_BY_AUTHOR} <strong>{postrow.POST_AUTHOR_FULL}</strong><br class="visible-xs" /> <i class="fa fa-clock-o fa-fw"></i> <small>{postrow.POST_DATE}</small>
 								</div>
@@ -248,9 +249,9 @@
 								</p>
 							<!-- ENDIF -->
 							<div class="content top10 bottom10">
-								<!-- EVENT viewtopic_content_before -->
+								<!-- EVENT viewtopic_postrow_post_content_before -->
 								{postrow.MESSAGE}
-								<!-- EVENT viewtopic_content_after -->
+								<!-- EVENT viewtopic_postrow_post_content_after -->
 							</div>
 							<!-- IF postrow.S_HAS_ATTACHMENTS -->
 								<dl class="attachbox">
