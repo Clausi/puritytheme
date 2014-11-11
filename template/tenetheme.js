@@ -12,6 +12,14 @@ function createInputbox() {
 	$("input.inputbox").addClass("form-control");
 }
 
+function scrollHandler() {
+	if ($(this).scrollTop() > 85) {
+		$('#back-to-top').fadeIn();
+	} else {
+		$('#back-to-top').fadeOut();
+	}
+}
+
 $(document).ready(function() {
 
 
@@ -19,6 +27,7 @@ $(document).ready(function() {
 
 	createSelectpicker();
 	createInputbox();
+	scrollHandler();
 	
 	$('.btn').tooltip({container: 'body'});
 	$('a').tooltip({container: 'body'});
@@ -53,5 +62,9 @@ $(document).ready(function() {
             scrollTop: 0
         }, 500);
     });
+	
+	$(window).scroll(function () {
+		scrollHandler();
+	});
 
 });
