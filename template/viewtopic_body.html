@@ -221,48 +221,48 @@
 						</div>
 					<!-- ENDIF -->
 					<div class="col-md-9">
-							<div class="row post-head top20-sm">
-								<div class="col-md-6 col-xs-6">
-									<!-- IF S_IS_BOT --><i class="fa fa-file-o"></i><!-- ELSE --><a href="{postrow.U_MINI_POST}" title="{postrow.POST_DATE}"><i class="fa fa-file-o fa-fw"></i></a> <!-- ENDIF -->{L_POST_BY_AUTHOR} <strong>{postrow.POST_AUTHOR_FULL}</strong><br class="visible-xs" /> <i class="fa fa-clock-o fa-fw"></i> <small>{postrow.POST_DATE}</small>
-								</div>
-								<div class="col-md-6 col-xs-6">
-								<!-- IF not S_IS_BOT -->
-									<!-- IF postrow.U_EDIT or postrow.U_DELETE or postrow.U_REPORT or postrow.U_WARN or postrow.U_INFO or postrow.U_QUOTE -->
-										<div class="btn-toolbar topic-buttons" role="toolbar">
-											<div class="btn-group">
-												<!-- IF postrow.U_EDIT --><a class="btn btn-warning btn-xs" href="{postrow.U_EDIT}" title="{L_EDIT_POST}"><i class="fa fa-pencil"></i></a><!-- ENDIF -->
-												<!-- IF postrow.U_DELETE --><a class="btn btn-danger btn-xs" href="{postrow.U_DELETE}" title="{L_DELETE_POST}"><i class="fa fa-trash-o"></i></a><!-- ENDIF -->
-											</div>
-											<div class="btn-group">
-												<!-- IF postrow.U_INFO --><a class="btn btn-primary btn-xs" href="{postrow.U_INFO}" title="{L_INFORMATION}"><i class="fa fa-info"></i></a><!-- ENDIF -->
-												<!-- IF postrow.U_QUOTE --><a class="btn btn-success btn-xs" href="{postrow.U_QUOTE}" title="{L_REPLY_WITH_QUOTE}"><i class="fa fa-quote-left"></i></a><!-- ENDIF -->
-											</div>
+						<div class="row post-head top20-sm">
+							<div class="col-md-6 col-xs-6">
+								<!-- IF S_IS_BOT --><i class="fa fa-file-o"></i><!-- ELSE --><a href="{postrow.U_MINI_POST}" title="{postrow.POST_DATE}"><i class="fa fa-file-o fa-fw"></i></a> <!-- ENDIF -->{L_POST_BY_AUTHOR} <strong>{postrow.POST_AUTHOR_FULL}</strong><br class="visible-xs" /> <i class="fa fa-clock-o fa-fw"></i> <small>{postrow.POST_DATE}</small>
+							</div>
+							<div class="col-md-6 col-xs-6">
+							<!-- IF not S_IS_BOT -->
+								<!-- IF postrow.U_EDIT or postrow.U_DELETE or postrow.U_REPORT or postrow.U_WARN or postrow.U_INFO or postrow.U_QUOTE -->
+									<div class="btn-toolbar topic-buttons" role="toolbar">
+										<div class="btn-group">
+											<!-- IF postrow.U_EDIT --><a class="btn btn-warning btn-xs" href="{postrow.U_EDIT}" title="{L_EDIT_POST}"><i class="fa fa-pencil"></i></a><!-- ENDIF -->
+											<!-- IF postrow.U_DELETE --><a class="btn btn-danger btn-xs" href="{postrow.U_DELETE}" title="{L_DELETE_POST}"><i class="fa fa-trash-o"></i></a><!-- ENDIF -->
 										</div>
-									<!-- ENDIF -->
+										<div class="btn-group">
+											<!-- IF postrow.U_INFO --><a class="btn btn-primary btn-xs" href="{postrow.U_INFO}" title="{L_INFORMATION}"><i class="fa fa-info"></i></a><!-- ENDIF -->
+											<!-- IF postrow.U_QUOTE --><a class="btn btn-success btn-xs" href="{postrow.U_QUOTE}" title="{L_REPLY_WITH_QUOTE}"><i class="fa fa-quote-left"></i></a><!-- ENDIF -->
+										</div>
+									</div>
 								<!-- ENDIF -->
-								</div>
-							</div>
-							<!-- IF postrow.S_POST_UNAPPROVED or postrow.S_POST_REPORTED -->
-								<p class="rules">
-									<!-- IF postrow.S_POST_UNAPPROVED --><i class="fa fa-exclamation-triangle"></i> <a href="{postrow.U_MCP_APPROVE}"><strong>{L_POST_UNAPPROVED}</strong></a><br /><!-- ENDIF -->
-									<!-- IF postrow.S_POST_REPORTED --><i class="fa fa-exclamation-triangle"></i> <a href="{postrow.U_MCP_REPORT}"><strong>{L_POST_REPORTED}</strong></a><!-- ENDIF -->
-								</p>
 							<!-- ENDIF -->
-							<div class="content top10 bottom10">
-								<!-- EVENT viewtopic_postrow_post_content_before -->
-								{postrow.MESSAGE}
-								<!-- EVENT viewtopic_postrow_post_content_after -->
 							</div>
-							<!-- IF postrow.S_HAS_ATTACHMENTS -->
-								<dl class="attachbox">
-									<dt>{L_ATTACHMENTS}</dt>
-									<!-- BEGIN attachment -->
-										<dd>{postrow.attachment.DISPLAY_ATTACHMENT}</dd>
-									<!-- END attachment -->
-								</dl>
-							<!-- ENDIF -->
-							<!-- IF postrow.S_DISPLAY_NOTICE --><div class="rules">{L_DOWNLOAD_NOTICE}</div><!-- ENDIF -->
-							<!-- IF postrow.SIGNATURE --><div id="sig{postrow.POST_ID}" class="signature">{postrow.SIGNATURE}</div><!-- ENDIF -->
+						</div>
+						<!-- IF postrow.S_POST_UNAPPROVED or postrow.S_POST_REPORTED -->
+							<p class="rules">
+								<!-- IF postrow.S_POST_UNAPPROVED --><i class="fa fa-exclamation-triangle"></i> <a href="{postrow.U_MCP_APPROVE}"><strong>{L_POST_UNAPPROVED}</strong></a><br /><!-- ENDIF -->
+								<!-- IF postrow.S_POST_REPORTED --><i class="fa fa-exclamation-triangle"></i> <a href="{postrow.U_MCP_REPORT}"><strong>{L_POST_REPORTED}</strong></a><!-- ENDIF -->
+							</p>
+						<!-- ENDIF -->
+						<div class="content top10 bottom10">
+							<!-- EVENT viewtopic_postrow_post_content_before -->
+							{postrow.MESSAGE}
+							<!-- EVENT viewtopic_postrow_post_content_after -->
+						</div>
+						<!-- IF postrow.S_HAS_ATTACHMENTS -->
+							<dl class="attachbox">
+								<dt>{L_ATTACHMENTS}</dt>
+								<!-- BEGIN attachment -->
+									<dd>{postrow.attachment.DISPLAY_ATTACHMENT}</dd>
+								<!-- END attachment -->
+							</dl>
+						<!-- ENDIF -->
+						<!-- IF postrow.S_DISPLAY_NOTICE --><div class="rules">{L_DOWNLOAD_NOTICE}</div><!-- ENDIF -->
+						<!-- IF postrow.SIGNATURE --><div id="sig{postrow.POST_ID}" class="signature">{postrow.SIGNATURE}</div><!-- ENDIF -->
 					</div>
 					</div>
 				</div>
