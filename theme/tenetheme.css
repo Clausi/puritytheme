@@ -652,7 +652,13 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	.dropdown-alerts {
 		min-width: 400px;
 	}
-
+	
+	a.anchor {
+		display: block;
+		position: relative;
+		top: -85px;
+		visibility: hidden;
+	}
 }
 
 @media(max-width:768px) {
