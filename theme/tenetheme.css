@@ -715,15 +715,13 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	.bottom30-sm { margin-bottom:30px; }
 }
 
-@media(max-width:1200px) {
+@media(min-width:768px) and (max-width:1200px) {
 	#homepage-menu {
 		font-size: 15px;
 	}
-}
-
-@media(min-width:768px) and (max-width:995px) {
-	body {
-		padding-top: 150px;
+	
+	.nav > li > a {
+		padding: 15px 6px;
 	}
 }
 
@@ -952,3 +950,6 @@ blockquote cite:before {
 	white-space: normal;
 }
 
+textarea#message, textarea#username_list {
+	resize: vertical;
+}
