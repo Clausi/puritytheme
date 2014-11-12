@@ -21,7 +21,7 @@
 		</div>
 		<div class="panel-body badger-left <!-- IF S_ONLINE -->badger-success" data-badger="ONLINE<!-- ELSE -->badger-danger" data-badger="OFFLINE<!-- ENDIF -->">
 			<div class="row">
-				<div class="col-md-3 post-info">
+				<div class="col-md-3 hidden-xs hidden-sm post-info">
 					<dl id="profile{MESSAGE_ID}">
 						<dt class="avatar text-center"><!-- IF AUTHOR_AVATAR --><a href="{U_MESSAGE_AUTHOR}">{AUTHOR_AVATAR}</a><br /><!-- ENDIF -->{MESSAGE_AUTHOR_FULL}</dt>
 						<!-- IF RANK_TITLE --><dd class="text-center"><span class="badge">{RANK_TITLE}</span></dd><!-- ENDIF -->
@@ -38,7 +38,7 @@
 					</dl>
 				</div>
 				<div class="col-md-9">
-					<div class="row post-head">
+					<div class="row post-head top20-sm">
 						<div class="col-md-6 col-xs-6">
 							<strong>{L_SENT_AT}:</strong> {SENT_DATE}
 							<br /><strong>{L_PM_FROM}:</strong> {MESSAGE_AUTHOR_FULL}

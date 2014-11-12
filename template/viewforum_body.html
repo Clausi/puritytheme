@@ -46,7 +46,7 @@
 <!-- IF S_DISPLAY_POST_INFO or PAGINATION or TOTAL_POSTS or TOTAL_TOPICS -->
         <div class="row<!-- IF S_HAS_SUBFORUM --> top5<!-- ENDIF --> bottom5">        
 			<!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
-				<div class="col-md-3">
+				<div class="col-sm-3">
 				
 					<!-- EVENT viewforum_buttons_top_before -->
 					
@@ -61,14 +61,14 @@
 				</div>
 			<!-- ENDIF -->
 			<!-- IF PAGINATION or TOTAL_POSTS or TOTAL_TOPICS -->
-				<div class="col-md-6 text-center">
+				<div class="col-sm-6 text-center">
 					<div class="btn-group">
 						<!-- IF not S_IS_BOT and U_MARK_TOPICS --><a href="{U_MARK_TOPICS}" class="btn btn-default" accesskey="m" data-ajax="mark_topics_read"><i class="icon-check"></i> {L_MARK_TOPICS_READ}</a><!-- ENDIF --><!-- IF TOTAL_TOPICS --><span class="btn btn-default disabled">{TOTAL_TOPICS}</span><!-- ENDIF -->
 					</div>
 				</div>
 			<!-- ENDIF -->
 			<!-- IF S_DISPLAY_SEARCHBOX -->
-				<div class="col-md-3">        
+				<div class="col-sm-3 hidden-xs">        
 					<form action="{S_SEARCHBOX_ACTION}" method="get" id="forum-search" class="form-search pull-right" style="margin:0;">
 						<div class="input-group">
 							<input class="input-medium search form-control input-sm" type="text" name="keywords" id="search_keywords" size="20" placeholder="{L_SEARCH_FORUM}"/>

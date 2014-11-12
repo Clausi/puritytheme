@@ -662,10 +662,6 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 }
 
 @media(max-width:768px) {
-	#content-wrapper {
-		padding: 0;
-	}
-
 	.navbar-brand img {
 		max-height: auto;
 		max-width: 200px;

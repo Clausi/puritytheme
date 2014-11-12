@@ -29,7 +29,7 @@
 </div>
 
 <div class="row bottom10">
-		<div class="col-md-3">
+		<div class="col-sm-3">
 		<!-- EVENT viewtopic_buttons_top_before -->
 		
 		<!-- IF not S_IS_BOT and S_DISPLAY_REPLY_INFO -->
@@ -46,7 +46,7 @@
 		</div>
 
 	<!-- IF .pagination or TOTAL_POSTS -->
-		<div class="col-md-6 text-center">
+		<div class="col-sm-6 text-center">
 			<!-- IF .pagination -->
 				<!-- INCLUDE pagination.html -->
 			<!-- ENDIF -->
@@ -54,7 +54,7 @@
 	<!-- ENDIF -->
 	
 	<!-- IF S_DISPLAY_SEARCHBOX -->
-		<div class="col-md-3 hidden-sm">
+		<div class="col-sm-3 hidden-xs">
 			<form method="get" id="topic-search" action="{S_SEARCHBOX_ACTION}" class="form-search pull-right no-margin">
 				<div class="input-group">
 					<input class="input-medium form-control input-sm"  type="text" name="keywords" id="search_keywords" size="20" placeholder="{LA_SEARCH_TOPIC}"/>
@@ -159,7 +159,7 @@
 				<div class="container-fluid">
 					<div class="row">
 					<!-- IF not postrow.S_IGNORE_POST -->
-						<div class="col-md-3 post-info hidden-sm">
+						<div class="col-md-3 post-info hidden-xs hidden-sm">
 							<dl id="profile{postrow.POST_ID}">
 								<dt class="avatar text-center">
 									<!-- EVENT viewtopic_body_avatar_before -->
