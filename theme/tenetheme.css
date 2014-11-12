@@ -770,7 +770,7 @@ th.topics {
 .badge {
 	border-radius: 4px;
 	color: #EFEFEF;
-	background-color: #147EC2;
+	background-color: #333;
 }
 
 .badge-warning {

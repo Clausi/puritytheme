@@ -47,8 +47,6 @@ ucp_register_profile_fields_before 	ucp_register.html 	ucp_register.html 	3.1.0-
 ucp_friend_list_before 	ucp_zebra_friends.html 	ucp_zebra_friends.html 	3.1.0-a4 	Add optional elements before list of friends in UCP
 ucp_friend_list_after 	ucp_zebra_friends.html 	ucp_zebra_friends.html 	3.1.0-a4 	Add optional elements after list of friends in UCP
 viewtopic_print_head_append 	viewtopic_print.html 	viewtopic_print.html 	3.1.0-a1 	Add asset calls directly before the `</head>` tag of the Print Topic screen
-viewtopic_body_avatar_after 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-RC3 	Add content right after the avatar when viewing topics
-viewtopic_body_avatar_before 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-RC3 	Add content right before the avatar when viewing topics
 viewtopic_body_footer_before 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-a1 	Add content to the bottom of the View topic screen below the posts and quick reply, directly before the jumpbox in Prosilver, breadcrumbs in Subsilver2.
 viewtopic_body_poll_option_after 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-b3 	Add content after the poll option the list.
 viewtopic_body_poll_option_before 	viewtopic_body.html 	viewtopic_body.html 	3.1.0-b3 	Add content before the poll option the list.

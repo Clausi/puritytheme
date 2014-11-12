@@ -162,9 +162,11 @@
 						<div class="col-md-3 post-info hidden-sm">
 							<dl id="profile{postrow.POST_ID}">
 								<dt class="avatar text-center">
+									<!-- EVENT viewtopic_body_avatar_before -->
 									<!-- IF postrow.POSTER_AVATAR -->
 										<!-- IF postrow.U_POST_AUTHOR --><a href="{postrow.U_POST_AUTHOR}">{postrow.POSTER_AVATAR}</a><!-- ELSE -->{postrow.POSTER_AVATAR}<!-- ENDIF --><br />
 									<!-- ENDIF -->
+									<!-- EVENT viewtopic_body_avatar_after -->
 								</dt>
 								<dd class="text-center">
 									<!-- IF not postrow.U_POST_AUTHOR --><strong>{postrow.POST_AUTHOR_FULL}</strong> <!-- ELSE -->{postrow.POST_AUTHOR_FULL}<!-- ENDIF -->
@@ -173,18 +175,14 @@
 								<dd>
 									<hr />
 								</dd>
-								<!-- IF postrow.POSTER_POSTS != '' --><dd><strong>{L_POSTS}:</strong> {postrow.POSTER_POSTS}</dd><!-- ENDIF -->
-								<!-- IF postrow.POSTER_JOINED --><dd><strong>{L_JOINED}:</strong> {postrow.POSTER_JOINED}</dd><!-- ENDIF -->
-								<!-- IF postrow.POSTER_FROM --><dd><strong>{L_LOCATION}:</strong> {postrow.POSTER_FROM}</dd><!-- ENDIF -->
-								<!-- IF postrow.S_PROFILE_FIELD1 -->
-									<!-- Use a construct like this to include admin defined profile fields. Replace FIELD1 with the name of your field. -->
-									<dd><strong>{postrow.PROFILE_FIELD1_NAME}:</strong> {postrow.PROFILE_FIELD1_VALUE}</dd>
-								<!-- ENDIF -->
+								<!-- IF postrow.POSTER_POSTS != '' --><dd><small><strong>{L_POSTS}:</strong> {postrow.POSTER_POSTS}</small></dd><!-- ENDIF -->
+								<!-- IF postrow.POSTER_FROM --><dd><strong><small>{L_LOCATION}:</strong> {postrow.POSTER_FROM}</small></dd><!-- ENDIF -->
+								<!-- IF postrow.POSTER_WARNINGS --><dd><strong>{L_WARNINGS}{L_COLON}</strong> {postrow.POSTER_WARNINGS}</dd><!-- ENDIF -->
 								
 								<!-- EVENT viewtopic_body_postrow_custom_fields_before -->
 								<!-- BEGIN custom_fields -->
 									<!-- IF not postrow.custom_fields.S_PROFILE_CONTACT -->
-									<dd><strong>{postrow.custom_fields.PROFILE_FIELD_NAME}:</strong> {postrow.custom_fields.PROFILE_FIELD_VALUE}</dd>
+									<dd><small><strong>{postrow.custom_fields.PROFILE_FIELD_NAME}:</strong> {postrow.custom_fields.PROFILE_FIELD_VALUE}</small></dd>
 									<!-- ENDIF -->
 								<!-- END custom_fields -->
 								<!-- EVENT viewtopic_body_postrow_custom_fields_after -->
