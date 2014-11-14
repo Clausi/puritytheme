@@ -32,13 +32,15 @@
 					<!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
 					<li class="divider"></li>
 					<li>
-						<form class="form-inline" role="form" method="get" id="search" action="{U_SEARCH}">
-							<div class="form-group">
+						<form role="form" method="get" id="search" action="{U_SEARCH}">
+							<div class="input-group input-group-sm">
 								<label class="sr-only" for="search_keywords">{LA_SEARCH_FORUM}</label>
-								<input class="form-control" style="width: 170px; margin-bottom: 0px;" maxlength="128" type="text" name="keywords" id="search_keywords" placeholder="{LA_SEARCH_FORUM}" />
+								<input class="form-control" maxlength="128" type="text" name="keywords" id="search_keywords" placeholder="{LA_SEARCH_FORUM}" />
 								{S_SEARCH_LOCAL_HIDDEN_FIELDS}
+								<span class="input-group-btn">
+									<button type="submit" class="btn btn-default" style="width: 40px; margin: 0px;"><i class="fa fa-search"></i></button>
+								</span>
 							</div>
-							<button type="submit" class="btn btn-default" style="width: 40px; margin: 0px;"><i class="fa fa-search"></i></button>
 						</form>
 					</li>
 				<!-- ENDIF -->
@@ -62,8 +64,8 @@
 					<!-- IF not S_USER_LOGGED_IN -->							
 						<li>
 							<form action="{S_LOGIN_ACTION}" method="post" id="navloginform" name="loginform" role="form" class="form">
-								<input type="text" placeholder="{L_USERNAME}" name="username" id="username" size="10" class="form-control" title="{L_USERNAME}"/>	
-								<input type="password" placeholder="{L_PASSWORD}" name="password" id="password" size="10" class="form-control" title="{L_PASSWORD}"/>
+								<input type="text" placeholder="{L_USERNAME}" name="username" id="username" size="10" class="form-control input-sm" title="{L_USERNAME}"/>	
+								<input type="password" placeholder="{L_PASSWORD}" name="password" id="password" size="10" class="form-control input-sm" title="{L_PASSWORD}"/>
 								<!-- IF S_AUTOLOGIN_ENABLED -->
 								<label class="btn btn-default checkbox" data-toggle="buttons">
 									<input type="checkbox" class="hidden" name="autologin" id="autologin" tabindex="4" /> {L_LOG_ME_IN}

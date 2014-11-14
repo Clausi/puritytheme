@@ -189,17 +189,6 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	margin-bottom: 2px;
 }
 
-.colorgraph {
-	height: 5px;
-	border-top: 0;
-	background: #c4e17f;
-	border-radius: 5px;
-	background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-	background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-	background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-	background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-}
-
 .post-info {
 	border-right: 1px solid #282828;
 	border-bottom: 1px solid #282828;
@@ -223,10 +212,6 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	border-top: 1px solid #282828;
 }
 
-.2top {
-	float: right;
-}
-
 .post-info .avatar img {
 	border-radius: 10%;
 	border:5px solid #eee;
@@ -235,7 +220,6 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 
 .post-info .avatar img:hover{
 	border:2px solid #eee; 
-	/*-webkit-font-smoothing:antialiased;*/
 }
 
 .post-head {
@@ -575,6 +559,7 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 
 .page-header {
 	margin-top: 0px;
+	border-bottom: none;
 }
 
 .top0 { margin-top: 0px; }
@@ -674,8 +659,12 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	
 	#main-nav {
 		height: auto;
-		max-height: 250px;
+		max-height: 300px;
 		overflow-x: hidden;
+	}
+	
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		 color: #fff;
 	}
 	
 	.top0-xs { margin-top: 0px; }
