@@ -672,6 +672,12 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 		text-align: left;
 	}
 	
+	#main-nav {
+		height: auto;
+		max-height: 250px;
+		overflow-x: hidden;
+	}
+	
 	.top0-xs { margin-top: 0px; }
 	.top5-xs { margin-top:5px; }
 	.top7-xs { margin-top:7px; }
