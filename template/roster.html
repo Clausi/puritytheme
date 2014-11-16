@@ -28,13 +28,12 @@
 						<th>Rank</th>
 						<th>Gildenrang</th>
 						<th>Erfolgspunkte</th>
-						<!-- IF U_ACP --><th>Beitritt</th><!-- ENDIF -->
 					</tr>
 				</thead>
 				
 				<tbody>
 					<!-- BEGIN n_members -->
-					<tr data-url="http://{REGION}.battle.net/wow/{BNETLOCALE}/character/{REALM}/{n_members.NAME}/advanced" title="{n_members.NAME}">
+					<tr data-url="http://{REGION}.battle.net/wow/{BNETLOCALE}/character/{n_members.REALM}/{n_members.NAME}/advanced" title="{n_members.NAME}">
 						<td>{n_members.NAME}</td>
 						<td>{n_members.RACE}</td>
 						<td><img src="./guild/images/race/{n_members.RACE}-{n_members.GENDER}.gif" alt="{n_members.RACENAME}" /></td>
@@ -44,7 +43,6 @@
 						<td>{n_members.RANK}</td>
 						<td>{n_members.RANKNAME}</td>
 						<td>{n_members.ACHIEVEMENTPOINTS}</td>
-						<!-- IF U_ACP --><td>{n_members.FIRSTSEEN}</td><!-- ENDIF -->
 					</tr>
 					<!-- END n_members -->
 				</tbody>
@@ -78,7 +76,7 @@
 				
 				<tbody>
 					<!-- BEGIN n_exMembers -->
-					<tr data-url="http://{REGION}.battle.net/wow/{BNETLOCALE}/character/{REALM}/{n_exMembers.NAME}/advanced" data-darktip="wow.character:{REGION}.{REALM}.{n_exMembers.NAME}({BNETLOCALE})">
+					<tr data-url="http://{REGION}.battle.net/wow/{BNETLOCALE}/character/{n_exMembers.REALM}/{n_exMembers.NAME}/advanced" data-darktip="wow.character:{REGION}.{REALM}.{n_exMembers.NAME}({BNETLOCALE})">
 						<td>{n_exMembers.NAME}</td>
 						<td>{n_exMembers.RACE}</td>
 						<td class="hidden-xs"><img src="./guild/images/race/{n_exMembers.RACE}-{n_exMembers.GENDER}.gif" alt="{n_exMembers.RACENAME}" /></td>
