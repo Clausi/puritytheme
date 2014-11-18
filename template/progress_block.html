@@ -8,21 +8,25 @@
 			<!-- BEGIN n_raidprogress -->
 			<li class="list-group-item">
 				<h6 class="list-group-item-heading"><a href="http://de.wowhead.com/zone={n_raidprogress.RAIDID}">{n_raidprogress.RAIDNAME}</a></h6>
-				<a href="#" tabindex="0" class="progress-popover" data-toggle="popover" data-placement="left" data-trigger="hover" data-content="<dl class='dl-horizontal'><!-- BEGIN n_nhkills --><dt>{n_raidprogress.n_nhkills.BOSSNAME}</dt><dd>{n_raidprogress.n_nhkills.KILLDATE}</dd><!-- END n_nhkills --></dl>">
-					<div class="progress">
-						<div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="{n_raidprogress.PROZENT}" aria-valuemin="0" aria-valuemax="100" style="width: {n_raidprogress.PROZENT}%">
-							{n_raidprogress.BOSSESKILLED} / {n_raidprogress.TOTALBOSSES}
-						</div>
-					</div>
-				</a>
-				
+				<!-- IF .n_hckills -->
 				<a href="#" tabindex="0" class="progress-popover" data-toggle="popover" data-placement="left" data-trigger="hover" data-content="<dl class='dl-horizontal'><!-- BEGIN n_hckills --><dt>{n_raidprogress.n_hckills.BOSSNAME}</dt><dd>{n_raidprogress.n_hckills.KILLDATE}</dd><!-- END n_hckills --></dl>">
 					<div class="progress">
-						<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{n_raidprogress.PROZENTHC}" aria-valuemin="0" aria-valuemax="100" style="width: {n_raidprogress.PROZENTHC}%">
-							HC: {n_raidprogress.HCBOSSESKILLED} / {n_raidprogress.TOTALHCBOSSES}
+						<div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="{n_raidprogress.PROZENT}" aria-valuemin="0" aria-valuemax="100" style="width: {n_raidprogress.PROZENTHC}%">
+							{n_raidprogress.HCBOSSESKILLED} / {n_raidprogress.HCBOSSES}
 						</div>
 					</div>
 				</a>
+				<!-- ENDIF -->
+				
+				<!-- IF .n_mythickills -->
+				<a href="#" tabindex="0" class="progress-popover" data-toggle="popover" data-placement="left" data-trigger="hover" data-content="<dl class='dl-horizontal'><!-- BEGIN n_mythickills --><dt>{n_raidprogress.n_mythickills.BOSSNAME}</dt><dd>{n_raidprogress.n_mythickills.KILLDATE}</dd><!-- END n_mythickills --></dl>">
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{n_raidprogress.PROZENTHC}" aria-valuemin="0" aria-valuemax="100" style="width: {n_raidprogress.PROZENTMYTHIC}%">
+							HC: {n_raidprogress.MYTHICBOSSESKILLED} / {n_raidprogress.MYTHICBOSSES}
+						</div>
+					</div>
+				</a>
+				<!-- ENDIF -->
 
 			</li>
 			<!-- END n_raidprogress -->
