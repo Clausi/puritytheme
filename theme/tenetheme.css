@@ -833,8 +833,16 @@ table a:not(.btn), .table a:not(.btn) {
 	background-color: transparent;
 }
 
+.progress-bar {
+	font-size: 11px;
+}
+
 .progress-bar-default {
 	background-color: #116BA5;
+}
+
+.progress {
+	background-color: rgba(10, 10, 10, 0.6);
 }
 
 .progresslist .progress {
