@@ -73,12 +73,13 @@
 	<form method="post" action="{S_POLL_ACTION}">
 		<div class="panel panel-default bottom5">
 			<div class="panel-heading">
-				<h3 class="panel-title">{POLL_QUESTION}</h3>
+				<h3 class="panel-title"><!-- EVENT viewtopic_body_poll_question_prepend -->{POLL_QUESTION}<!-- EVENT viewtopic_body_poll_question_append --></h3>
 			</div>
 			<div class="panel-body">
 				<p class="author">{L_POLL_LENGTH}<!-- IF S_CAN_VOTE and L_POLL_LENGTH --><br /><!-- ENDIF --><!-- IF S_CAN_VOTE -->{L_MAX_VOTES}<!-- ENDIF --></p>
 				<fieldset class="polls">
 				<!-- BEGIN poll_option -->
+					<!-- EVENT viewtopic_body_poll_option_before -->
 					<div class="row bottom5<!-- IF poll_option.POLL_OPTION_VOTED --> voted<!-- ENDIF -->"<!-- IF poll_option.POLL_OPTION_VOTED --> title="{L_POLL_VOTED_OPTION}"<!-- ENDIF -->>
 						<!-- IF poll_option.POLL_OPTION_VOTED or S_DISPLAY_RESULTS --><div class="col-md-3"><!-- ELSE --><div class="col-md-12"><!-- ENDIF -->
 							<!-- IF S_CAN_VOTE -->
@@ -97,16 +98,19 @@
 						</div>
 						<!-- IF S_DISPLAY_RESULTS -->
 							<div class="col-md-7 vote-progress">
-								<div class="progress">
-									<div class="progress-bar <!-- IF poll_option.POLL_OPTION_PCT < 33 -->progress-bar-danger<!-- ELSEIF poll_option.POLL_OPTION_PCT < 66 -->progress-bar-warning<!-- ELSE -->progress-bar-success<!-- ENDIF -->"  role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:<!-- IF poll_option.POLL_OPTION_PCT < 10 -->1%<!-- ELSE -->{poll_option.POLL_OPTION_PERCENT}<!-- ENDIF -->;">
-										<!-- IF poll_option.POLL_OPTION_RESULT == 0 -->{L_NO_VOTES}<!-- ELSE -->{poll_option.POLL_OPTION_PERCENT}<!-- ENDIF -->
+								<!-- IF poll_option.POLL_OPTION_RESULT > 0 and M_POLLVOTERS --><a href="#" data-toggle="popover" title="{L_TOTAL_VOTES}" data-placement="top" data-trigger="hover" data-content="<!-- EVENT viewtopic_body_poll_popover_content -->" class="progress-popover"><!-- ENDIF -->
+									<div class="progress">
+										<div class="progress-bar <!-- IF poll_option.POLL_OPTION_PCT < 33 -->progress-bar-danger<!-- ELSEIF poll_option.POLL_OPTION_PCT < 66 -->progress-bar-warning<!-- ELSE -->progress-bar-success<!-- ENDIF -->"  role="progressbar" aria-valuenow="{poll_option.POLL_OPTION_PERCENT}" aria-valuemin="0" aria-valuemax="100" style="width:<!-- IF poll_option.POLL_OPTION_PCT < 10 -->1%<!-- ELSE -->{poll_option.POLL_OPTION_PERCENT}<!-- ENDIF -->;">
+											<!-- IF poll_option.POLL_OPTION_RESULT == 0 -->{L_NO_VOTES}<!-- ELSE -->{poll_option.POLL_OPTION_PERCENT}<!-- ENDIF -->
+										</div>
 									</div>
-								</div>
+								<!-- IF poll_option.POLL_OPTION_RESULT > 0 and M_POLLVOTERS--></a><!-- ENDIF -->
 							</div>
 							<div class="col-md-2 vote-progress">
 								{poll_option.POLL_OPTION_RESULT}
 							</div>
 						<!-- ENDIF -->
+						<!-- EVENT viewtopic_body_poll_option_after -->
 					</div>
 				<!-- END poll_option -->
 				<div class="clearfix"></div>
@@ -134,6 +138,7 @@
 <!-- ENDIF -->
 	
 <!-- BEGIN postrow -->
+	<!-- EVENT viewtopic_body_postrow_post_before -->
 	<!-- IF postrow.S_FIRST_UNREAD --><a id="unread" class="anchor"></a><!-- ENDIF -->
 	<div id="p{postrow.POST_ID}">
 		<div class="panel <!-- IF postrow.S_UNREAD_POST -->panel-primary<!-- ELSEIF postrow.S_POST_REPORTED -->panel-danger<!-- ELSE -->panel-default panel-recolor<!-- ENDIF --> bottom5">
@@ -225,6 +230,7 @@
 							</div>
 							<div class="col-md-6 col-xs-6">
 							<!-- IF not S_IS_BOT -->
+								<!-- EVENT viewtopic_body_post_buttons_before -->
 								<!-- IF postrow.U_EDIT or postrow.U_DELETE or postrow.U_REPORT or postrow.U_WARN or postrow.U_INFO or postrow.U_QUOTE -->
 									<div class="btn-toolbar topic-buttons" role="toolbar">
 										<div class="btn-group">
@@ -237,6 +243,7 @@
 										</div>
 									</div>
 								<!-- ENDIF -->
+								<!-- EVENT viewtopic_body_post_buttons_after -->
 							<!-- ENDIF -->
 							</div>
 						</div>
@@ -261,27 +268,32 @@
 						<!-- ENDIF -->
 						<!-- IF postrow.S_DISPLAY_NOTICE --><div class="rules">{L_DOWNLOAD_NOTICE}</div><!-- ENDIF -->
 						<!-- IF postrow.SIGNATURE --><div id="sig{postrow.POST_ID}" class="signature">{postrow.SIGNATURE}</div><!-- ENDIF -->
+						<!-- EVENT viewtopic_body_postrow_post_content_footer -->
 					</div>
 					</div>
 				</div>
 			</div>
 			<div class="panel-footer post-footer">
+				<!-- EVENT viewtopic_body_postrow_post_notices_before -->
 				<!-- IF postrow.EDITED_MESSAGE or postrow.EDIT_REASON -->
 					<div class="panel-foo">{postrow.EDITED_MESSAGE}
 						<!-- IF postrow.EDIT_REASON --><strong>{L_REASON}:</strong> <em>{postrow.EDIT_REASON}</em><!-- ENDIF -->
 					</div>
 				<!-- ENDIF -->
 				<!-- IF postrow.BUMPED_MESSAGE --><div class="panel-foo">{postrow.BUMPED_MESSAGE}</div><!-- ENDIF -->
+				<!-- EVENT viewtopic_body_postrow_post_notices_after -->
 				<div class="pull-right"><a href="#content-wrapper" title="{L_BACK_TO_TOP}"><i class="fa fa-angle-up"></i></a></div>
 			</div>
 		</div>
 	</div>
+	<!-- EVENT viewtopic_body_postrow_post_after -->
 <!-- END postrow -->
 
 <!-- IF S_QUICK_REPLY -->
 	<!-- INCLUDE quickreply_editor.html -->
 <!-- ENDIF -->
 
+<!-- EVENT viewtopic_body_topic_actions_before -->
 <div class="row bottom5">
 	
 		<div class="col-md-3">
@@ -320,6 +332,7 @@
 	</div>
 </div>
 
+<!-- EVENT viewtopic_body_footer_before -->
 <!-- INCLUDE jumpbox.html -->
 
 <!-- IF S_NUM_POSTS > 1 or PREVIOUS_PAGE -->

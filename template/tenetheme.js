@@ -28,8 +28,8 @@ $(document).ready(function() {
 	createInputbox();
 	scrollHandler();
 	
-	$('.btn').tooltip({container: 'body'});
-	$('a').tooltip({container: 'body'});
+	$(".btn").tooltip({container: 'body'});
+	$("a:not('.progress-popover')").tooltip({container: 'body'});
 	$('#homepage-menu > li > a').tooltip('destroy')
 	
 	$('.progress-popover').popover({
