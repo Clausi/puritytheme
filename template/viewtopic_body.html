@@ -98,7 +98,7 @@
 						</div>
 						<!-- IF S_DISPLAY_RESULTS -->
 							<div class="col-md-7 vote-progress">
-								<!-- IF poll_option.POLL_OPTION_RESULT > 0 and M_POLLVOTERS --><a href="#" data-toggle="popover" title="{L_TOTAL_VOTES}" data-placement="top" data-trigger="hover" data-content="<!-- EVENT viewtopic_body_poll_popover_content -->" class="progress-popover"><!-- ENDIF -->
+								<!-- IF poll_option.POLL_OPTION_RESULT > 0 and M_POLLVOTERS --><a href="#" data-toggle="popover" title="{L_TOTAL_VOTES}: {TOTAL_VOTES}" data-placement="top" data-trigger="hover" data-content="<!-- EVENT viewtopic_body_poll_popover_content -->" class="progress-popover"><!-- ENDIF -->
 									<div class="progress">
 										<div class="progress-bar <!-- IF poll_option.POLL_OPTION_PCT < 33 -->progress-bar-danger<!-- ELSEIF poll_option.POLL_OPTION_PCT < 66 -->progress-bar-warning<!-- ELSE -->progress-bar-success<!-- ENDIF -->"  role="progressbar" aria-valuenow="{poll_option.POLL_OPTION_PERCENT}" aria-valuemin="0" aria-valuemax="100" style="width:<!-- IF poll_option.POLL_OPTION_PCT < 10 -->1%<!-- ELSE -->{poll_option.POLL_OPTION_PERCENT}<!-- ENDIF -->;">
 											<!-- IF poll_option.POLL_OPTION_RESULT == 0 -->{L_NO_VOTES}<!-- ELSE -->{poll_option.POLL_OPTION_PERCENT}<!-- ENDIF -->
@@ -116,7 +116,7 @@
 				<div class="clearfix"></div>
 				<!-- IF S_DISPLAY_RESULTS -->
 					<div class="text-center center-block">
-						<span class="btn btn-default disabled">{L_TOTAL_VOTES} : {TOTAL_VOTES}</span>
+						<span class="btn btn-default disabled">{L_TOTAL_VOTES}: {TOTAL_VOTES}</span>
 					</div>
 				<!-- ENDIF -->
 				<div class="spacer"></div>
