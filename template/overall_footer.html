@@ -150,7 +150,7 @@ $(document).ready(function() {
 
 		"fnInitComplete": function(oSettings, json) {
 			createSelectpicker();
-			filterTable(this, "[0,1,2,4,5,6]");
+			filterTable(this, "[0,1,2,3,5,6]");
 		}
 	});
 	
@@ -164,7 +164,7 @@ $(document).ready(function() {
 		"oLanguage": {
 			<!-- IF S_USER_LANG == 'de' -->"sUrl": "{T_THEME_PATH}/libs/datatables/lang/dataTables.german.txt"<!-- ENDIF -->
 		},
-		"order": [[ 9, "desc" ]],
+		"order": [[ 7, "desc" ]],
 		"pageLength": 10,
 		"lengthMenu": [[ 10, 15, 25, 50, 100, -1], [ 10, 15, 25, 50, 100, "Alle"] ],
 		
@@ -175,8 +175,6 @@ $(document).ready(function() {
 		  { "orderData": [3,4], "targets": [ 4 ] },
 		  { "targets": [ 6 ], "visible": false },
 		  { "orderData": [6,7], "targets": [ 7 ] },
-		  { "targets": [ 8 ], "visible": false },
-		  { "orderData": [8,9], "targets": [ 9 ] },
 		],
 	});
 	<!-- ENDIF -->

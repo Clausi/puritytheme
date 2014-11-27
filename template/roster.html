@@ -7,10 +7,10 @@
 					<select id="rosterFilter">
 						 <option value="[0-9]">alle</option>
 						 <option value="[0,1,2]">Offis</option>
-						 <option value="[0,1,2,4,5,6]" selected="selected">Raider (Offis, Members, Trials)</option>
-						 <option value="[4,5,6]">Members, Trials</option>
+						 <option value="[0,1,2,3,5,6]" selected="selected">Raider (Offis, Members, Trials)</option>
+						 <option value="[3,5,6]">Members, Trials</option>
 						 <option value="[8,9]">Friends</option>
-						 <option value="[3,7]">Twinks</option>
+						 <option value="[4,7]">Twinks</option>
 					</select>
 				</div>
 			</div>
@@ -67,8 +67,6 @@
 						<th>Class</th>
 						<th>Klasse</th>
 						<th>Stufe</th>
-						<th>Rank</th>
-						<th>Gildenrang</th>
 						<th>Lastseen</th>
 						<th>Verlassen</th>
 					</tr>
@@ -83,8 +81,6 @@
 						<td>{n_exMembers.CLASS}</td>
 						<td><img src="./guild/images/class/{n_exMembers.CLASS}.gif" alt="{n_exMembers.CLASSNAME}" /></td>
 						<td class="hidden-xs">{n_exMembers.LEVEL}</td>
-						<td>{n_exMembers.RANK}</td>
-						<td>{n_exMembers.RANKNAME}</td>
 						<td>{n_exMembers.LASTSEENTIMESTAMP}</td>
 						<td>{n_exMembers.LASTSEEN}</td>
 					</tr>
