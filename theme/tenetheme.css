@@ -602,8 +602,8 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 @media(min-width:768px) {
 	body {
 		padding-top: 85px;
-		background: #0e1316 url("images/bg.jpg") no-repeat center top;
-		background-size: 1280px auto;
+	/*	background: #0e1316 url("images/bg.jpg") no-repeat center top;
+		background-size: 1280px auto; */
 	}
 
 	.navbar-default {
