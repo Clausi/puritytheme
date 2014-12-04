@@ -952,3 +952,8 @@ blockquote cite:before {
 textarea#message, textarea#username_list {
 	resize: vertical;
 }
+
+.thumbnail {
+    background-color: transparent;
+    border: none;
+}
