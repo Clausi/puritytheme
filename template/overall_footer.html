@@ -178,16 +178,6 @@ $(document).ready(function() {
 		],
 	});
 	<!-- ENDIF -->
-	
-	$('#guildTabs').click('show', function(e) {  
-		paneID = $(e.target).attr('href');
-		src = $(paneID).attr('data-src');
-		if($(paneID+"Wrapper iframe").attr("src")=="")
-		{
-			$(paneID+"Wrapper iframe").attr("src", src);
-			$(paneID+"Wrapper").css( "height", "1200px");
-		}
-	});
 });
 
 </script>
