@@ -34,7 +34,7 @@
 				<tbody>
 					<!-- BEGIN n_members -->
 					<tr data-url="http://{REGION}.battle.net/wow/{BNETLOCALE}/character/{n_members.REALM}/{n_members.NAME}/advanced" title="{n_members.NAME}">
-						<td><a href="http://{REGION}.battle.net/wow/{BNETLOCALE}/character/{n_members.REALM}/{n_members.NAME}/advanced" target="_blank">{n_members.NAME}</a></td>
+						<td><a href="http://{REGION}.battle.net/wow/{BNETLOCALE}/character/{n_members.REALM}/{n_members.NAME}/advanced">{n_members.NAME}</a></td>
 						<td>{n_members.RACE}</td>
 						<td><img src="./guild/images/race/{n_members.RACE}-{n_members.GENDER}.gif" alt="{n_members.RACENAME}" /></td>
 						<td>{n_members.CLASS}</td>
@@ -54,9 +54,9 @@
 <!-- IF U_ACP -->
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<h3 class="panel-title">Ex-Member</h3>
+		<h3 class="panel-title"><a data-toggle="collapse" href="#exmember" aria-expanded="false" aria-controls="collapseOne">Ex-Member</a></h3>
 	</div>
-	<div class="panel-body">
+	<div class="panel-body collapse" id="exmember">
 		<div class="table-responsive">
 			<table class="table table-hover table-striped clickable_row" id="datatables-rosterexmember">
 				<thead>
