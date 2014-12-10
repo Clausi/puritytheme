@@ -12,7 +12,13 @@
 		<ul class="nav navbar-nav" id="homepage-menu">
 			<!-- EVENT overall_header_navigation_prepend -->
 			<li><a href="{ROOT_PATH}start.php" title="News"><i class="fa fa-star fa-fw"></i> News</a></li>
-			<!-- EVENT overall_header_navigation_clausi_epgp -->
+			<li class="dropdown">
+				<a href="#" title="Gilde" data-toggle="dropdown"><i class="fa fa-beer fa-fw"></i> Gilde <span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+					<li><a href="{ROOT_PATH}guild.php"><i class="fa fa-users fa-fw"></i> Roster</a></li>
+					<!-- EVENT overall_header_navigation_clausi_epgp -->
+				</ul>
+			</li>
 			<li><a href="{ROOT_PATH}apply.php" title="Bewerbung"><i class="fa fa-flag fa-fw"></i> Bewerbung</a></li>
 			<li><a href="{U_INDEX}" title="{L_INDEX}"><i class="fa fa-comment fa-fw"></i> Forum</a></li>
 			<!-- EVENT overall_header_navigation_append -->
