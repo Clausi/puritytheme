@@ -25,15 +25,13 @@
 
 <!-- INCLUDE overall_header.html -->
 
-<form id="confirm" action="{S_CONFIRM_ACTION}" method="post">
-<div class="panel">
-	<div class="inner">
+<form id="confirm" action="{S_CONFIRM_ACTION}" method="post" role="form">
+<div class="panel panel-default">
+	<div class="panel-body">
+		<h2 class="message-title">{MESSAGE_TITLE}</h2>
 
-	<h2 class="message-title">{MESSAGE_TITLE}</h2>
+		<p>{MESSAGE_TEXT}</p>
 
-	<p>{MESSAGE_TEXT}</p>
-
-	<fieldset class="fields1">
 		<!-- IF not S_SOFTDELETED and S_ALLOWED_DELETE and S_ALLOWED_SOFTDELETE -->
 			<dl>
 				<dt><label for="delete_permanent">{L_DELETE_PERMANENTLY}{L_COLON}</label></dt>
@@ -50,14 +48,10 @@
 			<dt><label for="delete_reason">{L_DELETE_REASON}{L_COLON}</label><br /><span>{L_DELETE_REASON_EXPLAIN}</span></dt>
 			<dd><input type="text" name="delete_reason" id="delete_reason" value="" class="inputbox autowidth" maxlength="120" size="45" /></dd>
 		</dl>
-	</fieldset>
 
-	<fieldset class="submit-buttons">
 		{S_HIDDEN_FIELDS}
 		<input type="submit" name="confirm" value="{L_YES}" class="btn btn-success" />&nbsp; 
 		<input type="submit" name="cancel" value="{L_NO}" class="btn btn-danger" />
-	</fieldset>
-
 	</div>
 </div>
 </form>

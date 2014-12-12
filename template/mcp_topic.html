@@ -1,44 +1,26 @@
 <!-- INCLUDE mcp_header.html -->
 
-<form id="mcp" method="post" action="{S_MCP_ACTION}">
+<form id="mcp" method="post" action="{S_MCP_ACTION}" role="form">
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h3 class="panel-title"><a href="{U_VIEW_TOPIC}">{L_TOPIC}: {TOPIC_TITLE}</a></h3>
 		</div>
 		<div class="panel-body">
-			<script type="text/javascript">
-			// <![CDATA[
-			var panels = new Array('display-panel', 'split-panel', 'merge-panel');
 
-			<!-- IF S_MERGE_VIEW -->
-				var show_panel = 'merge-panel';
-			<!-- ELSEIF S_SPLIT_VIEW -->
-				var show_panel = 'split-panel';
-			<!-- ELSE -->
-				var show_panel = 'display-panel';
-			<!-- ENDIF -->
-
-			onload_functions.push('subPanels()');
-
-			// ]]>
-			</script>
-			<div id="minitabs">
-				<ul>
-					<li id="display-panel-tab"<!-- IF not S_MERGE_VIEW --> class="activetab"<!-- ENDIF -->>
-						<span class="corners-top"><span></span></span>
-						<a href="#minitabs" onclick="subPanels('display-panel'); return false;"><span>{L_DISPLAY_OPTIONS}</span></a>
+				<ul class="nav nav-pills">
+					<li role="presentation"<!-- IF not S_MERGE_VIEW --> class="active"<!-- ENDIF -->>
+						<a href="#displayOptions" data-toggle="pill">{L_DISPLAY_OPTIONS}</a>
 					</li>
-					<li id="split-panel-tab">
-						<span class="corners-top"><span></span></span>
-						<a href="#minitabs" onclick="subPanels('split-panel'); return false;"><span>{L_SPLIT_TOPIC}</span></a>
+					<li role="presentation">
+						<a href="#splitOptions" data-toggle="pill">{L_SPLIT_TOPIC}</a>
 					</li>
-					<li id="merge-panel-tab"<!-- IF S_MERGE_VIEW --> class="activetab"<!-- ENDIF -->>
-						<span class="corners-top"><span></span></span>
-						<a href="#minitabs" onclick="subPanels('merge-panel'); return false;"><span>{L_MERGE_POSTS}</span></a>
+					<li role="presentation"<!-- IF S_MERGE_VIEW --> class="active"<!-- ENDIF -->>
+						<a href="#mergeOptions" data-toggle="pill">{L_MERGE_POSTS}</a>
 					</li>
 				</ul>
-			</div>
-			<fieldset id="display-panel" class="fields2">
+
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane<!-- IF not S_MERGE_VIEW --> active<!-- ENDIF -->" id="displayOptions">
 				<dl>
 					<dt><label for="posts_per_page">{L_POSTS_PER_PAGE}:</label><br /><span>{L_POSTS_PER_PAGE_EXPLAIN}</span></dt>
 					<dd><input class="form-control" type="text" name="posts_per_page" id="posts_per_page" size="6" value="{POSTS_PER_PAGE}" /></dd>
@@ -47,8 +29,9 @@
 					<dt><label>{L_DISPLAY_POSTS}:</label></dt>
 					<dd>{S_SELECT_SORT_DAYS}&nbsp;&nbsp;<label>{L_SORT_BY} {S_SELECT_SORT_KEY}</label><label>{S_SELECT_SORT_DIR}</label> <input type="submit" name="sort" value="{L_GO}" class="btn btn-default" /></dd>
 				</dl>
-			</fieldset>
+			</div>
 			<!-- IF S_CAN_SPLIT -->
+			<div role="tabpanel" class="tab-pane" id="splitOptions">			
 				<fieldset id="split-panel" class="fields2">
 					<p>{L_SPLIT_TOPIC_EXPLAIN}</p>
 					<!-- IF S_SHOW_TOPIC_ICONS -->
@@ -67,8 +50,10 @@
 						<dd><select name="to_forum_id">{S_FORUM_SELECT}</select></dd>
 					</dl>
 				</fieldset>
+			</div>
 			<!-- ENDIF -->
 			<!-- IF S_CAN_MERGE -->
+			<div role="tabpanel" class="tab-pane<!-- IF S_MERGE_VIEW --> active<!-- ENDIF -->" id="mergeOptions">
 				<fieldset id="merge-panel" class="fields2">
 					<p>{L_MERGE_TOPIC_EXPLAIN}</p>
 					<dl>
@@ -80,22 +65,21 @@
 							<!-- IF TO_TOPIC_INFO --><dd>{TO_TOPIC_INFO}</dd><!-- ENDIF -->
 					</dl>
 				</fieldset>
+			</div>
 			<!-- ENDIF -->
+		</div>
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="panel-title">
-						<span class="right-box"><a href="#review" onclick="viewableArea(getElementById('topicreview'), true); var rev_text = getElementById('review').getElementsByTagName('a').item(0).firstChild; if (rev_text.data == '{LA_EXPAND_VIEW}'){rev_text.data = '{LA_COLLAPSE_VIEW}'; } else if (rev_text.data == '{LA_COLLAPSE_VIEW}'){rev_text.data = '{LA_EXPAND_VIEW}'};">{L_EXPAND_VIEW}</a></span>
 						{L_TOPIC_REVIEW}: {TOPIC_TITLE}
 					</h3>
 				</div>
 				<div class="panel-body">
 					<div id="topicreview">
 						<!-- BEGIN postrow -->
-							<div class="post <!-- IF postrow.S_ROW_COUNT is odd -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
-								<div class="postbody" id="pr{postrow.POST_ID}">
-									<ul class="profile-icons"><li class="info-icon"><a href="{postrow.U_POST_DETAILS}" title="{L_POST_DETAILS}"><span>{L_POST_DETAILS}</span></a></li><li>{L_SELECT}: <input type="checkbox" name="post_id_list[]" value="{postrow.POST_ID}"<!-- IF postrow.S_CHECKED --> checked="checked"<!-- ENDIF --> /></li></ul>
-									<h3><a href="{postrow.U_POST_DETAILS}">{postrow.POST_SUBJECT}</a></h3>
-									<p class="author"><a href="#pr{postrow.POST_ID}">{postrow.MINI_POST_IMG}</a> {L_POSTED} {postrow.POST_DATE} {L_POST_BY_AUTHOR} <strong>{postrow.POST_AUTHOR_FULL}</strong><!-- IF postrow.U_MCP_DETAILS --> [ <a href="{postrow.U_MCP_DETAILS}">{L_POST_DETAILS}</a> ]<!-- ENDIF --></p>
+							<div class="panel panel-default">
+								<div class="panel-heading"><a href="{postrow.U_POST_DETAILS}">{postrow.POST_SUBJECT}</a><span class="pull-right"><label for="post_id_list_{postrow.POST_ID}">{L_SELECT}:</label> <input type="checkbox" id="post_id_list_{postrow.POST_ID}" name="post_id_list[]" value="{postrow.POST_ID}"<!-- IF postrow.S_CHECKED --> checked="checked"<!-- ENDIF --> /></span></div>
+								<div class="panel-body" id="pr{postrow.POST_ID}">
 									<!-- IF postrow.S_POST_UNAPPROVED or postrow.S_POST_REPORTED -->
 										<p class="rules">
 											<!-- IF postrow.S_POST_UNAPPROVED -->{UNAPPROVED_IMG} <a href="{postrow.U_MCP_APPROVE}"><strong>{L_POST_UNAPPROVED}</strong></a><br /><!-- ENDIF -->
@@ -112,6 +96,7 @@
 										</dl>
 									<!-- ENDIF -->
 								</div>
+							<div class="panel-footer"><a href="#pr{postrow.POST_ID}"><i class="fa fa-file-o fa-fw"></i></a> {L_POSTED} {postrow.POST_DATE} {L_POST_BY_AUTHOR} <strong>{postrow.POST_AUTHOR_FULL}</strong><!-- IF postrow.U_MCP_DETAILS --> [ <a href="{postrow.U_MCP_DETAILS}">{L_POST_DETAILS}</a> ]<!-- ENDIF --><span class="pull-right"><a href="{postrow.U_POST_DETAILS}" title="{L_POST_DETAILS}"><i class="fa fa-info-circle fa-fw"></i></a></span></div>
 							</div>
 						<!-- END postrow -->
 					</div>
