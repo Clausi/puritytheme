@@ -646,7 +646,8 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	}
 }
 
-@media(max-width:768px) {
+
+@media(max-width: 768px) {
 	.navbar-brand img {
 		max-height: auto;
 		max-width: 200px;
@@ -655,12 +656,6 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	.navbar-nav button {
 		width: 100%;
 		text-align: left;
-	}
-	
-	#main-nav {
-		height: auto;
-		max-height: 300px;
-		overflow-x: hidden;
 	}
 	
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -684,6 +679,14 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 	.bottom17-xs { margin-bottom:17px; }
 	.bottom20-xs { margin-bottom:20px; }
 	.bottom30-xs { margin-bottom:30px; }
+}
+
+@media screen and (orientation: landscape) and (max-width: 768px) {
+	#main-nav {
+		height: auto;
+		max-height: 300px;
+		overflow-x: hidden;
+	}
 }
 
 @media(max-width:992px) {
@@ -814,13 +817,13 @@ table a:not(.btn), .table a:not(.btn) {
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    color: #FFF;
-    background-color: #116BA5;
+	color: #FFF;
+	background-color: #116BA5;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
-    text-decoration: none;
-    color: #F0F0F0;
+	text-decoration: none;
+	color: #F0F0F0;
 	background-color: #0E5B8C;
 	border-color: #0E5B8C;
 }
