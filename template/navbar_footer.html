@@ -5,7 +5,11 @@
 				<!-- IF not S_IS_BOT -->
 					<!-- IF U_BUMP_TOPIC --><li><a href="{U_BUMP_TOPIC}" title="{L_BUMP_TOPIC}"><i class="fa fa-caret-square-o-up"></i> {L_BUMP_TOPIC}</a></li><!-- ENDIF -->
 				<!-- ENDIF -->
-			<li><!-- IF U_TEAM --><a href="{U_TEAM}"><i class="fa fa-users"></i> {L_THE_TEAM}</a> </li><!-- ENDIF --><!-- IF not S_IS_BOT --><li><a href="{U_DELETE_COOKIES}"><i class="fa fa-trash-o"></i> {L_DELETE_COOKIES}</a> </li> <!-- ENDIF -->
+				<!-- IF not S_IS_BOT and (S_DISPLAY_MEMBERLIST or U_TEAM) -->
+					<!-- IF S_DISPLAY_MEMBERLIST --><li><a href="{U_MEMBERLIST}"><i class="fa fa-users"></i> {L_MEMBERLIST}</a></li><!-- ENDIF -->
+					<!-- IF U_TEAM --><li><a href="{U_TEAM}"><i class="fa fa-users"></i> {L_THE_TEAM}</a></li><!-- ENDIF -->
+					<!-- IF not S_IS_BOT --><li><a href="{U_DELETE_COOKIES}"><i class="fa fa-trash-o"></i> {L_DELETE_COOKIES}</a> </li> <!-- ENDIF -->
+				<!-- ENDIF -->
 			<li><p class="navbar-text">{S_TIMEZONE}</p></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
