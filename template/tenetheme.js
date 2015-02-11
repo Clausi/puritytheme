@@ -21,7 +21,6 @@ function scrollHandler() {
 }
 
 $(document).ready(function() {
-
 	$( '.swipebox' ).swipebox();
 
 	createSelectpicker();
@@ -65,5 +64,4 @@ $(document).ready(function() {
 	$(window).scroll(function () {
 		scrollHandler();
 	});
-
 });
