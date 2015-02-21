@@ -6,12 +6,6 @@ mcp_ban_unban_after 	mcp_ban.html 	mcp_ban.html 	3.1.0-RC3 	Add additional field
 mcp_ban_unban_before 	mcp_ban.html 	mcp_ban.html 	3.1.0-RC3 	Add additional fields to the unban form in MCP
 memberlist_body_username_append 	memberlist_body.html 	memberlist_body.html 	3.1.0-a1 	Add information after every username in the memberlist. Works in all display modes (leader, group and normal memberlist).
 memberlist_body_username_prepend 	memberlist_body.html 	memberlist_body.html 	3.1.0-a1 	Add information before every username in the memberlist. Works in all display modes (leader, group and normal memberlist).
-memberlist_view_contact_after 	memberlist_view.html 	memberlist_view.html 	3.1.0-b2 	Add content after the user contact part of any user profile
-memberlist_view_contact_before 	memberlist_view.html 	memberlist_view.html 	3.1.0-b2 	Add content before the user contact part of any user profile
-memberlist_view_content_append 	memberlist_view.html 	memberlist_view.html 	3.1.0-b2 	Add custom content to the user profile view after the main content
-memberlist_view_content_prepend 	memberlist_view.html 	memberlist_view.html 	3.1.0-b3 	Add custom content to the user profile view before the main content
-memberlist_view_user_statistics_after 	memberlist_view.html 	memberlist_view.html 	3.1.0-a1 	Add entries after the user statistics part of any user profile
-memberlist_view_user_statistics_before 	memberlist_view.html 	memberlist_view.html 	3.1.0-a1 	Add entries before the user statistics part of any user profile
 mcp_warn_post_add_warning_field_after 	mcp_warn_post.html 	mcp_warn_post.html 	3.1.0-RC4 	Add content during warning for a post - after add warning field.
 mcp_warn_post_add_warning_field_before 	mcp_warn_post.html 	mcp_warn_post.html 	3.1.0-RC4 	Add content during warning for a post - before add warning field.
 mcp_warn_user_add_warning_field_after 	mcp_warn_user.html 	mcp_warn_user.html 	3.1.0-RC4 	Add content during warning a user - after add warning field.

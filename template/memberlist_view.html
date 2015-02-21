@@ -1,5 +1,7 @@
 <!-- INCLUDE overall_header.html -->
 
+<!-- EVENT memberlist_view_content_prepend -->
+
 <form method="post" action="{S_PROFILE_ACTION}" id="viewprofile">
 	<div class="user-details">
 		<!-- IF AVATAR_IMG -->
@@ -127,6 +129,9 @@
 											</div>
 										</div>
 									<!-- ENDIF -->
+									
+									<!-- EVENT memberlist_view_contact_before -->
+									
 									<div class="form-group">
 										<div class="col-md-9 col-md-offset-3">
 											<div class="btn-group">
@@ -153,6 +158,9 @@
 											</div>
 										</div>
 									</div>
+									
+									<!-- EVENT memberlist_view_contact_after -->
+									
 								</div>
 							</div>
 						</div>
@@ -163,6 +171,9 @@
 								<h3 class="panel-title">{L_USER_FORUM}</h3>
 							</div>
 							<div class="panel-body">
+							
+								<!-- EVENT memberlist_view_user_statistics_before -->
+								
 								<div class="form-horizontal">
 									<div class="form-group">
 										<label class="control-label col-md-3">{L_JOINED}:</label>
@@ -227,6 +238,9 @@
 										</div>
 									<!-- ENDIF -->
 								</div>
+								
+								<!-- EVENT memberlist_view_user_statistics_after -->
+								
 							</div>
 						</div>
 					</div>
@@ -245,6 +259,8 @@
 		</div>
 	</div>
 </form>
+
+<!-- EVENT memberlist_view_content_append -->
 
 <!-- INCLUDE jumpbox.html -->
 
