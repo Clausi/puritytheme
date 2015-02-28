@@ -73,26 +73,35 @@
 								</a></span>
 							</div>
 							<div class="pull-right">
-								<div class="btn-group pagination-line">
-									<!-- IF searchresults.S_TOPIC_UNAPPROVED or searchresults.S_POSTS_UNAPPROVED -->
-										<a href="{searchresults.U_MCP_QUEUE}" class="btn btn-warning btn-xs"><i class="fa fa-exclamation-triangle"></i></a>
-									<!-- ENDIF -->
-									<!-- IF searchresults.S_TOPIC_REPORTED -->
-										<a href="{searchresults.U_MCP_REPORT}" class="btn btn-warning btn-xs"><i class="fa fa-exclamation-triangle"></i></a>
-									<!-- ENDIF -->
-									<!-- IF searchresults.ATTACH_ICON_IMG -->
-										<a href="#" class="btn btn-default btn-xs disabled"><i class="fa fa-paperclip"></i></a>
-									<!-- ENDIF -->
-									<!-- IF searchresults.PAGINATION -->
-										{searchresults.PAGINATION}
-									<!-- ENDIF -->
-									<!-- IF searchresults.S_UNREAD_TOPIC -->
-										<a class="btn btn-xs btn-warning" href="{searchresults.U_NEWEST_POST}"><i class="fa fa-angle-right"></i></a>
-									<!-- ENDIF -->
-									<!-- IF not S_IS_BOT -->
-										<a class="btn btn-default btn-xs tooltip-link" href="{searchresults.U_LAST_POST}"  title="{L_LAST_POST}"><i class="fa fa-angle-double-right"></i></a>
-									<!-- ENDIF -->		
-								</div>
+								<nav>
+									<ul class="pagination pagination-sm">
+										<!-- IF searchresults.S_TOPIC_UNAPPROVED or searchresults.S_POSTS_UNAPPROVED -->
+											<li class="bg-warning"><a href="{searchresults.U_MCP_QUEUE}"><i class="fa fa-exclamation-triangle"></i></a></li>
+										<!-- ENDIF -->
+										<!-- IF searchresults.S_TOPIC_REPORTED -->
+											<li class="bg-warning"><a href="{searchresults.U_MCP_REPORT}"><i class="fa fa-exclamation-triangle"></i></a></li>
+										<!-- ENDIF -->
+										<!-- IF searchresults.ATTACH_ICON_IMG -->
+											<li><a href="#"><i class="fa fa-paperclip"></i></a></li>
+										<!-- ENDIF -->
+										<!-- IF .searchresults.pagination and alex -->
+											<!-- BEGIN pagination -->
+												<!-- IF searchresults.pagination.S_IS_PREV -->
+												<!-- ELSEIF searchresults.pagination.S_IS_CURRENT --><li class="active"><span>{searchresults.pagination.PAGE_NUMBER}</span></li>
+												<!-- ELSEIF searchresults.pagination.S_IS_ELLIPSIS --><li class="ellipsis"><span>{L_ELLIPSIS}</span></li>
+												<!-- ELSEIF searchresults.pagination.S_IS_NEXT -->
+												<!-- ELSE --><li><a href="{searchresults.pagination.PAGE_URL}">{searchresults.pagination.PAGE_NUMBER}</a></li>
+												<!-- ENDIF -->
+											<!-- END pagination -->
+										<!-- ENDIF -->
+										<!-- IF searchresults.S_UNREAD_TOPIC -->
+											<li><a class="bg-warning" href="{searchresults.U_NEWEST_POST}"><i class="fa fa-angle-right"></i></a></li>
+										<!-- ENDIF -->
+										<!-- IF not S_IS_BOT -->
+											<li><a href="{searchresults.U_LAST_POST}" title="{L_LAST_POST}"><i class="fa fa-angle-double-right"></i></a></li>
+										<!-- ENDIF -->		
+									</ul>
+								</nav>
 							</div>
 							<a href="{searchresults.U_VIEW_TOPIC}" class="topictitle"><strong>{searchresults.TOPIC_TITLE}</strong></a><br/>
 							<small>{L_POST_BY_AUTHOR} {searchresults.TOPIC_AUTHOR_FULL} &raquo; {searchresults.FIRST_POST_TIME} &raquo; {L_IN} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_TITLE}</a></small>
