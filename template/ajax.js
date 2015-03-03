@@ -6,34 +6,12 @@
 
 // This callback will mark all forum icons read
 phpbb.addAjaxCallback('mark_forums_read', function(res) {
-	var readTitle = res.NO_UNREAD_POSTS;
-	var unreadTitle = res.UNREAD_POSTS;
-	var iconsArray = {
-		'btn-warning': 'btn-default',
-	};
-
-	$('td.forum-name').find('a[class*="btn-warning"]').each(function() {
-		var $this = $(this);
-
-		$.each(iconsArray, function(unreadClass, readClass) {
-			if ($this.hasClass(unreadClass)) {
-				$this.removeClass(unreadClass).addClass(readClass);
-			}
-		});
-		$this.children('a[data-original-title="' + unreadTitle + '"]').attr('title', readTitle);
-	});
-
-	// Mark subforums read
-	$('a.subforum[class*="unread"]').removeClass('unread').addClass('read');
+	$('a.forum-icon').removeClass('btn-warning').addClass('btn-default');
 
 	// Mark topics read if we are watching a category and showing active topics
 	if ($('#active_topics').length) {
 		phpbb.ajaxCallbacks.mark_topics_read.call(this, res, false);
 	}
-
-	// Update mark forums read links
-	$('[data-ajax="mark_forums_read"]').attr('href', res.U_MARK_FORUMS);
-
 	phpbb.closeDarkenWrapper(3000);
 });
 
@@ -44,54 +22,7 @@ phpbb.addAjaxCallback('mark_forums_read', function(res) {
 *     updated. Defaults to true.
 */
 phpbb.addAjaxCallback('mark_topics_read', function(res, updateTopicLinks) {
-	var readTitle = res.NO_UNREAD_POSTS;
-	var unreadTitle = res.UNREAD_POSTS;
-	var iconsArray = {
-		'global_unread': 'global_read',
-		'announce_unread': 'announce_read',
-		'sticky_unread': 'sticky_read',
-		'topic_unread': 'topic_read'
-	};
-	var iconsState = ['', '_hot', '_hot_mine', '_locked', '_locked_mine', '_mine'];
-	var unreadClassSelectors;
-	var classMap = {};
-	var classNames = [];
-
-	if (typeof updateTopicLinks === 'undefined') {
-		updateTopicLinks = true;
-	}
-
-	$.each(iconsArray, function(unreadClass, readClass) {
-		$.each(iconsState, function(key, value) {
-			// Only topics can be hot
-			if ((value === '_hot' || value === '_hot_mine') && unreadClass !== 'topic_unread') {
-				return true;
-			}
-			classMap[unreadClass + value] = readClass + value;
-			classNames.push(unreadClass + value);
-		});
-	});
-
-	unreadClassSelectors = '.' + classNames.join(',.');
-
-	$('li.row').find(unreadClassSelectors).each(function() {
-		var $this = $(this);
-		$.each(classMap, function(unreadClass, readClass) {
-			if ($this.hasClass(unreadClass)) {
-				$this.removeClass(unreadClass).addClass(readClass);
-			}
-		});
-		$this.children('dt[title="' + unreadTitle + '"]').attr('title', readTitle);
-	});
-
-	// Remove link to first unread post
-	$('a').has('span.icon_topic_newest').remove();
-
-	// Update mark topics read links
-	if (updateTopicLinks) {
-		$('[data-ajax="mark_topics_read"]').attr('href', res.U_MARK_TOPICS);
-	}
-
+	$('a.topic-icon').removeClass('btn-warning').addClass('btn-default');
 	phpbb.closeDarkenWrapper(3000);
 });
 
