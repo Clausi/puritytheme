@@ -4,30 +4,29 @@
 	</li>
 <!-- ENDIF -->
 
-<!-- BEGIN notifications -->
 <li>
-	<!-- IF notifications.URL -->
-		<a class="<!-- IF notifications.UNREAD -->bg-warning<!-- ENDIF -->" href="<!-- IF notifications.UNREAD -->{notifications.U_MARK_READ}" data-real-url="{notifications.URL}<!-- ELSE -->{notifications.URL}<!-- ENDIF -->">
-	<!-- ENDIF -->
-	<ul class="media-list">
-	  <li class="media">
-		<!-- IF notifications.AVATAR -->{notifications.AVATAR}<!-- ELSE --><img class="img-rounded pull-left" src="{T_THEME_PATH}/images/no_avatar.gif" alt="" /><!-- ENDIF -->
-		<div class="media-body">
-		  <p>
-		 	 <i class="fa fa-comment fa-fw"></i> {notifications.FORMATTED_TITLE}
-				<!-- IF notifications.REFERENCE -->{notifications.REFERENCE}<!-- ENDIF -->
-				<!-- IF notifications.FORUM -->{notifications.FORUM}<!-- ENDIF -->
-				<!-- IF notifications.REASON -->{notifications.REASON}<!-- ENDIF -->
-				<br />
-				<small>{notifications.TIME}</small>
-			</p>
-		</div>
-	  </li>
+	<ul class="media-list notify-list">
+	<!-- BEGIN notifications -->
+		<!-- IF notifications.URL -->
+			<a class="" href="<!-- IF notifications.UNREAD -->{notifications.U_MARK_READ}" data-real-url="{notifications.URL}<!-- ELSE -->{notifications.URL}<!-- ENDIF -->">
+		<!-- ENDIF -->
+		  <li class="media<!-- IF notifications.UNREAD --> bg-warning<!-- ENDIF -->">
+			<!-- IF notifications.AVATAR -->{notifications.AVATAR}<!-- ELSE --><img class="img-rounded pull-left" src="{T_THEME_PATH}/images/no_avatar.gif" alt="" /><!-- ENDIF -->
+			<div class="media-body">
+			  <p>
+				 <i class="fa fa-comment fa-fw"></i> {notifications.FORMATTED_TITLE}
+					<!-- IF notifications.REFERENCE -->{notifications.REFERENCE}<!-- ENDIF -->
+					<!-- IF notifications.FORUM -->{notifications.FORUM}<!-- ENDIF -->
+					<!-- IF notifications.REASON -->{notifications.REASON}<!-- ENDIF -->
+					<br />
+					<small>{notifications.TIME}</small>
+				</p>
+			</div>
+		  </li>
+		<!-- IF notifications.URL --></a><!-- ENDIF -->
+	<!-- END notifications -->
 	</ul>
-
-	<!-- IF notifications.URL --></a><!-- ENDIF -->
 </li>
-<!-- END notifications -->
 
 <li class="divider"></li>
 <li>

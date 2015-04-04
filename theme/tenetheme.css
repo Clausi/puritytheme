@@ -644,6 +644,12 @@ th.forum-name, td.forum-name, th.topic-name, td.topic-name {
 		top: -85px;
 		visibility: hidden;
 	}
+	
+	.notify-list {
+		max-height: 300px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
 }
 
 
@@ -797,19 +803,23 @@ table a:not(.btn), .table a:not(.btn) {
 	background-color: rgba(10,10,10,0.95);
 }
 
-#notification_list img {
+.notify-list img {
 	width: auto;
 	height: 30px;
 	float: left !important;
 }
 
-.notification_list img {
-	width: 90px;
-	height: auto;
+.notify-list a, .notification_list a {
+	color: #fff;
 }
 
-#notification_list a {
-	margin-top: 1px;
+.notify-list li {
+	margin-top: 1px !important;
+	padding: 2px;
+}
+
+.notification_list li {
+	padding: 2px;
 }
 
 .breadcrumb, .well, .jumbotron  {

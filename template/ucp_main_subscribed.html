@@ -13,7 +13,7 @@
 						<tr>
 							<th>{L_WATCHED_FORUMS}</th>
 							<th class="lastpost">{L_LAST_POST}</th>
-							<th class="mark">{L_MARK}</th>
+							<th>{L_MARK}</th>
 						</tr>
 					</thead>
 					<tbody class="topiclist cplist">
@@ -24,7 +24,7 @@
 									<a href="{topicrow.U_LAST_POST}">{LAST_POST_IMG}</a> <br />{forumrow.LAST_POST_TIME}</span>
 									<!-- ELSE -->{L_NO_POSTS}<br />&nbsp;<!-- ENDIF -->
 								</td>
-								<td class="mark"><center><input type="checkbox" name="f[{forumrow.FORUM_ID}]" id="f{forumrow.FORUM_ID}" /></center></td>
+								<td><center><input type="checkbox" name="f[{forumrow.FORUM_ID}]" id="f{forumrow.FORUM_ID}" /></center></td>
 							</tr>
 						<!-- END forumrow -->
 					</tbody>
@@ -38,13 +38,10 @@
 				<div class="text-center">
 					<div class="btn-group">
 						<!-- IF TOTAL_TOPICS --> <span class="btn btn-default disabled">{TOTAL_TOPICS}</span><!-- ENDIF -->
-						<!-- IF PAGE_NUMBER -->
-							<!-- IF PAGINATION -->
-								<a href="#" class="btn bn-default" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}"><span class="label">{PAGE_NUMBER}</span></a>
-								<span class="btn btn-default">{PAGINATION}</span>
-							<!-- ELSE -->
-								<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
-							<!-- ENDIF -->
+						<!-- IF .pagination -->
+							<!-- INCLUDE pagination.html -->
+						<!-- ELSE -->
+							<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
 						<!-- ENDIF -->
 					</div>
 				</div>
@@ -53,7 +50,7 @@
 						<tr>
 							<th>{L_WATCHED_TOPICS}</th>
 							<th class="lastpost">{L_LAST_POST}</th>
-							<th class="mark">{L_MARK}</th>
+							<th>{L_MARK}</th>
 						</tr>
 					</thead>
 					<tbody class="topiclist cplist">
@@ -66,10 +63,10 @@
 									<!-- IF topicrow.PAGINATION --><strong class="pagination"><span>{topicrow.PAGINATION}</span></strong><!-- ENDIF -->
 									<!-- IF topicrow.ATTACH_ICON_IMG -->{topicrow.ATTACH_ICON_IMG} <!-- ENDIF -->{L_POST_BY_AUTHOR} {topicrow.TOPIC_AUTHOR_FULL} &raquo; {topicrow.FIRST_POST_TIME}
 								</td>
-								<td class="lastpost"><span><dfn>{L_LAST_POST} </dfn>{L_POST_BY_AUTHOR} {topicrow.LAST_POST_AUTHOR_FULL}
-									<a href="{topicrow.U_LAST_POST}">{LAST_POST_IMG}</a> <br />{topicrow.LAST_POST_TIME}</span>
+								<td class="lastpost"><span><dfn><i class="fa fa-clock-o fa-fw"></i> </dfn>{L_POST_BY_AUTHOR} {topicrow.LAST_POST_AUTHOR_FULL}<br />
+									 {topicrow.LAST_POST_TIME} <a href="{topicrow.U_LAST_POST}"><i class="fa fa-angle-double-right"></i></a></span>
 								</td>
-								<td class="mark"><center><input type="checkbox" name="t[{topicrow.TOPIC_ID}]" id="t{topicrow.TOPIC_ID}" /></center></td>
+								<td><center><input type="checkbox" name="t[{topicrow.TOPIC_ID}]" id="t{topicrow.TOPIC_ID}" /></center></td>
 							</tr>
 						<!-- END topicrow -->
 					</tbody>
