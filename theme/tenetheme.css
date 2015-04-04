@@ -809,6 +809,11 @@ table a:not(.btn), .table a:not(.btn) {
 	float: left !important;
 }
 
+.notification_list img {
+	width: auto;
+	max-height: 90px;
+}
+
 .notify-list a, .notification_list a {
 	color: #fff;
 }
