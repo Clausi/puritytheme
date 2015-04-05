@@ -37,6 +37,7 @@
 							</div>
 						</div>		
 					<!-- ENDIF -->
+					<!-- EVENT ucp_register_credentials_before -->
 					<div class="row">
 						<div class="col-xs-12">
 							<div class="form-group">
@@ -76,7 +77,11 @@
 							</div>
 						</div>
 					</div>
+					<!-- EVENT ucp_register_credentials_after -->
+					
 					<hr/>
+					
+					<!-- EVENT ucp_register_options_before -->
 					<div class="form-horizontal">
 						<div class="form-group">
 							<label for="lang" class="control-label col-md-3">{L_LANGUAGE}:</label>
@@ -99,6 +104,9 @@
 								</select>
 							</div>
 						</div>
+						
+						<!-- EVENT ucp_register_profile_fields_before -->
+						
 						<!-- IF .profile_fields -->
 							<div class="form-group">
 								<div class="col-md-12">
@@ -116,6 +124,9 @@
 								</div>
 							<!-- END profile_fields -->
 						<!-- ENDIF -->
+						
+						<!-- EVENT ucp_register_profile_fields_after -->
+						
 					</div>
 					<!-- IF CAPTCHA_TEMPLATE -->
 						<hr />

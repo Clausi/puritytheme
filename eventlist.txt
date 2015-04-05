@@ -4,19 +4,10 @@ mcp_ban_fields_after 	mcp_ban.html 	mcp_ban.html 	3.1.0-RC3 	Add additional fiel
 mcp_ban_fields_before 	mcp_ban.html 	mcp_ban.html 	3.1.0-RC3 	Add additional fields to the ban form in MCP
 mcp_ban_unban_after 	mcp_ban.html 	mcp_ban.html 	3.1.0-RC3 	Add additional fields to the unban form in MCP
 mcp_ban_unban_before 	mcp_ban.html 	mcp_ban.html 	3.1.0-RC3 	Add additional fields to the unban form in MCP
-memberlist_body_username_append 	memberlist_body.html 	memberlist_body.html 	3.1.0-a1 	Add information after every username in the memberlist. Works in all display modes (leader, group and normal memberlist).
-memberlist_body_username_prepend 	memberlist_body.html 	memberlist_body.html 	3.1.0-a1 	Add information before every username in the memberlist. Works in all display modes (leader, group and normal memberlist).
 mcp_warn_post_add_warning_field_after 	mcp_warn_post.html 	mcp_warn_post.html 	3.1.0-RC4 	Add content during warning for a post - after add warning field.
 mcp_warn_post_add_warning_field_before 	mcp_warn_post.html 	mcp_warn_post.html 	3.1.0-RC4 	Add content during warning for a post - before add warning field.
 mcp_warn_user_add_warning_field_after 	mcp_warn_user.html 	mcp_warn_user.html 	3.1.0-RC4 	Add content during warning a user - after add warning field.
 mcp_warn_user_add_warning_field_before 	mcp_warn_user.html 	mcp_warn_user.html 	3.1.0-RC4 	Add content during warning a user - before add warning field.
-mcp_front_latest_logs_after 	mcp_front.html 	mcp_front.html 	3.1.3-RC1 	Add content after latest logs list
-mcp_front_latest_logs_before 	mcp_front.html 	mcp_front.html 	3.1.3-RC1 	Add content before latest logs list
-mcp_front_latest_reported_before 	mcp_front.html 	mcp_front.html 	3.1.3-RC1 	Add content before latest reported posts list
-mcp_front_latest_reported_pms_before 	mcp_front.html 	mcp_front.html 	3.1.3-RC1 	Add content before latest reported private messages list
-mcp_front_latest_unapproved_before 	mcp_front.html 	mcp_front.html 	3.1.3-RC1 	Add content before latest unapproved posts list 
-ucp_agreement_terms_after 	ucp_agreement.html 	ucp_agreement.html 	3.1.0-b3 	Add content after the terms of agreement text at user registration
-ucp_agreement_terms_before 	ucp_agreement.html 	ucp_agreement.html 	3.1.0-b3 	Add content before the terms of agreement text at user registration
 ucp_pm_viewmessage_avatar_after 	ucp_pm_viewmessage.html 		3.1.0-RC3 	Add content right after the avatar when viewing a private message
 ucp_pm_viewmessage_avatar_before 	ucp_pm_viewmessage.html 		3.1.0-RC3 	Add content right before the avatar when viewing a private message
 ucp_pm_viewmessage_contact_fields_after 	ucp_pm_viewmessage.html 		3.1.0-b1 	Add data after the contact fields on the user profile when viewing a private message
@@ -34,10 +25,3 @@ ucp_prefs_view_radio_buttons_prepend 	ucp_prefs_view.html 	ucp_prefs_view.html 	
 ucp_prefs_view_radio_buttons_append 	ucp_prefs_view.html 	ucp_prefs_view.html 	3.1.0-a1 	Add options to the bottom of the radio buttons block of the Edit Display Options screen
 ucp_prefs_view_select_menu_prepend 	ucp_prefs_view.html 	ucp_prefs_view.html 	3.1.0-a1 	Add options to the top of the drop-down lists block of the Edit Display Options screen
 ucp_prefs_view_select_menu_append 	ucp_prefs_view.html 	ucp_prefs_view.html 	3.1.0-a1 	Add options to the bottom of the drop-down lists block of the Edit Display Options screen
-ucp_register_credentials_before 	ucp_register.html 	ucp_register.html 	3.1.0-b5 	Add options in registration page fieldset - before first field.
-ucp_register_profile_fields_after 	ucp_register.html 	ucp_register.html 	3.1.0-b5 	Add options in registration page fieldset - after last field.
-ucp_register_credentials_after 	ucp_register.html 	ucp_register.html 	3.1.0-b5 	Add options in registration page fieldset - after password field.
-ucp_register_options_before 	ucp_register.html 	ucp_register.html 	3.1.0-b5 	Add options in registration page fieldset - before language selector.
-ucp_register_profile_fields_before 	ucp_register.html 	ucp_register.html 	3.1.0-b5 	Add options in registration page fieldset - before profile fields.
-ucp_friend_list_before 	ucp_zebra_friends.html 	ucp_zebra_friends.html 	3.1.0-a4 	Add optional elements before list of friends in UCP
-ucp_friend_list_after 	ucp_zebra_friends.html 	ucp_zebra_friends.html 	3.1.0-a4 	Add optional elements after list of friends in UCP

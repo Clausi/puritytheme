@@ -5,6 +5,9 @@
 		<h3 class="panel-title">{PAGE_TITLE}</h3>
 	</div>
 	<div class="panel-body">
+	
+		<!-- EVENT mcp_front_latest_unapproved_before -->
+	
 		<!-- IF S_SHOW_UNAPPROVED -->
 			<form id="mcp_queue" method="post" action="{S_MCP_QUEUE_ACTION}">
 				<div class="panel panel-default">
@@ -51,6 +54,9 @@
 				<!-- ENDIF -->
 			</form>
 		<!-- ENDIF -->
+		
+		<!-- EVENT mcp_front_latest_reported_before -->
+		
 		<!-- IF S_SHOW_REPORTS -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -85,6 +91,9 @@
 				</div>
 			</div>
 		<!-- ENDIF -->
+		
+		<!-- EVENT mcp_front_latest_reported_pms_before -->
+		
 		<!-- IF S_SHOW_PM_REPORTS -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -119,6 +128,9 @@
 				</div>
 			</div>
 		<!-- ENDIF -->
+		
+		<!-- EVENT mcp_front_latest_logs_before -->
+		
 		<!-- IF S_SHOW_LOGS -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -156,6 +168,10 @@
 				</div>
 			</div>
 		<!-- ENDIF -->
+		
+		<!-- EVENT mcp_front_latest_logs_after -->
+		
 	</div>
 </div>
+
 <!-- INCLUDE mcp_footer.html -->

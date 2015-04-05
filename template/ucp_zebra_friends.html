@@ -10,6 +10,7 @@
 			<fieldset>
 				<div class="form-horizontal">
 					<!-- IF ERROR --><p class="alert alert-danger">{ERROR}</p><!-- ENDIF -->
+					<!-- EVENT ucp_friend_list_before -->
 					<div class="form-group">
 						<label class="control-label col-md-4" <!-- IF S_USERNAME_OPTIONS -->for="usernames"<!-- ENDIF -->>{L_YOUR_FRIENDS}:</label>
 						<div class="col-md-8">
@@ -21,6 +22,7 @@
 							<span class="help-block">{L_YOUR_FRIENDS_EXPLAIN}</span>
 						</div>
 					</div>
+					<!-- EVENT ucp_friend_list_after -->
 					<div class="form-group">
 						<label class="control-label col-md-4" for="add">{L_ADD_FRIENDS}:</label>
 						<div class="col-md-8">
