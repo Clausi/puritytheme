@@ -25,3 +25,21 @@ ucp_prefs_view_radio_buttons_prepend 	ucp_prefs_view.html 	ucp_prefs_view.html 	
 ucp_prefs_view_radio_buttons_append 	ucp_prefs_view.html 	ucp_prefs_view.html 	3.1.0-a1 	Add options to the bottom of the radio buttons block of the Edit Display Options screen
 ucp_prefs_view_select_menu_prepend 	ucp_prefs_view.html 	ucp_prefs_view.html 	3.1.0-a1 	Add options to the top of the drop-down lists block of the Edit Display Options screen
 ucp_prefs_view_select_menu_append 	ucp_prefs_view.html 	ucp_prefs_view.html 	3.1.0-a1 	Add options to the bottom of the drop-down lists block of the Edit Display Options screen
+overall_header_navbar_before 	overall_header.html 	overall_header.html 	3.1.4-RC1 	Add content before the navigation bar
+overall_header_searchbox_before 	overall_header.html 		3.1.4-RC1 	Add content before the search box in the header
+posting_editor_bbcode_status_after 	posting_editor.html 	posting_body.html 	3.1.4-RC1 	Add content after bbcode status
+posting_editor_smilies_after 	posting_editor.html 	posting_body.html 	3.1.4-RC1 	Add content after smilies
+posting_editor_smilies_before 	posting_editor.html 	posting_body.html 	3.1.4-RC1 	Add content before the smilies
+posting_pm_layout_include_pm_header_after 	posting_pm_layout.html 		3.1.4-RC1 	Add content after the include of posting_pm_header.html
+posting_pm_layout_include_pm_header_before 	posting_pm_layout.html 		3.1.4-RC1 	Add content before the include of posting_pm_header.html
+posting_poll_body_options_after 	posting_poll_body.html 	posting_poll_body.html 	3.1.4-RC1 	Add content after the poll options on creating a poll
+search_results_header_after 	search_results.html 	search_results.html 	3.1.4-RC1 	Add content after the header of the search results
+search_results_header_before 	search_results.html 	search_results.html 	3.1.4-RC1 	Add content before the header of the search results.
+search_results_searchbox_after 	search_results.html 	search_results.html 	3.1.4-RC1 	Add content right after the searchbox of the search results.
+ucp_profile_profile_info_before 	ucp_profile_profile_info.html 	ucp_profile_profile_info.html 	3.1.4-RC1 	Add options in profile page fieldset - before jabber field.
+ucp_profile_profile_info_after 	ucp_profile_profile_info.html 	ucp_profile_profile_info.html 	3.1.4-RC1 	Add options in profile page fieldset - after custom profile fields.
+ucp_profile_register_details_before 	ucp_profile_reg_details.html 	ucp_profile_reg_details.html 	3.1.4-RC1 	Add options in profile page fieldset - before first field.
+ucp_profile_register_details_after 	ucp_profile_reg_details.html 	ucp_profile_reg_details.html 	3.1.4-RC1 	Add options in profile page fieldset - after confirm password field.
+viewtopic_body_pagination_top_after 	viewtopic_body.html 	viewtopic_body.html 	3.1.4-RC1 	Add content after the pagination at top
+viewtopic_body_postrow_post_details_after 	viewtopic_body.html 	viewtopic_body.html 	3.1.4-RC1 	Add content after the post details
+viewtopic_body_postrow_post_details_before 	viewtopic_body.html 	viewtopic_body.html 	3.1.4-RC1 	Add content before the post details
