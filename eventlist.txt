@@ -43,3 +43,11 @@ ucp_profile_register_details_after 	ucp_profile_reg_details.html 	ucp_profile_re
 viewtopic_body_pagination_top_after 	viewtopic_body.html 	viewtopic_body.html 	3.1.4-RC1 	Add content after the pagination at top
 viewtopic_body_postrow_post_details_after 	viewtopic_body.html 	viewtopic_body.html 	3.1.4-RC1 	Add content after the post details
 viewtopic_body_postrow_post_details_before 	viewtopic_body.html 	viewtopic_body.html 	3.1.4-RC1 	Add content before the post details
+forumlist_body_category_header_row_append 	forumlist_body.html 		3.1.5-RC1 	Add content after the header row of the category on the forum list.
+forumlist_body_category_header_row_prepend 	forumlist_body.html 		3.1.5-RC1 	Add content before the header row of the category on the forum list.
+mcp_post_additional_options 	mcp_post.html 	mcp_post.html 	3.1.5-RC1 	Add content within the list of post moderation actions
+search_body_form_before 	search_body.html 	search_body.html 	3.1.5-RC1 	Add content before the search form
+viewforum_forum_title_after 	viewforum_body.html 	viewforum_body.html 	3.1.5-RC1 	Add content directly after the forum title on the View forum screen
+viewforum_forum_title_before 	viewforum_body.html 	viewforum_body.html 	3.1.5-RC1 	Add content directly before the forum title on the View forum screen
+viewtopic_body_post_buttons_list_after 	viewtopic_body.html 		3.1.5-RC1 	Add post button custom list to posts (next to edit, quote etc), after the original list.
+viewtopic_body_post_buttons_list_before 	viewtopic_body.html 		3.1.5-RC1 	Add post button custom list to posts (next to edit, quote etc), before the original list.
